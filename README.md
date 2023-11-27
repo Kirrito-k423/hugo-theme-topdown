@@ -13,7 +13,7 @@ A **developing** Hugo theme meticulously crafted for personal/team/lab/start-up 
 
 ### Why I was hesitant about development
 
-read my post
+read my [post](https://shaojiemike.top/thinking/2023/11/24/When4teampage/)
 
 ## My Ideal Theme 
 
