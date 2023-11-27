@@ -3,16 +3,16 @@
 
 name = "Topdown"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
+licenselink = "https://github.com/Kirrito-k423/hugo-theme-topdown/blob/master/LICENSE"
+description = "hugo theme for organization/product presentation using top-down idea"
+homepage = "http://shaojiemike.top"
 tags = []
 features = []
 min_version = "0.41.0"
 
 [author]
-  name = ""
-  homepage = ""
+  name = "shaojiemike"
+  homepage = "https://shaojiemike.top"
 
 # If porting an existing theme
 [original]
