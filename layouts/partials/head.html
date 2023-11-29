@@ -2,8 +2,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.BaseURL }}/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.BaseURL }}/css/style.min.css">
 	<!-- 使用 Go 模板语法创建一个变量 $title，其中包含网站标题和当前页面标题，用于设置网页的标题。 -->
     {{ $title := print .Site.Title " | " .Title }}
 	<!-- 如果当前页面是首页（IsHome），则将 $title 设置为只包含网站标题，而不是添加页面标题。 -->
