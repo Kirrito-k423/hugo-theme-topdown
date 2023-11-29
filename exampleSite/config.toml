@@ -28,6 +28,6 @@ url = "/Events" # folder
 weight = 3
 
 [[menu.main]]
-name = "about"
+name = "About"
 url = "about" # file
 weight = 4
