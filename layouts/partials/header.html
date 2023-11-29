@@ -9,31 +9,19 @@
 		</div>
 	</div>
 	
-	<!-- 创建一个导航栏的 <nav> 元素， -->
-	<!-- <nav>
-		<div class="menu-container menu-normal">
-
-		<ul class="desktop-menu list-inline mb-0 justify-content-end" id="desktop-menu">
-			<a class="mr-auto" href="{{ site.BaseURL | relLangURL }}">
-				<img class="img-fluid" width="110px" src="{{ site.Params.logo.longlogo | absURL}}"
-				  alt="{{ site.Title }}">
-			  </a>
-			{{ range site.Menus.main }}
-			<li class="menu-item menu-item-transparent white hvr-underline-from-left 1"><a href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a></li>
-			{{ end }}
-		</ul>
-		</div>
-	</nav> -->
 
 	<div class="navbar">
 		<div class="navbar-column">
-			<!-- <a class="mr-auto" href="{{ site.BaseURL | relLangURL }}"> -->
-				<img height="30px" src="{{ site.Params.logo.longlogo | absURL}}"
-				  alt="{{ site.Title }}">
-			  <!-- </a> -->
-		{{ range site.Menus.main }}
-		<a href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
-		{{ end }}
+			<a class="navbar-logo" href="{{ site.BaseURL | relLangURL }}">
+			<img height="30px" src="{{ site.Params.logo.longlogo | absURL}}"
+				alt="{{ site.Title }}">
+			</a>
+			
+			{{ range site.Menus.main }}
+			<div class="navbar-sublink">
+			<a class="navbar-text" href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
+			</div>
+			{{ end }}
 		</div>
 	</div>
 	<!-- <nav id="nav" class="nav justify-content-center"> -->
