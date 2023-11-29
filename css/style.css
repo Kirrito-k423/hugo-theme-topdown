@@ -58,7 +58,38 @@
     left: 10%;
     right: 10%;
 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* 垂直居中对齐 */
 }
+
+/* 图片容器样式，将 margin-right 设置为 auto 以推到左边 */
+.navbar-logo{
+    margin-right: auto;
+}
+
+.navbar-text {
+    text-decoration: none;
+    color: #fff; /* 设置链接颜色 */
+    margin-left: 30px; /* 为了添加一些间距，可以根据需要调整 */
+    font-family: Circular Std,Source Sans Pro,sans-serif;
+    font-weight: 600;
+}
+
+/* footer */
+
+.topdown-footer{
+    position: fixed;
+    bottom: 10px;
+}
+
+/* main */
+
+.topdown-main{
+    margin-top: 80px;
+}
+
+
 
 /* other */
 
