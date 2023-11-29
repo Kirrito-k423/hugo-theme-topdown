@@ -1,0 +1,13 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ range .Pages.ByPublishDate.Reverse }}
+<p>
+	<h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+	{{ partial "metadata.html" . }}
+	<a class="summary" href="{{ .RelPermalink }}">
+		<!-- Hugo automatically takes the first 70 words of your content as its summary and stores it into the .Summary variable -->
+		<p>{{ .Summary }}</p>
+	</a>
+</p>
+{{ end }}
+{{ end }}

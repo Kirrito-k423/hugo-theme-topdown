@@ -1,0 +1,18 @@
+<div id="nav-border" class="container">
+	<!-- 创建一个导航栏的 <nav> 元素， -->
+    <nav id="nav" class="nav justify-content-center">
+		<!-- 使用 Go 语言模板引擎的语法开始一个循环，遍历网站（.Site）的 "main" 菜单。 -->
+        {{ range .Site.Menus.main }}
+			<a class="nav-link" href="{{ .URL }}">
+			<!-- icon if we configure it as a pre property in config.toml, -->
+			{{ if .Pre }}
+				{{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
+				{{ $icon }}
+			{{ end }}
+			<!-- 在Go语言的模板引擎中，safeHTML 是一种安全函数（safe function）或过滤器，用于标记一段文本或HTML代码是安全的，不需要进行HTML转义。 -->
+			{{ $text := print .Name | safeHTML }}
+			{{ $text }}
+			</a>
+        {{ end }}
+    </nav>
+</div>
