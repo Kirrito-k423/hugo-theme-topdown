@@ -24,6 +24,9 @@ jobs:
       - name: Build
         run: |
           cd exampleSite
+          pwd
+          ls
+          ls ..
           hugo --themesDir ../.. -t topdown -d ../public
 
       - name: check
