@@ -1,18 +1,47 @@
 <div id="nav-border" class="container">
 	<!-- 创建一个导航栏的 <nav> 元素， -->
-    <nav id="nav" class="nav justify-content-center">
+	<div class="su-brand-bar su-brand-bar--white">
+		<div class="su-brand-bar__container">
+			<a class="su-brand-bar__logo" href="{{ .Site.Params.Toporg.url }}">
+				{{ .Site.Params.Toporg.name }}
+			</a>
+		</div>
+	</div>
+	
+	<nav>
+		<ul class="desktop-menu list-inline mb-0 justify-content-end" id="desktop-menu">
+			<a class="mr-auto" href="{{ site.BaseURL | relLangURL }}">
+			  <img class="img-fluid" width="{{site.Params.logo_width}}" src="{{ site.Params.logo.longlogo | absURL}}"
+				alt="{{ site.Title }}">
+			</a>
+			{{ range site.Menus.main }}
+			<li class="menu-item menu-item-transparent white hvr-underline-from-left 1"><a href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a></li>
+			{{ end }}
+		</ul>
+	</nav>
+
+
+	<!-- <nav id="nav" class="nav justify-content-center"> -->
 		<!-- 使用 Go 语言模板引擎的语法开始一个循环，遍历网站（.Site）的 "main" 菜单。 -->
-        {{ range .Site.Menus.main }}
-			<a class="nav-link" href="{{ .URL }}">
+        <!-- {{ range .Site.Menus.main }}
+			<a class="nav-link" href="{{ .URL }}"> -->
 			<!-- icon if we configure it as a pre property in config.toml, -->
-			{{ if .Pre }}
+			<!-- {{ if .Pre }}
 				{{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
 				{{ $icon }}
-			{{ end }}
+			{{ end }} -->
 			<!-- 在Go语言的模板引擎中，safeHTML 是一种安全函数（safe function）或过滤器，用于标记一段文本或HTML代码是安全的，不需要进行HTML转义。 -->
-			{{ $text := print .Name | safeHTML }}
+			<!-- {{ $text := print .Name | safeHTML }}
 			{{ $text }}
 			</a>
         {{ end }}
-    </nav>
+    </nav> -->
+
+
+	<!-- 3 -->
+	<!-- <ul>
+		{{ range .Site.Menus.main }}
+		<li><a href="{{ .URL }}">{{ .Name }}</a></li>
+		{{ end }}
+	</ul> -->
 </div>

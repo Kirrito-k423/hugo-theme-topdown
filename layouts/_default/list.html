@@ -1,5 +1,7 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
+ <!-- can add _index.md content here -->
+ <!-- https://gohugo.io/templates/lists/#example-project-directory -->
 {{ range .Pages.ByPublishDate.Reverse }}
 <p>
 	<h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
