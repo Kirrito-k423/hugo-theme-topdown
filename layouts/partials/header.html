@@ -1,14 +1,16 @@
 <div id="nav-border" class="container">
-	<!-- 创建一个导航栏的 <nav> 元素， -->
-	<div class="su-brand-bar su-brand-bar--white">
-		<div class="su-brand-bar__container">
-			<a class="su-brand-bar__logo" href="{{ .Site.Params.Toporg.url }}">
+
+	<!-- Toporg 的单色栏 -->
+	<div class="top-brand-bar">
+		<div class="top-brand-column">
+			<a class="top-brand-text" href="{{ .Site.Params.Toporg.url }}">
 				{{ .Site.Params.Toporg.name }}
 			</a>
 		</div>
 	</div>
 	
-	<nav>
+	<!-- 创建一个导航栏的 <nav> 元素， -->
+	<!-- <nav>
 		<div class="menu-container menu-normal">
 
 		<ul class="desktop-menu list-inline mb-0 justify-content-end" id="desktop-menu">
@@ -21,9 +23,19 @@
 			{{ end }}
 		</ul>
 		</div>
-	</nav>
+	</nav> -->
 
-
+	<div class="navbar">
+		<div class="navbar-column">
+			<!-- <a class="mr-auto" href="{{ site.BaseURL | relLangURL }}"> -->
+				<img height="30px" src="{{ site.Params.logo.longlogo | absURL}}"
+				  alt="{{ site.Title }}">
+			  <!-- </a> -->
+		{{ range site.Menus.main }}
+		<a href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
+		{{ end }}
+		</div>
+	</div>
 	<!-- <nav id="nav" class="nav justify-content-center"> -->
 		<!-- 使用 Go 语言模板引擎的语法开始一个循环，遍历网站（.Site）的 "main" 菜单。 -->
         <!-- {{ range .Site.Menus.main }}

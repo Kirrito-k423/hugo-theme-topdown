@@ -1,5 +1,67 @@
 @charset "UTF-8";
 
+
+/* 文字字体，字号，颜色 */
+/* 背景色，长宽，其他 */
+
+
+.top-brand-bar{
+    /* 悬浮 */
+    position: fixed; /* 固定导航栏位置 */
+    top: 0; /* 将导航栏固定在页面顶部 */
+
+    height: 20px;  
+    width: 100%;
+    padding: 5px; /* 设置导航栏内边距*/
+
+    z-index: 1000; /* 设置导航栏的层级，确保它在其他元素之上 */
+    background-color: #fff;
+	margin: 0 auto;
+}
+
+.top-brand-column{
+    /* 悬浮 */
+    position: absolute; 
+    left: 10%;
+    right: 10%;
+
+    background-color: #fff;
+    z-index: 1001; /* 设置导航栏的层级，确保它在其他元素之上 */
+}
+
+.top-brand-text{
+    font-family: Stanford,"Source Serif Pro",Georgia,Times,Times New Roman,serif;
+    font-size: 20px;
+    text-decoration: none; /* 去除下划线， 去除装饰*/
+    color: #8c1515;
+
+    -webkit-font-smoothing: antialiased;  /* 启用 Webkit 渲染引擎的抗锯齿效果 */
+    -moz-osx-font-smoothing: auto;        /*启用 Mozilla 渲染引擎的抗锯齿效果 */
+}
+
+.navbar {
+    position: fixed; /* 固定导航栏位置 */
+    top: 30px; /*top-bar height+2*padding */
+    left: 0px;
+
+    height: 30px; 
+    width: 100%; /* 设置导航栏宽度为100% */
+    padding: 10px; /* 设置导航栏内边距*/
+
+    background-color: #172e5c; /* 设置导航栏背景颜色 */
+    color: #fff; /* 设置导航栏文字颜色 */
+}
+
+.navbar-column {
+    position: absolute; 
+    top: 10px;
+    left: 10%;
+    right: 10%;
+
+}
+
+/* other */
+
 .white {
     color: #fff
 }
@@ -8,45 +70,7 @@
     background-color: #172e5c
 }
 
-.su-brand-bar--white {
-    background-color: #fff
-}
-
-.su-brand-bar--white .su-brand-bar__logo {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: auto;
-    color: #8c1515
-}
-
-.su-brand-bar{
-	width: 82%;
-	margin: 0 auto;
-}
 
 
-.su-brand-bar__logo {
-    display: inline-block;
-    font-family: Stanford,"Source Serif Pro",Georgia,Times,Times New Roman,serif;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
-    text-decoration: none;
-    line-height: .75;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    letter-spacing: 0;
-    -webkit-font-feature-settings: "liga";
-    -ms-font-feature-settings: "liga" 1;
-    font-feature-settings: "liga";
-    -webkit-font-variant-ligatures: discretionary-ligatures;
-    font-variant-ligatures: discretionary-ligatures;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin-top: 8px;
-	margin-bottom: 8px;
-    white-space: nowrap;
-    color: #fff;
-    font-size: 20px;
-    -ms-grid-column: 2
-}
+
+
