@@ -1,0 +1,11 @@
+
+baseURL = "http://icarus1.swangeese.fun"
+title = "ACSA Lab"
+theme = "topdown"
+
+##### tsj #####
+[params.toporg]
+name = "USTC"
+url = "https://en.ustc.edu.cn/"
+[params.logo]
+longlogo = "images/acsa_light.png"

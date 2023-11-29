@@ -4,7 +4,7 @@
     color: #fff
 }
 
-.desktop-menu {
+.menu-container {
     background-color: #172e5c
 }
 
@@ -16,6 +16,11 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: auto;
     color: #8c1515
+}
+
+.su-brand-bar{
+	width: 82%;
+	margin: 0 auto;
 }
 
 
@@ -39,6 +44,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin-top: 8px;
+	margin-bottom: 8px;
     white-space: nowrap;
     color: #fff;
     font-size: 20px;

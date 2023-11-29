@@ -2,6 +2,14 @@
 
 A **developing** Hugo theme meticulously crafted for personal/team/lab/start-up **presentations**, featuring an intuitive **top-down organizational** structure.
 
+## test site
+
+```bash
+git clone https://github.com/Kirrito-k423/hugo-theme-topdown.git topdown
+cd topdown/exampleSite/
+hugo server --themesDir ../.. -t topdown --bind=222.195.72.221 --baseURL=http://222.195.72.221 -p 1314 -D -d ../../../public_2
+```
+
 ## Why It's Necessary for Me
 
 (If you have great ideas, please let me know)
