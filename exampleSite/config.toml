@@ -9,3 +9,25 @@ name = "USTC"
 url = "https://en.ustc.edu.cn/"
 [params.logo]
 longlogo = "images/acsa_light.png"
+
+[menu] 
+
+[[menu.main]]
+name = "People"
+url = "people"
+weight = 1
+
+[[menu.main]]
+name = "Publications"
+url = "publications"
+weight = 2
+
+[[menu.main]]
+name = "Events"
+url = "/Events" # folder
+weight = 3
+
+[[menu.main]]
+name = "about"
+url = "about" # file
+weight = 4
