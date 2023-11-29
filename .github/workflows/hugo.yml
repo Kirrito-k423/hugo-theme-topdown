@@ -22,10 +22,14 @@ jobs:
           #extended: true
 
       - name: Build
-        run: cd exampleSite\
-          - hugo --themesDir ../.. -t topdown -d ../public
-          - ls
-          - ls ..
+        run: |
+          cd exampleSite
+          hugo --themesDir ../.. -t topdown -d ../public
+
+      - name: check
+        run: |
+          ls
+          ls ..
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

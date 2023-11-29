@@ -37,7 +37,7 @@ read my [post](https://shaojiemike.top/thinking/2023/11/24/When4teampage/)
 
 ~~(I hope to finish this during my free time before June 2024, the time I graduate from school)~~
 
-1. [ ] Learn how SSG works.
+1. [x] Learn how SSG works.
    1. [ ] make icarus support mkdocs grammar
 2. [ ] Modify some existing templates.
 3. [ ] Implement more detailed functions.
