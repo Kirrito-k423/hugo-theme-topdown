@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on ACSA Lab</title>
+    <link>http://icarus1.swangeese.fun/categories/</link>
+    <description>Recent content in Categories on ACSA Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <atom:link href="http://icarus1.swangeese.fun/categories/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

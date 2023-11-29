@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ACSA Lab</title>
+    <link>http://icarus1.swangeese.fun/</link>
+    <description>Recent content on ACSA Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <atom:link href="http://icarus1.swangeese.fun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://icarus1.swangeese.fun/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://icarus1.swangeese.fun/about/</guid>
+      <description>About ACSA 还在写，不要急~</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://icarus1.swangeese.fun/people/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://icarus1.swangeese.fun/people/</guid>
+      <description>Professors An hong, Junshi Chen
+PhD Jun Shi, qingcai jiang
+Master Students tsj, yfy, ibug
+Alumni of the ACSALab lingHan</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://icarus1.swangeese.fun/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://icarus1.swangeese.fun/publications/</guid>
+      <description>2023 2022 2014 Gongming Li, Hong An, Qi Li, Bobin Deng, Wenbo Dai:Efficient execution of speculative threads and transactions with hardware transactional memory.In Future Generation Comp. Syst. 30: 242-253 (2014) Feng Li, Hong An, Weihao Liang, Xiaoqiang Li, Yichao Cheng, Xia Jiang.A Compiler Translate Directive-Based Language to Optimized CUDA.In HPCC/CSS/ICESS 2014: 982-989 Yichao Cheng, Hong An, Zhitao Chen, Feng Li, Zhaohui Wang, Xia Jiang, Yi Peng. Understanding the SIMD Efficiency of Graph Traversal on GPUs.</description>
+    </item>
+  </channel>
+</rss>
