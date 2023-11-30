@@ -22,8 +22,8 @@
 .top-brand-column{
     /* 悬浮 */
     position: absolute; 
-    left: 10%;
-    right: 10%;
+    left: 20%;
+    right: 20%;
 
     background-color: #fff;
     z-index: 1001; /* 设置导航栏的层级，确保它在其他元素之上 */
@@ -55,8 +55,8 @@
 .navbar-column {
     position: absolute; 
     top: 10px;
-    left: 10%;
-    right: 10%;
+    left: 20%;
+    right: 20%;
 
     display: flex;
     justify-content: flex-end;
@@ -74,6 +74,7 @@
     margin-left: 30px; /* 为了添加一些间距，可以根据需要调整 */
     font-family: Circular Std,Source Sans Pro,sans-serif;
     font-weight: 600;
+    text-shadow: 0 1px 7px rgba(0,0,0,.4);
 }
 
 /* footer */
@@ -89,17 +90,6 @@
     margin-top: 80px;
 }
 
-
-
-/* other */
-
-.white {
-    color: #fff
-}
-
-.menu-container {
-    background-color: #172e5c
-}
 
 
 
