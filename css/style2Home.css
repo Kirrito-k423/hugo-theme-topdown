@@ -3,20 +3,47 @@
 
 /* 文字字体，字号，颜色 */
 /* 背景色，长宽，其他 */
+body {
+    margin: 0; /* 重置 body 的默认外边距 */
+    padding: 0; /* 重置 body 的默认内边距 */
+    height: 100vh; /* 设置 body 的高度为视口高度，确保背景图片充满整个页面 */
+    background-image: url('/images/first.png'); /* 替换 'your-background-image.jpg' 为你的背景图片路径 */
+    background-position: center center; /* 将背景图片的中心锚定在页面的中心 */
+    background-repeat: no-repeat; /* 禁止背景图片重复显示 */
+    background-size: cover; /* 使背景图片尽可能地覆盖整个容器 */
+    background-attachment: fixed; /* 使背景图片固定在视口中 */
+}
 
 .home-fisrt-full-page{
     position: fixed;
     top: 80px;
     bottom: 80px;
     left: 0px;
-    z-index: -2;
+    z-index: -3;
 
     height: 100%;
     width: 100%;
 
-    background-color: aquamarine;
-    border: 3px solid #73AD21;
+    /* background-color: aquamarine; */
+    /* border: 3px solid #73AD21; */
 }
+
+.slogan{
+
+    padding: 150px;
+    color: #fff; /* 设置链接颜色 */
+    font-family: Stanford,Source Serif Pro,Georgia,Times,Times New Roman,serif!important;
+    font-weight: normal;
+    font-size: 7.4505805969em;
+    text-align: right;
+    text-shadow: 0 0 30px rgba(0,0,0,.7);
+}
+
+.red-bold {
+    color: rgba(177, 4, 14); /* 设置红色 */
+    font-weight: bold; /* 设置加粗 */
+}
+
 
 .home-explore-bar{
     position: absolute;
@@ -39,7 +66,6 @@
 
 .home-explore-text {
     margin-top: 10px;
-    text-decoration: none;
     color: #fff; /* 设置链接颜色 */
     margin-left: 30px; /* 为了添加一些间距，可以根据需要调整 */
     font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
