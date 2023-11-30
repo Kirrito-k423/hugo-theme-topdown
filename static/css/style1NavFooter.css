@@ -90,11 +90,11 @@
 /* footer */
 
 .footer-primary{
+    height: 45px;
     background-color: #172e5c;
 
 }
 .footer-secondary{
-
     height: 90px;
     background-color: #2e2d29;
     color: #fff;
