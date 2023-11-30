@@ -155,7 +155,7 @@ header {
 }
 
 .home-rest-pages{
-    margin-top: 100%;
+    margin-top: 100vh;
     z-index: 0;
 
     background-color: #f4f4f4;
