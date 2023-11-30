@@ -1,28 +1,31 @@
 {{ define "main" }}
-<div class="topdown-main">
-  
-  <div class="home-fisrt-full-page">
-      xxx
-      <div class="home-explore-bar">
-        <div id="clicksource" class="home-explore-column">
-        <a href="#main-content-jump" style="text-decoration: none;" >
+  <div class="topdown-main">
+         
+      <div class="home-fisrt-full-page">
+          <div class="slogan">
+            <span class="red-bold">A</span>rchitecture <span class="red-bold">A</span>rtist
+          </div> 
+          <div class="home-explore-bar">
+            <div id="clicksource" class="home-explore-column">
+            <a href="#main-content-jump" style="text-decoration: none;" >
 
-          <p class="home-explore-text">
-            Explore ACSA<i class="home-explore-arrow" data-feather="chevron-down"></i>
-          </p>
-          
-        </a>
-        </div>
+              <p class="home-explore-text">
+                Explore ACSA<i class="home-explore-arrow" data-feather="chevron-down"></i>
+              </p>
+              
+            </a>
+            </div>
+          </div>
+      </div>
+      <div id="main-content-jump" class="home-rest-pages">
+          <h1 class="title">{{ .Site.Title }}
+            <br>working~~~
+            <br>working~~~
+            <br>working~~~
+            <br>working~~~
+            <br>working~~~
+          </h1>
       </div>
   </div>
-  <div id="main-content-jump" class="home-rest-pages">
-      <h1 class="title">{{ .Site.Title }}
-        <br>working~~~
-        <br>working~~~
-        <br>working~~~
-        <br>working~~~
-        <br>working~~~
-      </h1>
-  </div>
-</div>
+
 {{ end }}
