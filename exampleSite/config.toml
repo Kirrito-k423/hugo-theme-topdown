@@ -11,6 +11,7 @@ url = "https://en.ustc.edu.cn/"
 longlogo = "images/acsa_light.png"
 [params.pic]
 backgroundPic = "images/first.png"
+quotePic = "images/winter.jpg"
 
 
 [menu] 

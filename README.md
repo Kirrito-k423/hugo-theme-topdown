@@ -49,3 +49,4 @@ If someone wants to join me or complete these tasks for me, I would be grateful 
 ## Developing Blogs
 
 1. [Lab Homepage Template & Website Builder's Choice](https://shaojiemike.top/oow/2023/11/08/labTemplate/)
+2. [web design1: layout](https://shaojiemike.top/oow/2023/11/29/webDesign1LayoutOverview)
