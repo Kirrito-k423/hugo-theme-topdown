@@ -17,6 +17,7 @@
             </div>
           </div>
       </div>
+      
       <div id="main-content-jump" class="home-rest-pages">
           <h1 class="title">{{ .Site.Title }}
             <br>working~~~
@@ -28,4 +29,17 @@
       </div>
   </div>
 
+<!-- backpic -->
+<style>
+body {
+  margin: 0; /* 重置 body 的默认外边距 */
+  padding: 0; /* 重置 body 的默认内边距 */
+  height: 100vh; /* 设置 body 的高度为视口高度，确保背景图片充满整个页面 */
+  background-image: url("{{ site.Params.Pic.backgroundPic | absURL}}"); /* 替换 'your-background-image.jpg' 为你的背景图片路径 */
+  background-position: center center; /* 将背景图片的中心锚定在页面的中心 */
+  background-repeat: no-repeat; /* 禁止背景图片重复显示 */
+  background-size: cover; /* 使背景图片尽可能地覆盖整个容器 */
+  background-attachment: fixed; /* 使背景图片固定在视口中 */
+}
+</style>
 {{ end }}
