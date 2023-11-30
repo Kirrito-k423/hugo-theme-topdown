@@ -50,6 +50,7 @@
 
     background-color: #172e5c; /* 设置导航栏背景颜色 */
     color: #fff; /* 设置导航栏文字颜色 */
+    z-index: 1000; /* 设置导航栏的层级，确保它在其他元素之上 */
 }
 
 .navbar-column {
@@ -77,12 +78,7 @@
     text-shadow: 0 1px 7px rgba(0,0,0,.4);
 }
 
-/* footer */
 
-/* .topdown-footer{
-    position: fixed;
-    bottom: 0px;
-} */
 
 /* main */
 
@@ -91,7 +87,34 @@
 }
 
 
+/* footer */
 
+.footer-primary{
+    background-color: #172e5c;
+
+}
+.footer-secondary{
+
+    height: 90px;
+    background-color: #2e2d29;
+    color: #fff;
+}
+
+.footer-secondary-column{
+    position: absolute; 
+    left: 20%;
+    right: 20%;
+}
+
+.footer-secondary-text{
+    color: rgba(154, 154, 154);
+    text-decoration: none; /* 去除下划线， 去除装饰*/
+}
+
+.footer-secondary-url{
+    color: #fff;
+    text-decoration: none; /* 去除下划线， 去除装饰*/
+}
 
 
 
