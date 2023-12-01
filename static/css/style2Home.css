@@ -309,3 +309,24 @@ header {
     top: 7px;
     right: 6px;
 }
+
+/* research */
+
+.grid-container{
+    display: flex; /*横向排开 */
+    flex-wrap: wrap; /* 允许自动换行 */
+}
+
+.grid-container figure{
+    width: calc(33% - 80px);
+}
+
+.grid-container strong{
+    font-size: 1.5625em;
+    font-weight: 900;
+    line-height: 1.25em;
+}
+
+.more-margin{
+    margin-bottom: 50px;
+}
