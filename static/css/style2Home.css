@@ -74,13 +74,13 @@
 
 .panel-white{
     background-color: #fff;
-    padding: 1em calc(50% - 715px);
+    padding: 1em calc(50% - 720px);
     text-align: center;
 }
 
 .panel-fog{
     background-color: #f4f4f4;
-    padding: 1em calc(50% - 715px);
+    padding: 1em calc(50% - 720px);
     text-align: center;
 }
 
@@ -163,7 +163,98 @@ header {
 
 /* grid */
 
+.six-grids{
+    display: flex; /*横向排开 */
+    flex-wrap: wrap; /* 允许自动换行 */
+}
 
+.big-grid{
+    position: relative;
+    /* border: 1px solid #ad214b; */
+    width: calc(25% + 315px);
+    height: 350px;
+    box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
+    margin-left: 35px;
+    margin-bottom: 35px;
+    overflow: hidden; /* 隐藏超出容器的部分 */
+    background-color: #fff;
+}
+
+.small-grid{
+    position: relative;
+    /* border: 1px solid #22ca76; */
+    width: calc(12.5% + 140px); /*127px*/
+    box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
+    margin-left: 35px;
+    margin-bottom: 35px;
+    overflow: hidden; /* 隐藏超出容器的部分 */
+    background-color: #fff;
+}
+
+.small-grid-pic{
+    height: 200px;
+}
+
+.landscape {
+    object-fit: cover; /* 填充整个容器，保持纵横比，可能裁剪部分内容 */
+    width: 100%;
+    height: 100%;
+}
+
+.grid-content{
+    position: absolute;
+    top: 200px;
+    width: 90%;
+    padding: 28px;
+}
+
+.post-meta{
+    position: absolute;
+    top: 0px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 1.2;
+    color: rgb(252, 230, 225);
+    text-shadow: rgba(0,0,0,.6) 0 0 2px;
+    text-align: left;
+}
+
+.grid-content h3 a{
+    position: absolute;
+    top: 40px;
+    width: 90%;
+    font-size: 1.3888888889em;
+    text-decoration: none;
+    letter-spacing: .03em;
+    font-weight: 600;
+    line-height: 1.2;
+    display: block;
+    text-shadow: rgba(0,0,0,.6) 0 0 4px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+}
+
+.small-grid-content .post-meta{
+    color: #820000;
+}
+
+.small-grid-content{
+    position: absolute;
+    top: 200px;
+    padding: 28px;
+}
+
+.small-grid-content h3 a{
+    font-size: 1em;
+    text-decoration: none;
+    letter-spacing: .03em;
+    font-weight: 700;
+    line-height: 1.25em;
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
 
 
 
