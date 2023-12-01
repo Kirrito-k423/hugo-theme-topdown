@@ -4,18 +4,9 @@ A **developing** Hugo theme meticulously crafted for personal/team/lab/start-up 
 
 > [!CAUTION]  
 > The project development is still in the conceptual stage.
- 
-> [!CAUTION]  
-> 设计探讨：
-> 1. 页面排版设计的建议（合适的模板）
-> 2. 内容组织的探讨
-> 3. 额外的功能需求
-> 
-> ACSA 组内信息收集：
-> 1. 各种图片（宣传图，活动图
-> 2. 各种文本（实验室的admission，组织架构设计的初衷
-> 3. 当前成员的信息（头像，中文姓名以及拼音，研究方向以及成果
-> 4. 校友信息（中文姓名以及拼音，去向以及研究内容。欢迎提供其他信息
+
+> [!WARNING] 
+> At the current stage, the website design has heavily drawn inspiration from Stanford University's official website, which may lead to legal issues. Considering this, there are plans to gradually replace the design.
 
 ## test site
 
@@ -68,3 +59,15 @@ If someone wants to join me or complete these tasks for me, I would be grateful 
 2. [web design1: layout](https://shaojiemike.top/oow/2023/11/29/webDesign1LayoutOverview)
 3. [web design2: link content](https://shaojiemike.top/oow/2023/12/01/webDesign2LinkContent/)
 4. [web design3: further features](https://shaojiemike.top/oow/2023/12/01/webDesign3FutureFeatures/)
+
+> [!CAUTION]  
+> 设计探讨：
+> 1. 页面排版设计的建议（合适的模板）
+> 2. 内容组织的探讨
+> 3. 额外的功能需求
+> 
+> ACSA 组内信息收集：
+> 1. 各种图片（宣传图，活动图
+> 2. 各种文本（实验室的admission，组织架构设计的初衷
+> 3. 当前成员的信息（头像，中文姓名以及拼音，研究方向以及成果
+> 4. 校友信息（中文姓名以及拼音，去向以及研究内容。欢迎提供其他信息
