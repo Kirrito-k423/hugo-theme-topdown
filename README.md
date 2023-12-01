@@ -23,8 +23,8 @@ hugo server --themesDir ../.. -t topdown --bind=222.195.72.221 --baseURL=http://
 2. Influenced by the notion that every presentation should follow a top-down structure, I believe in presenting the key or abstract of our work first. This approach allows the reader to decide whether to delve deeper by using a "LEARN MORE" button.
 3. I consider the template crucial for CEOs/employees to keep their mission in mind and for visitors to quickly grasp information about the organization or product. Everyone should be able to efficiently obtain the information they seek.
 
-> [!WARNING] Why I was hesitant about development
-> read my [post](https://shaojiemike.top/thinking/2023/11/24/When4teampage/)
+> [!WARNING] 
+> [Why I was hesitant about development](https://shaojiemike.top/thinking/2023/11/24/When4teampage/)
 
 ## My Ideal Theme 
 
