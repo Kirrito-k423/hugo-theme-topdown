@@ -168,6 +168,11 @@ header {
     flex-wrap: wrap; /* 允许自动换行 */
 }
 
+.three-grids{
+    display: flex; /*横向排开 */
+    flex-wrap: wrap; /* 允许自动换行 */
+}
+
 .big-grid{
     position: relative;
     /* border: 1px solid #ad214b; */
@@ -191,9 +196,26 @@ header {
     background-color: #fff;
 }
 
+.one-grid{
+    position: relative;
+    /* border: 1px solid #22ca76; */
+    width: 30.5%; /*127px*/
+    height: 450px;
+    /* box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15); */
+    margin: 19px;
+
+    overflow: hidden; /* 隐藏超出容器的部分 */
+    background-color: #fff;
+}
+
 .small-grid-pic{
     box-shadow: 0 0 1px rgba(0,0,0,.15), 0 1px 1px rgba(0,0,0,.15);
     height: 200px;
+}
+
+.one-grid-pic{
+    box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
+    height: 290px;
 }
 
 .landscape {
@@ -259,6 +281,31 @@ header {
     text-align: left;
 }
 
+.one-grid-content{
+    text-align: left;
+}
 
+.one-grid-content h3{
+    font-size: 1.25em;
+    font-weight: 700;
+    line-height: 1.25em;
+    margin-bottom: 0.4096em;
+}
 
+.one-grid-content p{
+    font-weight: 400;
+    /* font-size: 1.9em;
+    line-height: 1.59375; */
+}
 
+.jump-link{
+    color: #006cb8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.jump-link-arrow {
+    position: relative;
+    top: 7px;
+    right: 6px;
+}
