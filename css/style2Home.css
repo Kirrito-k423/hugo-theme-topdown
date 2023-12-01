@@ -168,6 +168,11 @@ header {
     flex-wrap: wrap; /* 允许自动换行 */
 }
 
+.four-grids{
+    display: flex; /*横向排开 */
+    flex-wrap: wrap; /* 允许自动换行 */
+}
+
 .three-grids{
     display: flex; /*横向排开 */
     flex-wrap: wrap; /* 允许自动换行 */
@@ -208,6 +213,19 @@ header {
     background-color: #fff;
 }
 
+.quarter-grid{
+    position: relative;
+    /* border: 1px solid #22ca76; */
+    width: calc(12.5% + 140px); /*127px*/
+    height: 550px;
+    box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
+    margin-left: 35px;
+    margin-bottom: 35px;
+
+    overflow: hidden; /* 隐藏超出容器的部分 */
+    background-color: #fff;
+}
+
 .small-grid-pic{
     box-shadow: 0 0 1px rgba(0,0,0,.15), 0 1px 1px rgba(0,0,0,.15);
     height: 200px;
@@ -216,6 +234,58 @@ header {
 .one-grid-pic{
     box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
     height: 290px;
+}
+
+.quarter-grid-pic{
+    box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
+    height: 290px;
+}
+
+.start-time{
+    text-transform: uppercase;
+    text-align: left;
+    color: #2E2D29;
+}
+
+.quarter-grid .small-grid-content{
+    top: 350px;
+}
+
+.event-short-date {
+    margin-left: 28px;
+    background-color: #2f2424;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15), 0 3px 3px rgba(0, 0, 0, 0.15);
+    margin-bottom: -2.7em;
+    top: -2.5em;
+    position: relative;
+    background: #2f2424;
+    width: 5em;
+    height: 5em;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    line-height: 1.1;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.month {
+    display: block;
+    font-weight: 400;
+    line-height: 1.1;
+    border: 0 none;
+    text-decoration: none;
+}
+
+.day{
+    font-size: 1.375em;
+    font-weight: 800;
 }
 
 .landscape {
