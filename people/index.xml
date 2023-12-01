@@ -1,37 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ACSA Lab</title>
-    <link>https://kirrito-k423.github.io/hugo-theme-topdown/</link>
-    <description>Recent content on ACSA Lab</description>
+    <title>People on ACSA Lab</title>
+    <link>https://kirrito-k423.github.io/hugo-theme-topdown/people/</link>
+    <description>Recent content in People on ACSA Lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <atom:link href="https://kirrito-k423.github.io/hugo-theme-topdown/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>https://kirrito-k423.github.io/hugo-theme-topdown/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/about/</guid>
-      <description>About ACSA 还在写，不要急~
-Where is ACSA? google map</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://kirrito-k423.github.io/hugo-theme-topdown/home/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/home/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://kirrito-k423.github.io/hugo-theme-topdown/people/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/people/</guid>
-      <description>Professors An hong, Junshi Chen
-PhD Jun Shi, qingcai jiang
-Master Students tsj, yfy, ibug
-Alumni of the ACSALab lingHan</description>
-    </item>
+    <atom:link href="https://kirrito-k423.github.io/hugo-theme-topdown/people/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>https://kirrito-k423.github.io/hugo-theme-topdown/people/anhong/</link>
@@ -91,13 +66,6 @@ ACM SIGHPC China 副主任、国际高性能计算咨询委员会委员、中国
       <description>个人简介 丁保荣，硕士一年级，上海交通大学并行与分布式系统研究所。在陈榕教授的指导下，当前主要研究方向为图计算与基于RDMA的分布式数据结构。
 学术经历 2017.09 - 2021.6，南京大学计算机科学与技术系(拔尖计划)，本科生 2019.02 香港大学，香港科技大学，香港中文大学等，短期交流 2021.09 - 至今，上海交通大学软件学院，研究生，导师：陈榕 实习经历 2020.06 - 2020.09， 腾讯，后台开发实习生 2020.09 - 2021.02，字节跳动，基础架构实习生 2021.08 字节跳动夏令营，计算机体系结构方向 研究方向 分布式图计算与基于RDMA的分布式数据结构。
 研究项目 2017.09 - 2021.6，基于RDMA的分布式数据结构 2021.09 - 至今，面向统一共享内存架构的图计算系统 获奖情况 2020 卓越助教奖 2017 国家奖学金 教育部 助教课程 2019-2020 Introduction to Computer Systems 发表论文 [ATC ‘20] Harmonizing Performance and Isolation in Microkernels with Efficient Intra-kernel Isolation and Communication. Jinyu Gu, Xinyue Wu, Wentai Li, Nian Liu, Zeyu Mi, Yubin Xia and Haibo Chen.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/</guid>
-      <description>2023 2022 2014 Gongming Li, Hong An, Qi Li, Bobin Deng, Wenbo Dai:Efficient execution of speculative threads and transactions with hardware transactional memory.In Future Generation Comp. Syst. 30: 242-253 (2014) Feng Li, Hong An, Weihao Liang, Xiaoqiang Li, Yichao Cheng, Xia Jiang.A Compiler Translate Directive-Based Language to Optimized CUDA.In HPCC/CSS/ICESS 2014: 982-989 Yichao Cheng, Hong An, Zhitao Chen, Feng Li, Zhaohui Wang, Xia Jiang, Yi Peng. Understanding the SIMD Efficiency of Graph Traversal on GPUs.</description>
     </item>
   </channel>
 </rss>
