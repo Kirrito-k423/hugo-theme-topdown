@@ -1,6 +1,6 @@
 {{ define "main" }}
+{{ with .GetPage "home" }} 
   <div class="topdown-main">
-         
       <div class="home-fisrt-full-page">
 
           <!-- slogan -->
@@ -455,6 +455,7 @@
           </section>
 
           <!-- Lab Life -->
+          {{ if .Param "life_section" }}
           <section class="panel-white"> 
             <header>
               <h2 class="section-title">Lab Life</h2>
@@ -472,13 +473,12 @@
                   </div>
                   <div class="one-grid-content">
                     <h3>
-                      Spring and Autumn Outings
+                      {{ .Params.life1_h3 }}
                     </h3>
-                    <p>we prioritize team-building and close relationships among members. 
-                      Each spring and autumn, we organize outings to foster a strong sense of camaraderie and provide an opportunity for team members to relax and bond.</p>
+                      <p>{{ .Params.life1_text }}</p>
                     <p class="highlight-link">
                       <a class="jump-link" href="/">
-                        Spring and Autumn Outings
+                        {{ .Params.life1_h3 }}
                         <i class="jump-link-arrow" data-feather="chevron-right"></i>
                       </a>
                     </p>
@@ -532,7 +532,7 @@
               <a href="{{ site.BaseURL }}/about" class="more-button">More about lab life</a>
             </section>
           </section>
-
+          {{  end }}
       </div>
   </div>
 
@@ -549,4 +549,5 @@ body {
   background-attachment: fixed; /* 使背景图片固定在视口中 */
 }
 </style>
+{{ end }}
 {{ end }}
