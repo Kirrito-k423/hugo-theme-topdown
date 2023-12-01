@@ -4,6 +4,18 @@ A **developing** Hugo theme meticulously crafted for personal/team/lab/start-up 
 
 > [!CAUTION]  
 > The project development is still in the conceptual stage.
+ 
+> [!CAUTION]  
+> 设计探讨：
+> 1. 页面排版设计的建议（合适的模板）
+> 2. 内容组织的探讨
+> 3. 额外的功能需求
+> 
+> ACSA 组内信息收集：
+> 1. 各种图片（宣传图，活动图
+> 2. 各种文本（实验室的admission，组织架构设计的初衷
+> 3. 当前成员的信息（头像，中文姓名以及拼音，研究方向以及成果
+> 4. 校友信息（中文姓名以及拼音，去向以及研究内容。欢迎提供其他信息
 
 ## test site
 
