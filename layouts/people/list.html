@@ -1,0 +1,130 @@
+{{ define "main" }}
+<div class="topdown-main">
+	<h1>成员</h1>
+	<p>排版有待调整</p>
+
+	<hr aria-hidden="true">
+	<!-- https://gohugo.io/templates/lists/#example-project-directory -->
+
+	{{ $numMapping := dict  "01" "一" "02" "二" "03" "三" "04" "四" "05" "五" "06" "六" "07" "七" "08" "八" "09" "九" "10" "十" "11" "十一" "12" "十二" }}
+	{{ $currentYear := now.Year }}
+
+	<h1>教师们</h1>
+	{{ range .Pages.ByPublishDate.Reverse }}
+	<div>
+		{{ $RelPermalink := .RelPermalink }}
+		{{ $Title := .Title }}
+		{{ $cn_name := .Params.cn_name }}
+		{{ $cn_level := .Params.cn_level }}
+		{{ $img := .Params.img }}
+
+		{{ with .Params.cn_level }}
+		<!-- <h3><a class="title" href="{{ $RelPermalink }}">{{ $Title }}</a></h3> -->
+
+		<img width=150px src={{ $img }}>
+		<a class="summary" href="{{ $RelPermalink }}">
+			<!-- Hugo automatically takes the first 70 words of your content as its summary and stores it into the .Summary variable -->
+			<p>{{ $cn_name }} ：{{ $cn_level }} </p>
+		</a>
+		{{ end }}
+	</div>
+	{{ end }}
+
+	<h1>博士研究生</h1>
+	{{ range .Pages.ByPublishDate.Reverse }}
+	<p>
+		{{ $RelPermalink := .RelPermalink }}
+		{{ $cn_name := .Params.cn_name }}
+		{{ $cn_level := .Params.cn_level }}
+		{{ $img := .Params.img }}
+
+		{{ with .Params.year_graduation }}
+		{{ else }}
+			{{ with .Params.year_enrollment_PhD }}
+				<img width=150px src={{ $img }}>
+				<a class="summary" href="{{ $RelPermalink }}">
+					<!-- Hugo automatically takes the first 70 words of your content as its summary and stores it into the .Summary variable -->
+					{{ $yearDifference := sub $currentYear . }}
+					<p>{{ $cn_name }} ：博士{{ index $numMapping (printf "%02d" $yearDifference) }}年级 </p>
+				</a>
+			{{ end }}
+		{{ end }}
+	</p>
+	{{ end }}
+
+	<h1>硕士研究生</h1>
+	{{ range .Pages.ByPublishDate.Reverse }}
+	<p>
+		{{ $RelPermalink := .RelPermalink }}
+		{{ $cn_name := .Params.cn_name }}
+		{{ $cn_level := .Params.cn_level }}
+		{{ $img := .Params.img }}
+
+		{{ with .Params.year_graduation }}
+		{{ else }}
+			{{ with .Params.year_enrollment_PhD }}
+			{{ else }}
+				{{ with .Params.year_enrollment }}
+					<img width=150px src={{ $img }}>
+					<a class="summary" href="{{ $RelPermalink }}">
+						<!-- Hugo automatically takes the first 70 words of your content as its summary and stores it into the .Summary variable -->
+						{{ $yearDifference := sub $currentYear . }}
+						<p>{{ $cn_name }} ：硕士{{ index $numMapping (printf "%02d" $yearDifference) }}年级 </p>
+					</a>
+				{{ end }}
+			{{ end }}
+		{{ end }}
+	</p>
+	{{ end }}
+
+	<h1>本科生</h1>
+	{{ range .Pages.ByPublishDate.Reverse }}
+	<p>
+		{{ $RelPermalink := .RelPermalink }}
+		{{ $cn_name := .Params.cn_name }}
+		{{ $cn_level := .Params.cn_level }}
+		{{ $img := .Params.img }}
+
+		{{ with .Params.year_graduation }}
+		{{ else }}
+			{{ with .Params.year_enrollment_PhD }}
+			{{ else }}
+				{{ with .Params.year_enrollment }}
+				{{ else }}
+					{{ with .Params.year_enrollment_undergraduate }}
+						<img width=150px src={{ $img }}>
+						<a class="summary" href="{{ $RelPermalink }}">
+							<!-- Hugo automatically takes the first 70 words of your content as its summary and stores it into the .Summary variable -->
+							{{ $yearDifference := sub $currentYear . }}
+							<p>{{ $cn_name }} ：本科{{ index $numMapping (printf "%02d" $yearDifference) }}年级 </p>
+						</a>
+					{{ end }}
+				{{ end }}
+			{{ end }}
+		{{ end }}
+	</p>
+	{{ end }}
+
+
+	<h1>校友</h1>
+	{{ range .Pages.ByPublishDate.Reverse }}
+	<p>
+		{{ $RelPermalink := .RelPermalink }}
+		{{ $cn_name := .Params.cn_name }}
+		{{ $employment := .Params.employment }}
+		{{ $img := .Params.img }}
+
+		{{ with .Params.year_graduation }}
+
+			<img width=150px src={{ $img }}>
+			<a class="summary" href="{{ $RelPermalink }}">
+				<!-- Hugo automatically takes the first 70 words of your content as its summary and stores it into the .Summary variable -->
+				<p>{{ $cn_name }} ：{{ $employment }} </p>
+			</a>
+		{{ end }}
+	</p>
+	{{ end }}
+
+
+</div>
+{{ end }}

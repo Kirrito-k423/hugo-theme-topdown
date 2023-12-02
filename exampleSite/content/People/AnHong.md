@@ -1,8 +1,9 @@
 ---
 # 后续与个人不符合的选项，请空缺
 cn_name: 安虹
-cn_level: 教授          # 教授，研究员，（博士生几年级，硕士生几年级后续根据入学年份自动计算
+cn_level: 教授          # 教授，研究员（博士生,硕士生不用填
 img: https://cs.ustc.edu.cn/_upload/article/images/3a/fd/01aaa2ca4444b0b2ed20d9e04607/f0443061-aa51-4a07-b435-9437f9a411c4.png # 头像链接
+date: 2023-01-01 # 技巧：使用hugo的日期来排序，时间越大(但是不能超过当前时间)，优先级越高。默认时间0001-01-01
 
 year_enrollment:        # 硕士入学年份，来计算硕士生几年级
 year_enrollment_PhD:    # 博士入学年份，来计算博士生几年级
