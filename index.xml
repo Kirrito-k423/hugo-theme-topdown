@@ -6,36 +6,12 @@
     <description>Recent content on ACSA Lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://kirrito-k423.github.io/hugo-theme-topdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://kirrito-k423.github.io/hugo-theme-topdown/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/about/</guid>
-      <description>About ACSA 还在写，不要急~
-Where is ACSA? google map</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://kirrito-k423.github.io/hugo-theme-topdown/home/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/home/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://kirrito-k423.github.io/hugo-theme-topdown/people/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/people/</guid>
-      <description>Professors An hong, Junshi Chen
-PhD Jun Shi, qingcai jiang
-Master Students tsj, yfy, ibug
-Alumni of the ACSALab lingHan</description>
-    </item>
-    <item>
-      <title></title>
       <link>https://kirrito-k423.github.io/hugo-theme-topdown/people/anhong/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://kirrito-k423.github.io/hugo-theme-topdown/people/anhong/</guid>
       <description>安虹，博士，教授，博导，省教学名师。
 2000年获中国科学技术大学计算机专业工学博士学位，
@@ -63,6 +39,37 @@ ACM SIGHPC China 副主任、国际高性能计算咨询委员会委员、中国
 获奖情况： 2000年，中科院科技进步二等奖 2000年，中国科大教学成果一等奖 2001年，国家科技进步二等奖 2001年，国家级教学成果二等奖 2001年，安徽省教学成果一等奖 2004年，中国科学院杰出科技成就奖 2008年，中国科学院朱李月华优秀教师奖 2008年，宝钢优秀教师奖 2009年，国家级“并行计算”教学团队 2012年，中国科大学位与研究生教育先进个人 2013年，中国科大平凡基金教育奖 2013年，中国科大“全院办校、所系结合”优秀个人 2015年，宝钢优秀教师奖 2016年，中国科大西区精神教学成就奖 2017年，中国科学院教育教学成果一等奖 2018年，安徽省教学名师 2019年，安徽省模范教师 2020年，安徽省教书育人楷模 2020年，国家级一流线下课程《计算机系统概论》 2020年，教育部全国高校计算机专业优秀教师 2021年，教育部基础学科拔尖人才培养计划优秀教师奖 2021年，中国科大李佩奖 2021年，ACM 超算“戈登•贝尔奖”提名 2021年，CCF “中国超算年度最佳应用奖” 2022年，ACM 超算“戈登•贝尔奖”提名 2022年，CCF “中国超算年度最佳应用奖” 2022年，中国科大杰出研究校长奖 教材著作： [1]陈国良，安虹，陈崚，郑启龙，单久龙，并行算法实践，高等教育出版社，2004。</description>
     </item>
     <item>
+      <title>test</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/people/text/</link>
+      <pubDate>Sun, 02 Dec 1923 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/people/text/</guid>
+      <description>个人简介 丁保荣，硕士一年级，上海交通大学并行与分布式系统研究所。在陈榕教授的指导下，当前主要研究方向为图计算与基于RDMA的分布式数据结构。
+学术经历 2017.09 - 2021.6，南京大学计算机科学与技术系(拔尖计划)，本科生 2019.02 香港大学，香港科技大学，香港中文大学等，短期交流 2021.09 - 至今，上海交通大学软件学院，研究生，导师：陈榕 实习经历 2020.06 - 2020.09， 腾讯，后台开发实习生 2020.09 - 2021.02，字节跳动，基础架构实习生 2021.08 字节跳动夏令营，计算机体系结构方向 研究方向 分布式图计算与基于RDMA的分布式数据结构。
+研究项目 2017.09 - 2021.6，基于RDMA的分布式数据结构 2021.09 - 至今，面向统一共享内存架构的图计算系统 获奖情况 2020 卓越助教奖 2017 国家奖学金 教育部 助教课程 2019-2020 Introduction to Computer Systems 发表论文 [ATC ‘20] Harmonizing Performance and Isolation in Microkernels with Efficient Intra-kernel Isolation and Communication. Jinyu Gu, Xinyue Wu, Wentai Li, Nian Liu, Zeyu Mi, Yubin Xia and Haibo Chen.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/about/</guid>
+      <description>About ACSA 还在写，不要急~
+Where is ACSA? google map</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/home/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/home/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/people/chenjunshi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/people/chenjunshi/</guid>
+      <description>大师兄</description>
+    </item>
+    <item>
       <title></title>
       <link>https://kirrito-k423.github.io/hugo-theme-topdown/people/jiangqingcai/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -82,15 +89,6 @@ ACM SIGHPC China 副主任、国际高性能计算咨询委员会委员、中国
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://kirrito-k423.github.io/hugo-theme-topdown/people/tanshaojie/</guid>
       <description>个人简介 谭邵杰</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://kirrito-k423.github.io/hugo-theme-topdown/people/text/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/people/text/</guid>
-      <description>个人简介 丁保荣，硕士一年级，上海交通大学并行与分布式系统研究所。在陈榕教授的指导下，当前主要研究方向为图计算与基于RDMA的分布式数据结构。
-学术经历 2017.09 - 2021.6，南京大学计算机科学与技术系(拔尖计划)，本科生 2019.02 香港大学，香港科技大学，香港中文大学等，短期交流 2021.09 - 至今，上海交通大学软件学院，研究生，导师：陈榕 实习经历 2020.06 - 2020.09， 腾讯，后台开发实习生 2020.09 - 2021.02，字节跳动，基础架构实习生 2021.08 字节跳动夏令营，计算机体系结构方向 研究方向 分布式图计算与基于RDMA的分布式数据结构。
-研究项目 2017.09 - 2021.6，基于RDMA的分布式数据结构 2021.09 - 至今，面向统一共享内存架构的图计算系统 获奖情况 2020 卓越助教奖 2017 国家奖学金 教育部 助教课程 2019-2020 Introduction to Computer Systems 发表论文 [ATC ‘20] Harmonizing Performance and Isolation in Microkernels with Efficient Intra-kernel Isolation and Communication. Jinyu Gu, Xinyue Wu, Wentai Li, Nian Liu, Zeyu Mi, Yubin Xia and Haibo Chen.</description>
     </item>
     <item>
       <title></title>

@@ -2,13 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/people/anhong/</loc>
+    <lastmod>2023-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/</loc>
+    <lastmod>2023-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/people/</loc>
+    <lastmod>2023-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/people/text/</loc>
+    <lastmod>1923-12-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://kirrito-k423.github.io/hugo-theme-topdown/about/</loc>
   </url><url>
     <loc>https://kirrito-k423.github.io/hugo-theme-topdown/home/</loc>
   </url><url>
-    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/people/</loc>
-  </url><url>
-    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/people/anhong/</loc>
+    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/people/chenjunshi/</loc>
   </url><url>
     <loc>https://kirrito-k423.github.io/hugo-theme-topdown/people/jiangqingcai/</loc>
   </url><url>
@@ -16,15 +26,13 @@
   </url><url>
     <loc>https://kirrito-k423.github.io/hugo-theme-topdown/people/tanshaojie/</loc>
   </url><url>
-    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/people/text/</loc>
-  </url><url>
     <loc>https://kirrito-k423.github.io/hugo-theme-topdown/publications/</loc>
-  </url><url>
-    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/</loc>
   </url><url>
     <loc>https://kirrito-k423.github.io/hugo-theme-topdown/categories/</loc>
   </url><url>
-    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/people/</loc>
+    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/tags/hpc/</loc>
+  </url><url>
+    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/tags/pim/</loc>
   </url><url>
     <loc>https://kirrito-k423.github.io/hugo-theme-topdown/tags/</loc>
   </url>
