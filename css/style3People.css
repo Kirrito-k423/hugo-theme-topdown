@@ -21,19 +21,31 @@
 }
 
 .person{
+    position: relative; /* 设置相对定位，用于绝对定位子元素 */
     width: 16%;
     margin: 20px;
     text-align: center;
 }
 
 .person div {
+    position: relative; /* 设置相对定位，用于绝对定位子元素 */
     text-align: center;
     margin: 5px;
 }
 
+.square-container {
+    width: 100%; /* 设置宽度等于父元素的宽度 */
+    padding-top: 100%; /* 设置 padding-top 百分比，使高度等于宽度 */
+    position: absolute; /* 设置绝对定位，使子元素脱离文档流 */
+}
+
 .person-img-container{
-    width: 150px; /* 设置容器的宽度 */
-    height: 150px; /* 设置容器的高度 */
+    position: absolute; /* 设置绝对定位，使内容脱离文档流 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* height: 150px; 设置容器的高度 */
     overflow: hidden; /* 隐藏溢出的部分 */
     display: inline-block; /* 或者使用 display: block; */
     margin: 0 auto; /* 使用 auto 将 .img-container 在水平方向上居中 */
