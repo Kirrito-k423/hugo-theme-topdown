@@ -76,3 +76,7 @@ img:hover {
 .person-title{
     font-size: 0.9em;
 }
+
+body {
+    min-width: 500px; 
+}
