@@ -1,7 +1,8 @@
 {{ define "main" }}
 <div class="topdown-main">
-	<h1>成员</h1>
-	<p>排版有待调整</p>
+	<div class="people-column">
+	<h1 style="text-align:left; font-size: xx-large;">成员</h1>
+	<!-- <p>排版有待调整</p> -->
 
 	<hr aria-hidden="true">
 	<!-- https://gohugo.io/templates/lists/#example-project-directory -->
@@ -10,121 +11,160 @@
 	{{ $currentYear := now.Year }}
 
 	<h1>教师们</h1>
-	{{ range .Pages.ByPublishDate.Reverse }}
-	<div>
-		{{ $RelPermalink := .RelPermalink }}
-		{{ $Title := .Title }}
-		{{ $cn_name := .Params.cn_name }}
-		{{ $cn_level := .Params.cn_level }}
-		{{ $img := .Params.img }}
+	<div class="people-group">
+		{{ range .Pages.ByPublishDate.Reverse }}
+			{{ $RelPermalink := .RelPermalink }}
+			{{ $Title := .Title }}
+			{{ $cn_name := .Params.cn_name }}
+			{{ $cn_level := .Params.cn_level }}
+			{{ $img := .Params.img }}
 
-		{{ with .Params.cn_level }}
-		<!-- <h3><a class="title" href="{{ $RelPermalink }}">{{ $Title }}</a></h3> -->
-
-		<img width=150px src={{ $img }}>
-		<a class="summary" href="{{ $RelPermalink }}">
-			<!-- Hugo automatically takes the first 70 words of your content as its summary and stores it into the .Summary variable -->
-			<p>{{ $cn_name }} ：{{ $cn_level }} </p>
-		</a>
-		{{ end }}
-	</div>
-	{{ end }}
-
-	<h1>博士研究生</h1>
-	{{ range .Pages.ByPublishDate.Reverse }}
-	<p>
-		{{ $RelPermalink := .RelPermalink }}
-		{{ $cn_name := .Params.cn_name }}
-		{{ $cn_level := .Params.cn_level }}
-		{{ $img := .Params.img }}
-
-		{{ with .Params.year_graduation }}
-		{{ else }}
-			{{ with .Params.year_enrollment_PhD }}
-				<img width=150px src={{ $img }}>
-				<a class="summary" href="{{ $RelPermalink }}">
-					<!-- Hugo automatically takes the first 70 words of your content as its summary and stores it into the .Summary variable -->
-					{{ $yearDifference := sub $currentYear . }}
-					<p>{{ $cn_name }} ：博士{{ index $numMapping (printf "%02d" $yearDifference) }}年级 </p>
+			{{ with .Params.cn_level }}
+			<div class="person">
+				<a class="person-img-container" href="{{ $RelPermalink }}">
+					<img src={{ $img }}>
 				</a>
+				<div>
+					<a class="person-name" href="{{ $RelPermalink }}">
+						<!-- Hugo automatically takes the first 70 words of your content as its summary and stores it into the .Summary variable -->
+						{{ $cn_name }}
+					</a>
+				</div>
+				
+				<div class="person-title">{{ $cn_level }}</div>
+			</div>
 			{{ end }}
 		{{ end }}
-	</p>
-	{{ end }}
+	</div>
 
-	<h1>硕士研究生</h1>
-	{{ range .Pages.ByPublishDate.Reverse }}
-	<p>
-		{{ $RelPermalink := .RelPermalink }}
-		{{ $cn_name := .Params.cn_name }}
-		{{ $cn_level := .Params.cn_level }}
-		{{ $img := .Params.img }}
+	<h1>博士研究生</h1>
+	<div class="people-group">
+		{{ range .Pages.ByPublishDate.Reverse }}
+			{{ $RelPermalink := .RelPermalink }}
+			{{ $cn_name := .Params.cn_name }}
+			{{ $cn_level := .Params.cn_level }}
+			{{ $img := .Params.img }}
 
-		{{ with .Params.year_graduation }}
-		{{ else }}
-			{{ with .Params.year_enrollment_PhD }}
+			{{ with .Params.year_graduation }}
 			{{ else }}
-				{{ with .Params.year_enrollment }}
-					<img width=150px src={{ $img }}>
-					<a class="summary" href="{{ $RelPermalink }}">
-						<!-- Hugo automatically takes the first 70 words of your content as its summary and stores it into the .Summary variable -->
+				{{ with .Params.year_enrollment_PhD }}
+					<div class="person">
+						<a class="person-img-container" href="{{ $RelPermalink }}">
+							<img src={{ $img }}>
+						</a>
+						<div>
+							<a class="person-name" href="{{ $RelPermalink }}">
+								<!-- Hugo automatically takes the first 70 words of your content as its summary and stores it into the .Summary variable -->
+								{{ $cn_name }}
+							</a>
+						</div>
+						
 						{{ $yearDifference := sub $currentYear . }}
-						<p>{{ $cn_name }} ：硕士{{ index $numMapping (printf "%02d" $yearDifference) }}年级 </p>
-					</a>
+						<div class="person-title">博士{{ index $numMapping (printf "%02d" $yearDifference) }}年级</div>
+					</div>
 				{{ end }}
 			{{ end }}
 		{{ end }}
-	</p>
-	{{ end }}
+	</div>
 
-	<h1>本科生</h1>
-	{{ range .Pages.ByPublishDate.Reverse }}
-	<p>
-		{{ $RelPermalink := .RelPermalink }}
-		{{ $cn_name := .Params.cn_name }}
-		{{ $cn_level := .Params.cn_level }}
-		{{ $img := .Params.img }}
+	<h1>硕士研究生</h1>
+	<div class="people-group">
+		{{ range .Pages.ByPublishDate.Reverse }}
+			{{ $RelPermalink := .RelPermalink }}
+			{{ $cn_name := .Params.cn_name }}
+			{{ $cn_level := .Params.cn_level }}
+			{{ $img := .Params.img }}
 
-		{{ with .Params.year_graduation }}
-		{{ else }}
-			{{ with .Params.year_enrollment_PhD }}
+			{{ with .Params.year_graduation }}
 			{{ else }}
-				{{ with .Params.year_enrollment }}
+				{{ with .Params.year_enrollment_PhD }}
 				{{ else }}
-					{{ with .Params.year_enrollment_undergraduate }}
-						<img width=150px src={{ $img }}>
-						<a class="summary" href="{{ $RelPermalink }}">
-							<!-- Hugo automatically takes the first 70 words of your content as its summary and stores it into the .Summary variable -->
+					{{ with .Params.year_enrollment }}
+						<div class="person">
+							<a class="person-img-container" href="{{ $RelPermalink }}">
+								<img src={{ $img }}>
+							</a>
+							<div>
+								<a class="person-name" href="{{ $RelPermalink }}">
+									<!-- Hugo automatically takes the first 70 words of your content as its summary and stores it into the .Summary variable -->
+									{{ $cn_name }}
+								</a>
+							</div>
+							
 							{{ $yearDifference := sub $currentYear . }}
-							<p>{{ $cn_name }} ：本科{{ index $numMapping (printf "%02d" $yearDifference) }}年级 </p>
-						</a>
+							<div class="person-title">硕士{{ index $numMapping (printf "%02d" $yearDifference) }}年级</div>
+						</div>
 					{{ end }}
 				{{ end }}
 			{{ end }}
 		{{ end }}
-	</p>
-	{{ end }}
+	</div>
+
+	<h1>本科生</h1>
+	<div class="people-group">
+		{{ range .Pages.ByPublishDate.Reverse }}
+			{{ $RelPermalink := .RelPermalink }}
+			{{ $cn_name := .Params.cn_name }}
+			{{ $cn_level := .Params.cn_level }}
+			{{ $img := .Params.img }}
+
+			{{ with .Params.year_graduation }}
+			{{ else }}
+				{{ with .Params.year_enrollment_PhD }}
+				{{ else }}
+					{{ with .Params.year_enrollment }}
+					{{ else }}
+						{{ with .Params.year_enrollment_undergraduate }}
+							<div class="person">
+								<a class="person-img-container" href="{{ $RelPermalink }}">
+									<img src={{ $img }}>
+								</a>
+								<div>
+									<a class="person-name" href="{{ $RelPermalink }}">
+										<!-- Hugo automatically takes the first 70 words of your content as its summary and stores it into the .Summary variable -->
+										{{ $cn_name }}
+									</a>
+								</div>
+								
+								{{ $yearDifference := sub $currentYear . }}
+								<div class="person-title">本科{{ index $numMapping (printf "%02d" $yearDifference) }}年级</div>
+							</div>
+						{{ end }}
+					{{ end }}
+				{{ end }}
+			{{ end }}
+		{{ end }}
+	</div>
 
 
 	<h1>校友</h1>
-	{{ range .Pages.ByPublishDate.Reverse }}
-	<p>
-		{{ $RelPermalink := .RelPermalink }}
-		{{ $cn_name := .Params.cn_name }}
-		{{ $employment := .Params.employment }}
-		{{ $img := .Params.img }}
+	<div class="people-group">
 
-		{{ with .Params.year_graduation }}
+		{{ range .Pages.ByPublishDate.Reverse }}
+			{{ $RelPermalink := .RelPermalink }}
+			{{ $cn_name := .Params.cn_name }}
+			{{ $employment := .Params.employment }}
+			{{ $img := .Params.img }}
 
-			<img width=150px src={{ $img }}>
-			<a class="summary" href="{{ $RelPermalink }}">
-				<!-- Hugo automatically takes the first 70 words of your content as its summary and stores it into the .Summary variable -->
-				<p>{{ $cn_name }} ：{{ $employment }} </p>
-			</a>
+			{{ with .Params.year_graduation }}
+				<div class="person">
+					<a class="person-img-container" href="{{ $RelPermalink }}">
+						<img src={{ $img }}>
+					</a>
+					<div>
+						<a class="person-name" href="{{ $RelPermalink }}">
+							<!-- Hugo automatically takes the first 70 words of your content as its summary and stores it into the .Summary variable -->
+							{{ $cn_name }}
+						</a>
+					</div>
+					
+					{{ $yearDifference := sub $currentYear . }}
+					<div class="person-title">{{ $employment }}</div>
+				</div>
+			{{ end }}
 		{{ end }}
-	</p>
-	{{ end }}
+	</div>
 
-
+	</div>
 </div>
 {{ end }}
