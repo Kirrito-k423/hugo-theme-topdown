@@ -46,7 +46,8 @@
     object-position: top; /* 设置裁剪时图片在容器中的位置为靠上 */
     border-radius: 50%; /* 将图片的边角设置为50%，使其呈圆形 */
     transition: border-radius 0.5s; /* 添加边角变化的过渡效果，时长为0.5秒 */
-    border: 1px solid rgb(146, 157, 192);
+    background-color: rgb(218, 235, 243);
+    border: 1px solid rgb(218, 235, 243);
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* 添加灰色内阴影，颜色可根据需要调整 */
 }
 
