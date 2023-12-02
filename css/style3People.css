@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+
+/* 文字字体，字号，颜色 */
+/* 背景色，长宽，其他 */
+
+.people-column{
+    text-align: left;
+    padding: 1em calc(50% - 520px);
+    color: rgb(146, 157, 192);
+}
+
+.people-column h1{
+    text-align: center;
+    font-weight: 400;
+    font-size: x-large;
+}
+
+.people-group{
+    display: flex;
+}
+
+.person{
+    width: 16%;
+    margin: 20px;
+    text-align: center;
+}
+
+.person div {
+    text-align: center;
+    margin: 5px;
+}
+
+.person-img-container{
+    width: 150px; /* 设置容器的宽度 */
+    height: 150px; /* 设置容器的高度 */
+    overflow: hidden; /* 隐藏溢出的部分 */
+    display: inline-block; /* 或者使用 display: block; */
+    margin: 0 auto; /* 使用 auto 将 .img-container 在水平方向上居中 */
+}
+
+.person-img-container img {
+    width: 97%; /* 图片宽度占满容器 */
+    height: 97%; /* 图片高度占满容器 */
+    object-fit: cover;
+    object-position: top; /* 设置裁剪时图片在容器中的位置为靠上 */
+    border-radius: 50%; /* 将图片的边角设置为50%，使其呈圆形 */
+    transition: border-radius 0.5s; /* 添加边角变化的过渡效果，时长为0.5秒 */
+    border: 1px solid rgb(146, 157, 192);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* 添加灰色内阴影，颜色可根据需要调整 */
+}
+
+img:hover {
+    border-radius: 0; /* 在悬浮状态下将边角设置为0，使其呈方形 */
+}
+
+.person-name{
+    text-decoration: none;
+    color: rgb(23, 113, 192);
+    font-size: 1.1em;
+}
+
+.person-title{
+    font-size: 0.9em;
+}
