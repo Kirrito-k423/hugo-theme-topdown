@@ -1,6 +1,6 @@
 ---
 title: "231124组会"
-type: "seminar"
+types: "seminar"
 date: 2023-11-29T09:09:15+08:00
 location: "致信楼 707"
 onlineLink: # 线上会议
