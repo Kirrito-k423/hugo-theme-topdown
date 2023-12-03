@@ -47,16 +47,42 @@
 					{{ end }}
 				{{ end }}
 
-				github-icon + url + email
+				<!-- github-icon + url + email -->
+
+				<div>
+					<div class="icons-container">
+						{{ with .Params.homepage_url }}
+							<a class="icons" href="{{ . | safeHTML }}">
+								<i  data-feather="book"></i>
+								<!-- <span class="feather-text">Blog</span> -->
+							</a>
+						{{ end }}
+	
+						{{ with .Params.github_url }}
+							<a class="icons" href="{{ . | safeHTML }}">
+								<i  data-feather="github"></i>
+								<!-- <span class="feather-text">GitHub</span> -->
+							</a>
+						{{ end }}
+						
+						{{ with .Params.email }}
+							<a class="icons" href="mailto:{{ . | safeHTML }} ?subject=邮件标题&body=邮件内容">
+								<i  data-feather="mail"></i>
+								<!-- <span class="feather-text">Email</span> -->
+							</a>
+						{{ end }}
+	
+					</div>
+				</div>
+			
 				
 			</div>
 
 
 		</div>
+
 		<div class="column">
 			<div class="detail-info">{{ .Content }}</div>
-
-
 		</div>
 
 	</div>
