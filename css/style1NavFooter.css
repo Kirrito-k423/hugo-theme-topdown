@@ -89,6 +89,10 @@
 
 /* footer */
 
+.topdown-footer{
+    position: relative;
+}
+
 .footer-primary{
     height: 45px;
     background-color: #172e5c;
