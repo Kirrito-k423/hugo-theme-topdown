@@ -1,8 +1,63 @@
 {{ define "main" }}
 <div class="topdown-main">
-	<h1>{{ .Title }}</h1>
-	{{ partial "metadata.html" . }}
-	<br><br>
-	{{ .Content }}
+	
+	{{ $numMapping := dict  "01" "一" "02" "二" "03" "三" "04" "四" "05" "五" "06" "六" "07" "七" "08" "八" "09" "九" "10" "十" "11" "十一" "12" "十二" }}
+	{{ $currentYear := now.Year }}
+
+	<div class="stick-motto-bar">
+		<h1 class="stick-motto-column motto">“红专并进，理实交融”</h1>
+		<div class="stick-motto-column">
+
+			<div class="person">
+				<div class="square-container">
+					<a class="person-img-container" href="{{ .RelPermalink }}">
+						<img src={{ .Params.img }}>
+					</a>
+				</div>
+				<div>
+					<a class="person-name" href="{{ .RelPermalink }}">
+						<!-- Hugo automatically takes the first 70 words of your content as its summary and stores it into the .Summary variable -->
+						{{ .Params.cn_name }}
+					</a>
+				</div>
+				
+				{{ with .Params.cn_level }}
+					<div class="person-title">{{ . }}</div>
+				{{ else }}
+					{{ $employment := .Params.employment }}
+					{{ with .Params.year_graduation }}
+						<div class="person-title">{{ $employment }}</div>
+					{{ else }}
+						{{ with .Params.year_enrollment_PhD }}
+							{{ $yearDifference := sub $currentYear . }}
+							<div class="person-title">博士{{ index $numMapping (printf "%02d" $yearDifference) }}年级</div>
+						{{ else }}
+							{{ with .Params.year_enrollment }}
+								{{ $yearDifference := sub $currentYear . }}
+								<div class="person-title">硕士{{ index $numMapping (printf "%02d" $yearDifference) }}年级</div>
+							{{ else }}
+								{{ with .Params.year_enrollment_undergraduate }}
+									{{ $yearDifference := sub $currentYear . }}
+									<div class="person-title">本科{{ index $numMapping (printf "%02d" $yearDifference) }}年级</div>
+								{{ else }}
+
+								{{ end }}
+							{{ end }}
+						{{ end }}
+					{{ end }}
+				{{ end }}
+
+				github-icon + url + email
+				
+			</div>
+
+
+		</div>
+		<div class="detail-info">{{ .Content }}</div>
+
+	</div>
+	<br>
+
+
 </div>
 {{ end }}

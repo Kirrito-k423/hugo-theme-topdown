@@ -80,3 +80,47 @@ img:hover {
 body {
     min-width: 500px; 
 }
+
+ /* person detail page */
+
+
+.stick-motto-bar{
+    position: relative;
+    top:40px;
+    /* height: 100vh; */
+    background-color: rgb(199, 212, 141,0);
+}
+
+.stick-motto-column{
+    padding: 1em calc(50% - 720px);
+    position: sticky;
+    top: 80px;
+    background-color: rgb(236, 141, 141,0);
+    display: flex;
+    z-index: 2;
+}
+
+.stick-motto-column .person{
+    padding: 100px 30px;
+    border: 2px solid #000;
+
+}
+
+.motto{
+    background-color: rgb(236, 141, 141);
+    text-align: left;
+    font-size: 4em;
+    border: 2px solid rgb(0, 60, 255);
+    height: 100px;
+    /* width: 100vh; */
+}
+
+.detail-info{
+    position: relative;
+    padding: 1em calc(50% - 720px);
+
+    border: 2px solid #000;
+    background-color: #fff;
+    /* height: 100px; */
+    /* width: 60%; */
+}

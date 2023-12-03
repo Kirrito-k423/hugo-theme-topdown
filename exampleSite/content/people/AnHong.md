@@ -151,3 +151,4 @@ email:  han@ustc.edu.cn                # 常用邮件
 9. Mingfan Li, Han Lin, Junshi Chen, Jose Monsalve Diaz, Qian Xiao, Rongfen Lin,Fei Wang, Guang R. Gao, Hong An, swFLOW: A large-scale distributed framework for deep learning on Sunway TaihuLight supercomputer, Information Sciences, Volume 570, September 2021, Pages 831-847
 
 10. Weihao Liang, Yong Chen, Jialin Liu and Hong An. CARS: A Contention-Aware Scheduler for Efficient Resource Management of HPC Storage Systems. Parallel Computing, Volume 87, September 2019, Pages 25-34
+
