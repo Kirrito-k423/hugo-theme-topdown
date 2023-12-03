@@ -97,5 +97,12 @@ Where is ACSA? google map</description>
       <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/</guid>
       <description>2022 Wei Hu, Hong An, Zhuoqiang Guo, Qingcai Jiang , Xinming Qin , Junshi Chen, Weile Jia, Chao Yangk, Zhaolong Luo, Jielan Li, Wentiao Wu, Guangming Tan, Dongning Jia, Qinglin Lu, Fangfang Liu, Min Tian, Fang Li, Yeqi Huang , Liyi Wang, Sha Liu and Jinlong Yang，2.5 Million-Atom Ab Initio Electronic-Structure Simulation of Complex Metallic Heterostructures with DGDFT，In the Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis（SC），Dallas US, 2022.</description>
     </item>
+    <item>
+      <title>A3PIM: An Automated, Analytic and Accurate Processing-in-Memory Offloader</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/date23-a3pim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/date23-a3pim/</guid>
+      <description>The performance gap between memory and proces- sor has grown rapidly. Consequently, the energy and wall-clock time costs associated with moving data between the CPU and main memory predominate the overall computational cost. The Processing-in-Memory (PIM) paradigm emerges as a promising architecture that mitigates the need for extensive data movements by strategically positioning computing units proximate to the memory. Despite the abundant efforts devoted to building a robust and highly-available PIM system, identifying PIM-friendly segments of applications poses significant challenges due to the lack of a comprehensive tool to evaluate the intrinsic memory access pattern of the segment.</description>
+    </item>
   </channel>
 </rss>

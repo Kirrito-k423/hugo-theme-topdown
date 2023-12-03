@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on ACSA Lab</title>
+    <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/</link>
+    <description>Recent content in Publications on ACSA Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <atom:link href="https://kirrito-k423.github.io/hugo-theme-topdown/publications/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A3PIM: An Automated, Analytic and Accurate Processing-in-Memory Offloader</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/date23-a3pim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/date23-a3pim/</guid>
+      <description>The performance gap between memory and proces- sor has grown rapidly. Consequently, the energy and wall-clock time costs associated with moving data between the CPU and main memory predominate the overall computational cost. The Processing-in-Memory (PIM) paradigm emerges as a promising architecture that mitigates the need for extensive data movements by strategically positioning computing units proximate to the memory. Despite the abundant efforts devoted to building a robust and highly-available PIM system, identifying PIM-friendly segments of applications poses significant challenges due to the lack of a comprehensive tool to evaluate the intrinsic memory access pattern of the segment.</description>
+    </item>
+  </channel>
+</rss>
