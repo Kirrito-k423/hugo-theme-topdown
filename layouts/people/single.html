@@ -5,7 +5,13 @@
 	{{ $currentYear := now.Year }}
 
 	<div class="stick-motto-bar">
-		<h1 class="stick-motto-column motto">“红专并进，理实交融”</h1>
+		<h1 class="stick-motto-column motto">
+			{{ with .Params.motto }}
+			{{ . }}
+			{{ else }}
+			“红专并进，理实交融”
+			{{ end }}
+		</h1>
 		<div class="stick-motto-column">
 
 			<div class="person">
@@ -90,4 +96,21 @@
 
 
 </div>
+
+{{ with .Params.custmize_css }}
+<style>
+	{{ . | safeCSS }}
+</style>
+{{ end }}
+
+{{ with .Params.motto_pic }}
+<style>
+	.motto {
+		background-image: url('{{ . | safeHTML }}'); /* 替换 'your-image-url.jpg' 为你的图片路径 */
+		background-size: cover; /* 可以根据需要设置背景大小的调整方式，例如 'contain' */
+		background-position: top; /* 可以根据需要设置背景图片的位置 */
+	}
+</style>
+{{ end }}
+	
 {{ end }}
