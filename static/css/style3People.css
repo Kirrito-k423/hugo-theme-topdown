@@ -113,6 +113,7 @@ body {
     background-color: rgb(236, 141, 141,0);
     /* display: flex; */
     z-index: 2;
+    pointer-events: none; /* 使上面的图层透明的部分能够被下面的图层透过 */
 }
 
 .stick-motto-column .person{
@@ -120,6 +121,7 @@ body {
     background-color: #fff;
     /* border: 2px solid #000; */
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.13), 0px 3px 6px rgba(0, 0, 0, 0.1);
+    pointer-events: auto; /* 使上面的图层部分保留点击功能 */
 }
 
 .stick-motto-column .person .square-container .person-img-container img{
