@@ -2,10 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/people/anhong/</loc>
-    <lastmod>2023-01-01T00:00:00+00:00</lastmod>
+    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/events/202311/231124-seminar/</loc>
+    <lastmod>2023-11-29T09:09:15+08:00</lastmod>
   </url><url>
     <loc>https://kirrito-k423.github.io/hugo-theme-topdown/</loc>
+    <lastmod>2023-11-29T09:09:15+08:00</lastmod>
+  </url><url>
+    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/events/</loc>
+    <lastmod>2023-11-29T09:09:15+08:00</lastmod>
+  </url><url>
+    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/news/2023/230530-asc/</loc>
+    <lastmod>2023-05-30T09:09:15+08:00</lastmod>
+  </url><url>
+    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/news/</loc>
+    <lastmod>2023-05-30T09:09:15+08:00</lastmod>
+  </url><url>
+    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/people/anhong/</loc>
     <lastmod>2023-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://kirrito-k423.github.io/hugo-theme-topdown/people/</loc>
