@@ -1,0 +1,58 @@
+{{ define "main" }}
+<div class="topdown-main">
+	<div class="publications-column">
+		<h1 style="text-align:left; font-size: xx-large;">论文</h1>
+		<!-- <p>排版有待调整</p> -->
+
+		<hr aria-hidden="true">
+	
+		{{ range .Pages.ByPublishDate.Reverse }}
+			<div class="paper-bar">
+				<div class="paper-card">
+					<p class="paper-title">{{ .Params.title }}</p>
+					<span class="paper-FirstAuthor">
+						{{ range .Params.FirstAuthor }}
+							{{ . }},
+						{{ end }}
+					</span>
+					<span class="paper-OtherAuthors">
+						{{ range .Params.OtherAuthors }}
+							{{ . }},
+						{{ end }}
+					</span>
+					<div class="paper-ConfJournal">
+						{{ .Params.ConfJournal }} ({{ .Params.ConfJournalAbbr }} {{ .Params.Year }})
+						<b>CCF {{ .Params.CCFLevel }}</b> 
+					</div>
+					<div class="paper-multimedia">
+						{{ with .Params.Link }}
+							<a class="icons" href="{{ . | safeHTML }}">
+								<i  data-feather="link"></i>
+								<span class="feather-text">DOI</span>
+							</a>
+						{{ end }}
+						{{ with .Params.PDF }}
+							<a class="icons" href="{{ . | safeHTML }}">
+								<i  data-feather="paperclip"></i>
+								<span class="feather-text">PDF</span>
+							</a>
+						{{ end }}
+						{{ with .Params.SLIDE }}
+							<a class="icons" href="{{ . | safeHTML }}">
+								<i  data-feather="download"></i>
+								<span class="feather-text">PPT</span>
+							</a>
+						{{ end }}
+						{{ with .Params.video }}
+							<a class="icons" href="{{ . | safeHTML }}">
+								<i  data-feather="video"></i>
+								<span class="feather-text">Video</span>
+							</a>
+						{{ end }}
+					</div>
+				</div>
+			</div>
+		{{ end }}
+	</div>
+</div>
+{{ end }}
