@@ -7,7 +7,7 @@ FirstAuthor:
 OtherAuthors:
 - Junshi Chen
 - Hong An
-Conference/Journal: 
+Conference/Journal: "Design, Automation and Test in Europe Conference"
 Conference/Journal Abbreviation: DATE
 IsAConference: "yes" # 会议填yes，期刊写 no
 CCFLevel: "B" 
