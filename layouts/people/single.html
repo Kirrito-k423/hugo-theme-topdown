@@ -115,6 +115,177 @@
 
 				<!-- 所在小组 -->
 
+				{{ if eq .Params.cn_level "教授"  }}
+					<!-- <h1>论文</h1> -->
+				{{ else }}
+					<h1>所在小组</h1>
+				{{ end }}
+
+				{{ with $root.Site.GetPage "section" "teams" }}
+					{{ range .Data.Pages}}
+						{{ $page := . }}
+
+						{{ $combinedMembers := union .Params.leader .Params.members }}
+
+						{{ range $combinedMembers }}
+							{{ $words := split . " " }}
+							{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+							{{ if eq $reversedName $filename }}
+								<div class="paper-card">
+									<a href="{{ $page.Permalink }}" style="
+										text-decoration: none;
+										">
+										<p class="paper-title">{{ $page.Params.title }}</p>
+									</a>
+									<span class="paper-FirstAuthor">
+										{{ range $page.Params.leader }}
+											{{ $name := . }}
+											{{ $words := split . " " }}
+											{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+											<!-- {{ $reversedName }} -->
+											{{ with $root.Site.GetPage "section" "people" }}
+												{{ with .GetPage  $reversedName }}
+													<!-- 文件存在的处理逻辑 -->
+													<!-- <p>文件存在：{{ $page.Params.cn_name }}</p> -->
+													{{ if eq $reversedName $filename}}
+														<a href="{{ .Permalink }}" 
+															style="color:black">
+															{{ $name }}
+														</a>,
+													{{ else }}
+														<a href="{{ .Permalink }}" 
+															style="color:rgb(146, 157, 192);">
+															{{ $name }}
+														</a>,
+													{{ end }}
+												{{ else }}
+													<!-- 文件不存在的处理逻辑 -->
+													<!-- <p>文件不存在</p> -->
+													<b>{{ $name }}</b>,
+												{{ end }}
+											{{ end }}
+										{{ end }}
+									</span>
+									<span class="paper-OtherAuthors">
+										{{ range $page.Params.members }}
+											{{ $name := . }}
+											{{ $words := split . " " }}
+											{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+											<!-- {{ $reversedName }} -->
+											{{ with $root.Site.GetPage "section" "people" }}
+												{{ with .GetPage  $reversedName }}
+													<!-- 文件存在的处理逻辑 -->
+													<!-- <p>文件存在：{{ $page.Params.cn_name }}</p> -->
+													{{ if eq $reversedName $filename}}
+														<a href="{{ .Permalink }}" 
+															style="color:black">
+															{{ $name }}
+														</a>,
+													{{ else }}
+														<a href="{{ .Permalink }}" 
+															style="color:rgb(146, 157, 192);">
+															{{ $name }}
+														</a>,
+													{{ end }}
+												{{ else }}
+													<!-- 文件不存在的处理逻辑 -->
+													<!-- <p>文件不存在</p> -->
+													{{ $name }},
+												{{ end }}
+											{{ end }}
+										{{ end }}
+									</span>
+				
+								</div>
+							{{ end }}
+						{{ end }}
+						
+
+						<!-- TODO: temp design only two-level teams -->
+						{{ range .Data.Pages}}
+							{{ $page := . }}
+							{{ $combinedMembers := union .Params.leader .Params.members }}
+
+							{{ range $combinedMembers }}
+								{{ $words := split . " " }}
+								{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+								{{ if eq $reversedName $filename }}
+									<img align="center" src="{{ site.BaseURL }}/images/downright.png" alt="" height="30" width="30" style="
+											margin-left:2em;
+										">
+									<div class="paper-card" style="
+											margin-left:4em;
+										">
+										<a href="{{ $page.Permalink }}" style="
+											text-decoration: none;
+											">
+											<p class="paper-title">{{ $page.Params.title }}</p>
+										</a>
+										<span class="paper-FirstAuthor">
+											{{ range $page.Params.leader }}
+												{{ $name := . }}
+												{{ $words := split . " " }}
+												{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+												<!-- {{ $reversedName }} -->
+												{{ with $root.Site.GetPage "section" "people" }}
+													{{ with .GetPage  $reversedName }}
+														<!-- 文件存在的处理逻辑 -->
+														<!-- <p>文件存在：{{ $page.Params.cn_name }}</p> -->
+														{{ if eq $reversedName $filename}}
+															<a href="{{ .Permalink }}" 
+																style="color:black">
+																{{ $name }}
+															</a>,
+														{{ else }}
+															<a href="{{ .Permalink }}" 
+																style="color:rgb(146, 157, 192);">
+																{{ $name }}
+															</a>,
+														{{ end }}
+													{{ else }}
+														<!-- 文件不存在的处理逻辑 -->
+														<!-- <p>文件不存在</p> -->
+														<b>{{ $name }}</b>,
+													{{ end }}
+												{{ end }}
+											{{ end }}
+										</span>
+										<span class="paper-OtherAuthors">
+											{{ range $page.Params.members }}
+												{{ $name := . }}
+												{{ $words := split . " " }}
+												{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+												<!-- {{ $reversedName }} -->
+												{{ with $root.Site.GetPage "section" "people" }}
+													{{ with .GetPage  $reversedName }}
+														<!-- 文件存在的处理逻辑 -->
+														<!-- <p>文件存在：{{ $page.Params.cn_name }}</p> -->
+														{{ if eq $reversedName $filename}}
+															<a href="{{ .Permalink }}" 
+																style="color:black">
+																{{ $name }}
+															</a>,
+														{{ else }}
+															<a href="{{ .Permalink }}" 
+																style="color:rgb(146, 157, 192);">
+																{{ $name }}
+															</a>,
+														{{ end }}
+													{{ else }}
+														<!-- 文件不存在的处理逻辑 -->
+														<!-- <p>文件不存在</p> -->
+														{{ $name }},
+													{{ end }}
+												{{ end }}
+											{{ end }}
+										</span>
+									
+									</div>
+								{{ end }}
+							{{ end }}
+						{{ end }}
+					{{ end }}
+				{{ end }}
 
 				<!-- 所在项目 -->
 
@@ -128,7 +299,9 @@
 				{{ with $root.Site.GetPage "section" "projects" }}
 					{{ range .Data.Pages}}
 						{{ $page := . }}
-						{{ range .Params.leader }}
+						{{ $combinedMembers := union .Params.leader .Params.members }}
+
+						{{ range $combinedMembers }}
 							{{ $words := split . " " }}
 							{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
 							{{ if eq $reversedName $filename }}
@@ -159,72 +332,6 @@
 															{{ $name }}
 														</a>,
 													{{ end }}
-												{{ else }}
-													<!-- 文件不存在的处理逻辑 -->
-													<!-- <p>文件不存在</p> -->
-													<b>{{ $name }}</b>,
-												{{ end }}
-											{{ end }}
-										{{ end }}
-									</span>
-									<span class="paper-OtherAuthors">
-										{{ range $page.Params.members }}
-											{{ $name := . }}
-											{{ $words := split . " " }}
-											{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
-											<!-- {{ $reversedName }} -->
-											{{ with $root.Site.GetPage "section" "people" }}
-												{{ with .GetPage  $reversedName }}
-													<!-- 文件存在的处理逻辑 -->
-													<!-- <p>文件存在：{{ $page.Params.cn_name }}</p> -->
-													<a href="{{ .Permalink }}" 
-														style="color:rgb(146, 157, 192);">
-														{{ $name }}
-													</a>,
-												{{ else }}
-													<!-- 文件不存在的处理逻辑 -->
-													<!-- <p>文件不存在</p> -->
-													{{ $name }},
-												{{ end }}
-											{{ end }}
-										{{ end }}
-									</span>
-									<div class="paper-ConfJournal">
-										From {{ $page.Params.start_time }} to 
-										{{ with $page.Params.end_time }}
-											{{ . }}
-										{{ else }}
-											Now
-										{{ end }}
-									</div>
-				
-								</div>
-							{{ end }}
-						{{ end }}
-						{{ range .Params.members }}
-							{{ $words := split . " " }}
-							{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
-							{{ if eq $reversedName $filename }}
-								<div class="paper-card">
-									<a href="{{ $page.Permalink }}" style="
-										text-decoration: none;
-										">
-										<p class="paper-title">{{ $page.Params.title }}</p>
-									</a>
-									<span class="paper-FirstAuthor">
-										{{ range $page.Params.leader }}
-											{{ $name := . }}
-											{{ $words := split . " " }}
-											{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
-											<!-- {{ $reversedName }} -->
-											{{ with $root.Site.GetPage "section" "people" }}
-												{{ with .GetPage  $reversedName }}
-													<!-- 文件存在的处理逻辑 -->
-													<!-- <p>文件存在：{{ $page.Params.cn_name }}</p> -->
-													<a href="{{ .Permalink }}" 
-														style="color:rgb(146, 157, 192);">
-														<b>{{ $name }}</b>
-													</a>,
 												{{ else }}
 													<!-- 文件不存在的处理逻辑 -->
 													<!-- <p>文件不存在</p> -->
@@ -274,6 +381,7 @@
 								</div>
 							{{ end }}
 						{{ end }}
+						
 					{{ end }}
 				{{ end }}
 
