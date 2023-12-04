@@ -3,6 +3,8 @@
 	
 	{{ $numMapping := dict  "01" "一" "02" "二" "03" "三" "04" "四" "05" "五" "06" "六" "07" "七" "08" "八" "09" "九" "10" "十" "11" "十一" "12" "十二" }}
 	{{ $currentYear := now.Year }}
+	{{ $root := . }}
+
 
 	<div class="stick-motto-bar">
 		<h1 class="stick-motto-column motto">
@@ -103,7 +105,254 @@
 		</div>
 
 		<div class="column">
-			<div class="detail-info">{{ .Content }}</div>
+			<div class="detail-info">
+				{{ .Content }}
+				
+				{{ $filename := .File.BaseFileName }}
+
+				{{ if or (eq .Params.cn_level "教授") 
+						(eq .Params.cn_level "特任副研究员") }}
+					<!-- <h1>论文</h1> -->
+				{{ else }}
+					<h1>一作论文</h1>
+				{{ end }}
+
+				{{ with $root.Site.GetPage "section" "publications" }}
+					{{ range .Data.Pages}}
+						{{ $page := . }}
+						{{ range .Params.FirstAuthor }}
+							{{ $words := split . " " }}
+							{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+							{{ if eq $reversedName $filename }}
+								<div class="paper-card">
+									<p class="paper-title">{{ $page.Params.title }}</p>
+									<span class="paper-FirstAuthor">
+										{{ range $page.Params.FirstAuthor }}
+											{{ $name := . }}
+											{{ $words := split . " " }}
+											{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+											<!-- {{ $reversedName }} -->
+											{{ with $root.Site.GetPage "section" "people" }}
+												{{ with .GetPage  $reversedName }}
+													<!-- 文件存在的处理逻辑 -->
+													<!-- <p>文件存在：{{ $page.Params.cn_name }}</p> -->
+													{{ if eq $reversedName $filename}}
+														<a href="{{ .Permalink }}" 
+															style="color:black">
+															{{ $name }}
+														</a>,
+													{{ else }}
+														<a href="{{ .Permalink }}" 
+															style="color:rgb(146, 157, 192);">
+															{{ $name }}
+														</a>,
+													{{ end }}
+												{{ else }}
+													<!-- 文件不存在的处理逻辑 -->
+													<!-- <p>文件不存在</p> -->
+													{{ $name }},
+												{{ end }}
+											{{ end }}
+										{{ end }}
+									</span>
+									<span class="paper-OtherAuthors">
+										{{ range $page.Params.OtherAuthors }}
+											{{ $name := . }}
+											{{ $words := split . " " }}
+											{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+											<!-- {{ $reversedName }} -->
+											{{ with $root.Site.GetPage "section" "people" }}
+												{{ with .GetPage  $reversedName }}
+													<!-- 文件存在的处理逻辑 -->
+													<!-- <p>文件存在：{{ $page.Params.cn_name }}</p> -->
+													<a href="{{ .Permalink }}" 
+														style="color:rgb(146, 157, 192);">
+														{{ $name }}
+													</a>,
+												{{ else }}
+													<!-- 文件不存在的处理逻辑 -->
+													<!-- <p>文件不存在</p> -->
+													{{ $name }},
+												{{ end }}
+											{{ end }}
+										{{ end }}
+									</span>
+									<div class="paper-ConfJournal">
+										{{ $page.Params.ConfJournal }} ({{ $page.Params.ConfJournalAbbr }} {{ $page.Params.Year }})
+										{{ if eq $page.Params.CCFLevel "A" }}
+											<b class="rainbow-text">CCF {{ $page.Params.CCFLevel }}</b> 
+										{{ else }}
+											<b>CCF {{ $page.Params.CCFLevel }}</b> 
+										{{ end }}
+										{{ with $page.Params.IsAConference }}
+											{{ if eq . "no" }}
+											<b>Journal</b>
+											{{ end }}
+										{{ end }}
+										{{ with $page.Params.Award }}
+											<!-- <b class="radial-gradient-text">{{ . }}</b> -->
+											<b style="color:rgb(191, 4, 4);">{{ . }}</b>
+										{{ end }}
+									</div>
+									<div class="paper-multimedia">
+										{{ with $page.Params.Link }}
+											<a class="icons" href="{{ . | safeHTML }}">
+												<i  data-feather="link"></i>
+												<!-- <img align="center" src="{{ site.BaseURL }}/images/acm.png" alt="" height="30" width="30"> -->
+
+												<span class="feather-text">DOI</span>
+											</a>
+										{{ end }}
+										{{ with $page.Params.PDF }}
+											<a class="icons" href="{{ . | safeHTML }}">
+												<i  data-feather="paperclip"></i>
+												<!-- <img align="center" src="{{ site.BaseURL }}/images/pdf.png" alt="" height="30" width="30"> -->
+												<span class="feather-text">PDF</span>
+											</a>
+										{{ end }}
+										{{ with $page.Params.SLIDE }}
+											<a class="icons" href="{{ . | safeHTML }}">
+												<i  data-feather="download"></i>
+												<!-- <img align="center" src="{{ site.BaseURL }}/images/ppt.png" alt="" height="30" width="30"> -->
+												<span class="feather-text">PPT</span>
+											</a>
+										{{ end }}
+										{{ with $page.Params.video }}
+											<a class="icons" href="{{ . | safeHTML }}">
+												<i  data-feather="video"></i>
+												<!-- <img align="center" src="{{ site.BaseURL }}/images/video.png" alt="" height="30" width="30"> -->
+												<span class="feather-text">Video</span>
+											</a>
+										{{ end }}
+									</div>
+								</div>
+							{{ end }}
+						{{ end }}
+					{{ end }}
+				{{ end }}
+
+				{{ if or (eq .Params.cn_level "教授") 
+						(eq .Params.cn_level "特任副研究员") }}
+					<h1>论文</h1>
+				{{ else }}
+					<h1>参与论文</h1>
+				{{ end }}
+
+					{{ with $root.Site.GetPage "section" "publications" }}
+					{{ range .Data.Pages}}
+						{{ $page := . }}
+						{{ range .Params.OtherAuthors }}
+							{{ $words := split . " " }}
+							{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+							{{ if eq $reversedName $filename }}
+								<div class="paper-card">
+									<p class="paper-title">{{ $page.Params.title }}</p>
+									<span class="paper-FirstAuthor">
+										{{ range $page.Params.FirstAuthor }}
+											{{ $name := . }}
+											{{ $words := split . " " }}
+											{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+											<!-- {{ $reversedName }} -->
+											{{ with $root.Site.GetPage "section" "people" }}
+												{{ with .GetPage  $reversedName }}
+													<!-- 文件存在的处理逻辑 -->
+													<!-- <p>文件存在：{{ $page.Params.cn_name }}</p> -->
+													<a href="{{ .Permalink }}" 
+														style="color:rgb(146, 157, 192);">
+														{{ $name }}
+													</a>,
+												{{ else }}
+													<!-- 文件不存在的处理逻辑 -->
+													<!-- <p>文件不存在</p> -->
+													{{ $name }},
+												{{ end }}
+											{{ end }}
+										{{ end }}
+									</span>
+									<span class="paper-OtherAuthors">
+										{{ range $page.Params.OtherAuthors }}
+											{{ $name := . }}
+											{{ $words := split . " " }}
+											{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+											<!-- {{ $reversedName }} -->
+											{{ with $root.Site.GetPage "section" "people" }}
+												{{ with .GetPage  $reversedName }}
+													<!-- 文件存在的处理逻辑 -->
+													<!-- <p>文件存在：{{ $page.Params.cn_name }}</p> -->
+													{{ if eq $reversedName $filename}}
+														<a href="{{ .Permalink }}" 
+															style="color:black">
+															{{ $name }}
+														</a>,
+													{{ else }}
+														<a href="{{ .Permalink }}" 
+															style="color:rgb(146, 157, 192);">
+															{{ $name }}
+														</a>,
+													{{ end }}
+												{{ else }}
+													<!-- 文件不存在的处理逻辑 -->
+													<!-- <p>文件不存在</p> -->
+													{{ $name }},
+												{{ end }}
+											{{ end }}
+										{{ end }}
+									</span>
+									<div class="paper-ConfJournal">
+										{{ $page.Params.ConfJournal }} ({{ $page.Params.ConfJournalAbbr }} {{ $page.Params.Year }})
+										{{ if eq $page.Params.CCFLevel "A" }}
+											<b class="rainbow-text">CCF {{ $page.Params.CCFLevel }}</b> 
+										{{ else }}
+											<b>CCF {{ $page.Params.CCFLevel }}</b> 
+										{{ end }}
+										{{ with $page.Params.IsAConference }}
+											{{ if eq . "no" }}
+											<b>Journal</b>
+											{{ end }}
+										{{ end }}
+										{{ with $page.Params.Award }}
+											<!-- <b class="radial-gradient-text">{{ . }}</b> -->
+											<b style="color:rgb(191, 4, 4);">{{ . }}</b>
+										{{ end }}
+									</div>
+									<div class="paper-multimedia">
+										{{ with $page.Params.Link }}
+											<a class="icons" href="{{ . | safeHTML }}">
+												<i  data-feather="link"></i>
+												<!-- <img align="center" src="{{ site.BaseURL }}/images/acm.png" alt="" height="30" width="30"> -->
+
+												<span class="feather-text">DOI</span>
+											</a>
+										{{ end }}
+										{{ with $page.Params.PDF }}
+											<a class="icons" href="{{ . | safeHTML }}">
+												<i  data-feather="paperclip"></i>
+												<!-- <img align="center" src="{{ site.BaseURL }}/images/pdf.png" alt="" height="30" width="30"> -->
+												<span class="feather-text">PDF</span>
+											</a>
+										{{ end }}
+										{{ with $page.Params.SLIDE }}
+											<a class="icons" href="{{ . | safeHTML }}">
+												<i  data-feather="download"></i>
+												<!-- <img align="center" src="{{ site.BaseURL }}/images/ppt.png" alt="" height="30" width="30"> -->
+												<span class="feather-text">PPT</span>
+											</a>
+										{{ end }}
+										{{ with $page.Params.video }}
+											<a class="icons" href="{{ . | safeHTML }}">
+												<i  data-feather="video"></i>
+												<!-- <img align="center" src="{{ site.BaseURL }}/images/video.png" alt="" height="30" width="30"> -->
+												<span class="feather-text">Video</span>
+											</a>
+										{{ end }}
+									</div>
+								</div>
+							{{ end }}
+						{{ end }}
+					{{ end }}
+				{{ end }}
+			</div>
+
 		</div>
 
 	</div>
