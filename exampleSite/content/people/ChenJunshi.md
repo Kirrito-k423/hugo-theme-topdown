@@ -11,6 +11,8 @@ year_graduation:        # 毕业年份，来判断是不是校友
 employment:             # 实验室毕业工作去向：e.g. 百度，MIT，中石化，公务员
 
 # social media
+googlescholar_url: https://scholar.google.com/citations?hl=zh-CN&user=hEADXbAAAAAJ         # googlescholar
+dblp_url: https://dblp.org/pid/120/1745.html
 homepage_url:  https://faculty.ustc.edu.cn/chenjunshi/en/index/61049/list/index.htm         # 个人博客
 github_url:             # github主页
 email:  cjuns@ustc.edu.cn                # 常用邮件

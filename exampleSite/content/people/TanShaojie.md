@@ -11,6 +11,8 @@ year_graduation:        # 毕业年份，来判断是不是校友
 employment:             # 实验室毕业工作去向：e.g. 百度，MIT，中石化，公务员
 
 # social media
+googlescholar_url: https://scholar.google.com/citations?user=3-W0pa0AAAAJ         # googlescholar
+dblp_url: https://dblp.org/pid/158/1375.html 
 homepage_url:  https://shaojiemike.top         # 个人博客
 github_url:  https://github.com/Kirrito-k423           # github主页
 email:  shaojiemike@mail.ustc.edu.cn                # 常用邮件

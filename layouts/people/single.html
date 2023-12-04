@@ -57,23 +57,38 @@
 
 				<div>
 					<div class="icons-container">
+						{{ with .Params.googlescholar_url }}
+						<a class="icons" href="{{ . | safeHTML }}">
+							<img align="center" src="{{ site.BaseURL }}/images/googlescholar.svg" alt="" height="30" width="30">
+						</a>
+						{{ end }}
+
+						{{ with .Params.dblp_url }}
+						<a class="icons" href="{{ . | safeHTML }}">
+							<img align="center" src="{{ site.BaseURL }}/images/dblp.svg" alt="" height="30" width="30">
+						</a>
+						{{ end }}
+
 						{{ with .Params.homepage_url }}
 							<a class="icons" href="{{ . | safeHTML }}">
-								<i  data-feather="book"></i>
+								<img align="center" src="{{ site.BaseURL }}/images/home.gif" alt="" height="30" width="30">
+								<!-- <i  data-feather="book"></i> -->
 								<!-- <span class="feather-text">Blog</span> -->
 							</a>
 						{{ end }}
 	
 						{{ with .Params.github_url }}
 							<a class="icons" href="{{ . | safeHTML }}">
-								<i  data-feather="github"></i>
+								<img align="center" src="{{ site.BaseURL }}/images/github.svg" alt="" height="30" width="30">
+								<!-- <i  data-feather="github"></i> -->
 								<!-- <span class="feather-text">GitHub</span> -->
 							</a>
 						{{ end }}
 						
 						{{ with .Params.email }}
 							<a class="icons" href="mailto:{{ . | safeHTML }} ?subject=邮件标题&body=邮件内容">
-								<i  data-feather="mail"></i>
+								<img align="center" src="{{ site.BaseURL }}/images/email.png" alt="" height="30" width="30">
+								<!-- <i  data-feather="mail"></i> -->
 								<!-- <span class="feather-text">Email</span> -->
 							</a>
 						{{ end }}

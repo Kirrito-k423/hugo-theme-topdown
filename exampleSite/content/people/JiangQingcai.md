@@ -10,6 +10,8 @@ year_graduation:        # 毕业年份，来判断是不是校友
 employment:           # 实验室毕业工作去向：e.g. 百度，MIT，中石化，公务员
 
 # social media
+googlescholar_url: https://scholar.google.com/citations?user=OaiS4pMAAAAJ         # googlescholar
+dblp_url: https://dblp.org/pid/262/1511.html            # dblp
 homepage_url: https://qcjiang.github.io/          # 个人博客
 github_url: https://github.com/qcjiang            # github主页
 email:  jqc_AT_mail.ustc.edu.cn     # 常用邮件
