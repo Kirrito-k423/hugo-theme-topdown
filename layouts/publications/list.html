@@ -68,24 +68,29 @@
 													{{ with .Params.Link }}
 														<a class="icons" href="{{ . | safeHTML }}">
 															<i  data-feather="link"></i>
+															<!-- <img align="center" src="{{ site.BaseURL }}/images/acm.png" alt="" height="30" width="30"> -->
+
 															<span class="feather-text">DOI</span>
 														</a>
 													{{ end }}
 													{{ with .Params.PDF }}
 														<a class="icons" href="{{ . | safeHTML }}">
 															<i  data-feather="paperclip"></i>
+															<!-- <img align="center" src="{{ site.BaseURL }}/images/pdf.png" alt="" height="30" width="30"> -->
 															<span class="feather-text">PDF</span>
 														</a>
 													{{ end }}
 													{{ with .Params.SLIDE }}
 														<a class="icons" href="{{ . | safeHTML }}">
 															<i  data-feather="download"></i>
+															<!-- <img align="center" src="{{ site.BaseURL }}/images/ppt.png" alt="" height="30" width="30"> -->
 															<span class="feather-text">PPT</span>
 														</a>
 													{{ end }}
 													{{ with .Params.video }}
 														<a class="icons" href="{{ . | safeHTML }}">
 															<i  data-feather="video"></i>
+															<!-- <img align="center" src="{{ site.BaseURL }}/images/video.png" alt="" height="30" width="30"> -->
 															<span class="feather-text">Video</span>
 														</a>
 													{{ end }}

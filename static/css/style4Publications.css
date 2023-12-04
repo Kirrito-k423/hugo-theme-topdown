@@ -39,7 +39,21 @@
 
 .paper-card .icons{
     text-decoration: underline;
+    
 }
+
+/* .paper-card .icons .feather-text{
+   top: 2px; 
+} */
+
+/* .paper-card .icons img{
+    filter: grayscale(50%);
+    background-color: #ff0000; /* 替换为你想要的颜色
+} */
+
+.monochrome-img {
+    filter: url('#monochrome');
+  }
 
 .paper-title{
     margin-top: 0;
