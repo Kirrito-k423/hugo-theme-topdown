@@ -112,5 +112,19 @@ Where is ACSA? google map</description>
       <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/date23-a3pim/</guid>
       <description>The performance gap between memory and proces- sor has grown rapidly. Consequently, the energy and wall-clock time costs associated with moving data between the CPU and main memory predominate the overall computational cost. The Processing-in-Memory (PIM) paradigm emerges as a promising architecture that mitigates the need for extensive data movements by strategically positioning computing units proximate to the memory. Despite the abundant efforts devoted to building a robust and highly-available PIM system, identifying PIM-friendly segments of applications poses significant challenges due to the lack of a comprehensive tool to evaluate the intrinsic memory access pattern of the segment.</description>
     </item>
+    <item>
+      <title>Quantifying Throughput of Basic Blocks on ARM Microarchitectures by Static Code Analyzers: A Case Study on Kunpeng 920</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2022/hpcc22-sca/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2022/hpcc22-sca/</guid>
+      <description>The performance of high-performance computing (HPC) and other real-world applications is becoming unpre-dictable as the micro-architecture of the modern central processing unit (CPU) turns to be more and more complex. As a consequence, predicting the execution time of a code snippet is notoriously difficult. Basic block throughput predictor, also known as static code analyzer, provides a ubiquitous way to predict the execution time of a basic block, which includes assembly code segments without jump-related instructions.</description>
+    </item>
+    <item>
+      <title>Uncovering the performance bottleneck of modern HPC processor with static code analyzer: a case study on Kunpeng 920</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/thpc-sca/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/thpc-sca/</guid>
+      <description>The performance gap between memory and proces- sor has grown rapidly. Consequently, the energy and wall-clock time costs associated with moving data between the CPU and main memory predominate the overall computational cost. The Processing-in-Memory (PIM) paradigm emerges as a promising architecture that mitigates the need for extensive data movements by strategically positioning computing units proximate to the memory. Despite the abundant efforts devoted to building a robust and highly-available PIM system, identifying PIM-friendly segments of applications poses significant challenges due to the lack of a comprehensive tool to evaluate the intrinsic memory access pattern of the segment.</description>
+    </item>
   </channel>
 </rss>
