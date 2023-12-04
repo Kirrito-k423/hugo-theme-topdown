@@ -24,63 +24,74 @@
 			{{ if gt $counter 0 }}
 				<h2>{{ $year }}</h2>
 				
-				<!-- 打印对应年份的paper -->
-				{{ range $Pages.ByPublishDate.Reverse }}
-				{{ if eq $year .Params.Year }}
-					<div class="paper-bar">
-						<div class="paper-card">
-							<p class="paper-title">{{ .Params.title }}</p>
-							<span class="paper-FirstAuthor">
-								{{ range .Params.FirstAuthor }}
-									{{ . }},
-								{{ end }}
-							</span>
-							<span class="paper-OtherAuthors">
-								{{ range .Params.OtherAuthors }}
-									{{ . }},
-								{{ end }}
-							</span>
-							<div class="paper-ConfJournal">
-								{{ .Params.ConfJournal }} ({{ .Params.ConfJournalAbbr }} {{ .Params.Year }})
-								<b>CCF {{ .Params.CCFLevel }}</b> 
-								{{ with .Params.IsAConference }}
-									{{ if eq . "no" }}
-									<b>Journal</b>
+				<!-- 打印对应年份的paper, A类优先，会议优先 -->
+				{{ $CCFs := slice "A" "B" "C" }}
+				{{ $ConfFirst := slice "yes" "no" }}
+
+				{{ range $index, $CCF := $CCFs }}
+					{{ range $index, $Conf := $ConfFirst }}
+						{{ range $Pages.ByPublishDate.Reverse }}
+							{{ if eq $Conf .Params.IsAConference }}
+								{{ if eq $CCF .Params.CCFLevel }}
+									{{ if eq $year .Params.Year }}
+										<div class="paper-bar">
+											<div class="paper-card">
+												<p class="paper-title">{{ .Params.title }}</p>
+												<span class="paper-FirstAuthor">
+													{{ range .Params.FirstAuthor }}
+														{{ . }},
+													{{ end }}
+												</span>
+												<span class="paper-OtherAuthors">
+													{{ range .Params.OtherAuthors }}
+														{{ . }},
+													{{ end }}
+												</span>
+												<div class="paper-ConfJournal">
+													{{ .Params.ConfJournal }} ({{ .Params.ConfJournalAbbr }} {{ .Params.Year }})
+													<b>CCF {{ .Params.CCFLevel }}</b> 
+													{{ with .Params.IsAConference }}
+														{{ if eq . "no" }}
+														<b>Journal</b>
+														{{ end }}
+													{{ end }}
+													{{ with .Params.Award }}
+														<b style="color:rgb(188, 4, 4);">{{ . }}</b>
+													{{ end }}
+												</div>
+												<div class="paper-multimedia">
+													{{ with .Params.Link }}
+														<a class="icons" href="{{ . | safeHTML }}">
+															<i  data-feather="link"></i>
+															<span class="feather-text">DOI</span>
+														</a>
+													{{ end }}
+													{{ with .Params.PDF }}
+														<a class="icons" href="{{ . | safeHTML }}">
+															<i  data-feather="paperclip"></i>
+															<span class="feather-text">PDF</span>
+														</a>
+													{{ end }}
+													{{ with .Params.SLIDE }}
+														<a class="icons" href="{{ . | safeHTML }}">
+															<i  data-feather="download"></i>
+															<span class="feather-text">PPT</span>
+														</a>
+													{{ end }}
+													{{ with .Params.video }}
+														<a class="icons" href="{{ . | safeHTML }}">
+															<i  data-feather="video"></i>
+															<span class="feather-text">Video</span>
+														</a>
+													{{ end }}
+												</div>
+											</div>
+										</div>
 									{{ end }}
 								{{ end }}
-								{{ with .Params.Award }}
-									<b style="color:rgb(188, 4, 4);">{{ . }}</b>
-								{{ end }}
-							</div>
-							<div class="paper-multimedia">
-								{{ with .Params.Link }}
-									<a class="icons" href="{{ . | safeHTML }}">
-										<i  data-feather="link"></i>
-										<span class="feather-text">DOI</span>
-									</a>
-								{{ end }}
-								{{ with .Params.PDF }}
-									<a class="icons" href="{{ . | safeHTML }}">
-										<i  data-feather="paperclip"></i>
-										<span class="feather-text">PDF</span>
-									</a>
-								{{ end }}
-								{{ with .Params.SLIDE }}
-									<a class="icons" href="{{ . | safeHTML }}">
-										<i  data-feather="download"></i>
-										<span class="feather-text">PPT</span>
-									</a>
-								{{ end }}
-								{{ with .Params.video }}
-									<a class="icons" href="{{ . | safeHTML }}">
-										<i  data-feather="video"></i>
-										<span class="feather-text">Video</span>
-									</a>
-								{{ end }}
-							</div>
-						</div>
-					</div>
-				{{ end }}
+							{{ end }}
+						{{ end }}
+					{{ end }}
 				{{ end }}
 			{{ end }}
 		{{ end }}
