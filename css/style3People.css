@@ -154,6 +154,11 @@ body {
     /* width: 60%; */
 }
 
+.detail-info .paper-card{
+    margin: 1em;
+    color: rgb(146, 157, 192);
+}
+
 .stick-motto-column .person div{
     text-align: left;
 }
