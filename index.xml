@@ -136,6 +136,14 @@ Where is ACSA? google map</description>
       <description></description>
     </item>
     <item>
+      <title>AI小组</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/teams/ai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/teams/ai/</guid>
+      <description>欢迎来到AI小组的主页
+所属子小组</description>
+    </item>
+    <item>
       <title>PIM存内计算小组</title>
       <link>https://kirrito-k423.github.io/hugo-theme-topdown/teams/hpc/pim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -156,6 +164,14 @@ Where is ACSA? google map</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/thpc-sca/</guid>
       <description>The performance gap between memory and proces- sor has grown rapidly. Consequently, the energy and wall-clock time costs associated with moving data between the CPU and main memory predominate the overall computational cost. The Processing-in-Memory (PIM) paradigm emerges as a promising architecture that mitigates the need for extensive data movements by strategically positioning computing units proximate to the memory. Despite the abundant efforts devoted to building a robust and highly-available PIM system, identifying PIM-friendly segments of applications poses significant challenges due to the lack of a comprehensive tool to evaluate the intrinsic memory access pattern of the segment.</description>
+    </item>
+    <item>
+      <title>数据流小组</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/teams/hpc/dataflow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/teams/hpc/dataflow/</guid>
+      <description>欢迎来到数据流小组的主页
+所属项目</description>
     </item>
     <item>
       <title>静态代码性能分析器</title>
