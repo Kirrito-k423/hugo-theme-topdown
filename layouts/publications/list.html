@@ -48,6 +48,9 @@
 									<b>Journal</b>
 									{{ end }}
 								{{ end }}
+								{{ with .Params.Award }}
+									<b style="color:rgb(188, 4, 4);">{{ . }}</b>
+								{{ end }}
 							</div>
 							<div class="paper-multimedia">
 								{{ with .Params.Link }}

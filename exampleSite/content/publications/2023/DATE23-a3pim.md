@@ -12,6 +12,7 @@ ConfJournalAbbr: DATE
 IsAConference: "yes" # 会议填yes，期刊写 no
 CCFLevel: "B" 
 Year: 2023
+Award: "TSJ's Best Paper Award"
 Abstract: "A3PIM1: an Automated,
 Analytic and Accurate Processing-in-Memory offloader. We sys-
 tematically consider the cross-segment data movement and the
