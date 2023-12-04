@@ -9,6 +9,7 @@
 		{{ $currentYear := now.Year }}
 		{{ $startYear := 2010 }}
 		{{ $Pages := .Pages }}
+		{{ $root := . }}
 
 		<!-- 2010到今年 -->
 		{{ range $year := seq $currentYear -1 $startYear  }}
@@ -39,12 +40,46 @@
 												<p class="paper-title">{{ .Params.title }}</p>
 												<span class="paper-FirstAuthor">
 													{{ range .Params.FirstAuthor }}
-														{{ . }},
+														{{ $name := . }}
+														{{ $words := split . " " }}
+														{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+														<!-- {{ $reversedName }} -->
+														{{ with $root.Site.GetPage "section" "people" }}
+															{{ with .GetPage  $reversedName }}
+																<!-- 文件存在的处理逻辑 -->
+																<!-- <p>文件存在：{{ .Params.cn_name }}</p> -->
+																<a href="{{ .Permalink }}" 
+																	style="color:rgb(146, 157, 192);">
+																	{{ $name }}
+																</a>,
+															{{ else }}
+																<!-- 文件不存在的处理逻辑 -->
+																<!-- <p>文件不存在</p> -->
+																{{ $name }},
+															{{ end }}
+														{{ end }}
 													{{ end }}
 												</span>
 												<span class="paper-OtherAuthors">
 													{{ range .Params.OtherAuthors }}
-														{{ . }},
+														{{ $name := . }}
+														{{ $words := split . " " }}
+														{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+														<!-- {{ $reversedName }} -->
+														{{ with $root.Site.GetPage "section" "people" }}
+															{{ with .GetPage  $reversedName }}
+																<!-- 文件存在的处理逻辑 -->
+																<!-- <p>文件存在：{{ .Params.cn_name }}</p> -->
+																<a href="{{ .Permalink }}" 
+																	style="color:rgb(146, 157, 192);">
+																	{{ $name }}
+																</a>,
+															{{ else }}
+																<!-- 文件不存在的处理逻辑 -->
+																<!-- <p>文件不存在</p> -->
+																{{ $name }},
+															{{ end }}
+														{{ end }}
 													{{ end }}
 												</span>
 												<div class="paper-ConfJournal">
