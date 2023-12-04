@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on ACSA Lab</title>
+    <link>https://kirrito-k423.github.io/hugo-theme-topdown/projects/</link>
+    <description>Recent content in Projects on ACSA Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <atom:link href="https://kirrito-k423.github.io/hugo-theme-topdown/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3D堆叠内存系统上的地址翻译问题</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/projects/pim-addressmapping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/projects/pim-addressmapping/</guid>
+      <description>欢迎来到存内计算上的地址翻译问题 的详细介绍页面
+所属论文</description>
+    </item>
+    <item>
+      <title>3D堆叠内存系统上的调度问题</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/projects/pim-offloader/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/projects/pim-offloader/</guid>
+      <description>欢迎来到存内计算 的详细介绍页面
+所属论文</description>
+    </item>
+    <item>
+      <title>静态代码性能分析器</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/projects/sca/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/projects/sca/</guid>
+      <description>欢迎来到华为的合作项目SCA的详细介绍页面
+所属论文</description>
+    </item>
+  </channel>
+</rss>

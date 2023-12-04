@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HPC小组 on ACSA Lab</title>
+    <link>https://kirrito-k423.github.io/hugo-theme-topdown/teams/hpc/</link>
+    <description>Recent content in HPC小组 on ACSA Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <atom:link href="https://kirrito-k423.github.io/hugo-theme-topdown/teams/hpc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PIM存内计算小组</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/teams/hpc/pim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/teams/hpc/pim/</guid>
+      <description>欢迎来到PIM小组的主页
+所属项目</description>
+    </item>
+  </channel>
+</rss>

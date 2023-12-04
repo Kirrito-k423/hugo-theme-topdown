@@ -106,6 +106,22 @@ Where is ACSA? google map</description>
       <description>宇宙のなかで、星々は煌めき、それはまるで造物主の詩のようです。大地には多様な命が息づき、花は咲き誇り、まるで造物主の絵筆が躍動しているかのようです。一枚の葉っぱや一片の雲、それぞれが神秘の美を語っています。そよ風が吹くとき、感じるのは終わりのない平和と神秘。太陽が昇る瞬間、その光は大地に注がれ、まるで造物主の慈愛の光です。この壮大で不思議な創造の中で、私たちが見るのは造物主の深い、果てしない知恵です。この宇宙の傑作に対する賛美は、感謝と畏敬の念を心の底から表します。</description>
     </item>
     <item>
+      <title>3D堆叠内存系统上的地址翻译问题</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/projects/pim-addressmapping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/projects/pim-addressmapping/</guid>
+      <description>欢迎来到存内计算上的地址翻译问题 的详细介绍页面
+所属论文</description>
+    </item>
+    <item>
+      <title>3D堆叠内存系统上的调度问题</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/projects/pim-offloader/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/projects/pim-offloader/</guid>
+      <description>欢迎来到存内计算 的详细介绍页面
+所属论文</description>
+    </item>
+    <item>
       <title>A3PIM: An Automated, Analytic and Accurate Processing-in-Memory Offloader</title>
       <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/date23-a3pim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -120,6 +136,14 @@ Where is ACSA? google map</description>
       <description></description>
     </item>
     <item>
+      <title>PIM存内计算小组</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/teams/hpc/pim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/teams/hpc/pim/</guid>
+      <description>欢迎来到PIM小组的主页
+所属项目</description>
+    </item>
+    <item>
       <title>Quantifying Throughput of Basic Blocks on ARM Microarchitectures by Static Code Analyzers: A Case Study on Kunpeng 920</title>
       <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2022/hpcc22-sca/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -132,6 +156,14 @@ Where is ACSA? google map</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/thpc-sca/</guid>
       <description>The performance gap between memory and proces- sor has grown rapidly. Consequently, the energy and wall-clock time costs associated with moving data between the CPU and main memory predominate the overall computational cost. The Processing-in-Memory (PIM) paradigm emerges as a promising architecture that mitigates the need for extensive data movements by strategically positioning computing units proximate to the memory. Despite the abundant efforts devoted to building a robust and highly-available PIM system, identifying PIM-friendly segments of applications poses significant challenges due to the lack of a comprehensive tool to evaluate the intrinsic memory access pattern of the segment.</description>
+    </item>
+    <item>
+      <title>静态代码性能分析器</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/projects/sca/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/projects/sca/</guid>
+      <description>欢迎来到华为的合作项目SCA的详细介绍页面
+所属论文</description>
     </item>
   </channel>
 </rss>

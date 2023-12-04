@@ -38,6 +38,10 @@
   </url><url>
     <loc>https://kirrito-k423.github.io/hugo-theme-topdown/people/tanshaojie/</loc>
   </url><url>
+    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/projects/pim-addressmapping/</loc>
+  </url><url>
+    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/projects/pim-offloader/</loc>
+  </url><url>
     <loc>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/date23-a3pim/</loc>
   </url><url>
     <loc>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2022/sc22-aiquantum/</loc>
@@ -46,7 +50,13 @@
   </url><url>
     <loc>https://kirrito-k423.github.io/hugo-theme-topdown/tags/hpc/</loc>
   </url><url>
+    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/teams/hpc/</loc>
+  </url><url>
     <loc>https://kirrito-k423.github.io/hugo-theme-topdown/tags/pim/</loc>
+  </url><url>
+    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/teams/hpc/pim/</loc>
+  </url><url>
+    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/projects/</loc>
   </url><url>
     <loc>https://kirrito-k423.github.io/hugo-theme-topdown/publications/</loc>
   </url><url>
@@ -54,6 +64,10 @@
   </url><url>
     <loc>https://kirrito-k423.github.io/hugo-theme-topdown/tags/</loc>
   </url><url>
+    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/teams/</loc>
+  </url><url>
     <loc>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/thpc-sca/</loc>
+  </url><url>
+    <loc>https://kirrito-k423.github.io/hugo-theme-topdown/projects/sca/</loc>
   </url>
 </urlset>
