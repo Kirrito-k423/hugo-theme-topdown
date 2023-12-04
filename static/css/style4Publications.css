@@ -68,3 +68,39 @@
     color: rgb(114, 155, 191);
     margin-right: 10px;
 }
+
+ /* 太酷了 */
+
+ /* linear-gradient 用于创建水平的渐变背景，然后通过 -webkit-background-clip: text; 和 color: transparent; 将背景应用到文本上，从而实现了文字颜色的渐变效果。 */
+.gradient-text {
+    background: linear-gradient(to right, #ff00ff, #00ffff);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+.radial-gradient-text {
+    background: radial-gradient(circle, #ff0000, #00ff00, #2600ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@keyframes rainbow {
+    0% { color: #ff0000; }
+    20% { color: #ff7f00; }
+    40% { color: #ffff00; }
+    60% { color: #00ff00; }
+    80% { color: #0000ff; }
+    100% { color: #ff00ff; }
+}
+
+@keyframes rainbow2 {
+    0% { color: #a70404; }
+    20% { color: #a55505; }
+    80% { color: #8801a3; }
+    100% { color: #a504a5; }
+}
+
+.rainbow-text {
+    animation: rainbow2 5s infinite; /* 持续时间为 5 秒，无限循环 */
+}
+  

@@ -49,14 +49,19 @@
 												</span>
 												<div class="paper-ConfJournal">
 													{{ .Params.ConfJournal }} ({{ .Params.ConfJournalAbbr }} {{ .Params.Year }})
-													<b>CCF {{ .Params.CCFLevel }}</b> 
+													{{ if eq .Params.CCFLevel "A" }}
+														<b class="rainbow-text">CCF {{ .Params.CCFLevel }}</b> 
+													{{ else }}
+														<b>CCF {{ .Params.CCFLevel }}</b> 
+													{{ end }}
 													{{ with .Params.IsAConference }}
 														{{ if eq . "no" }}
 														<b>Journal</b>
 														{{ end }}
 													{{ end }}
 													{{ with .Params.Award }}
-														<b style="color:rgb(188, 4, 4);">{{ . }}</b>
+														<!-- <b class="radial-gradient-text">{{ . }}</b> -->
+														<b style="color:rgb(191, 4, 4);">{{ . }}</b>
 													{{ end }}
 												</div>
 												<div class="paper-multimedia">
