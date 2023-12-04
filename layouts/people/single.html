@@ -131,7 +131,9 @@
 							{{ $words := split . " " }}
 							{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
 							{{ if eq $reversedName $filename }}
-								<div class="paper-card">
+								<div class="paper-card" style="
+										margin-bottom:0em;
+									">
 									<a href="{{ $page.Permalink }}" style="
 										text-decoration: none;
 										">
@@ -211,10 +213,11 @@
 								{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
 								{{ if eq $reversedName $filename }}
 									<img align="center" src="{{ site.BaseURL }}/images/downright.png" alt="" height="30" width="30" style="
-											margin-left:2em;
+											margin-left:1.2em;
 										">
 									<div class="paper-card" style="
-											margin-left:4em;
+											margin-top:0em;
+											margin-left:3em;
 										">
 										<a href="{{ $page.Permalink }}" style="
 											text-decoration: none;
