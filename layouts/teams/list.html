@@ -1,0 +1,137 @@
+{{ define "main" }}
+<div class="topdown-main">
+	<div class="publications-column">
+		<h1 style="text-align:left; font-size: xx-large;">研究小组</h1>
+		<!-- <p>排版有待调整</p> -->
+
+		<hr aria-hidden="true">
+		{{ $root := . }}
+
+
+		{{ range .Pages.ByPublishDate.Reverse }}
+		
+			<div class="paper-bar">
+				<a href="{{ .RelPermalink }}" style="
+					text-decoration: none;
+					">
+					<div class="paper-card">
+						<p class="paper-title">{{ .Params.title }}</p>
+						<span class="paper-FirstAuthor">
+							{{ range .Params.leader }}
+								{{ $name := . }}
+								{{ $words := split . " " }}
+								{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+								<!-- {{ $reversedName }} -->
+								{{ with $root.Site.GetPage "section" "people" }}
+									{{ with .GetPage  $reversedName }}
+										<!-- 文件存在的处理逻辑 -->
+										<!-- <p>文件存在：{{ .Params.cn_name }}</p> -->
+										<a href="{{ .Permalink }}" 
+											style="color:rgb(146, 157, 192);">
+											<b>{{ $name }}</b>
+										</a>,
+									{{ else }}
+										<!-- 文件不存在的处理逻辑 -->
+										<!-- <p>文件不存在</p> -->
+										<b>{{ $name }}</b>,
+									{{ end }}
+								{{ end }}
+							{{ end }}
+						</span>
+						<span class="paper-OtherAuthors">
+							{{ range .Params.members }}
+								{{ $name := . }}
+								{{ $words := split . " " }}
+								{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+								<!-- {{ $reversedName }} -->
+								{{ with $root.Site.GetPage "section" "people" }}
+									{{ with .GetPage  $reversedName }}
+										<!-- 文件存在的处理逻辑 -->
+										<!-- <p>文件存在：{{ .Params.cn_name }}</p> -->
+										<a href="{{ .Permalink }}" 
+											style="color:rgb(146, 157, 192);">
+											{{ $name }}
+										</a>,
+									{{ else }}
+										<!-- 文件不存在的处理逻辑 -->
+										<!-- <p>文件不存在</p> -->
+										{{ $name }},
+									{{ end }}
+								{{ end }}
+							{{ end }}
+						</span>
+
+	
+					</div>
+				</a>
+				
+			</div>
+			
+			<!-- TODO: temp design only two-level teams -->
+			{{ range .Pages.ByPublishDate.Reverse }}
+				<div class="paper-bar">
+					<img align="center" src="{{ site.BaseURL }}/images/downright.png" alt="" height="30" width="30">
+					<a href="{{ .RelPermalink }}" style="
+						text-decoration: none;
+						">
+						<div class="paper-card tab-card">
+							<p class="paper-title">{{ .Params.title }}</p>
+							<span class="paper-FirstAuthor">
+								{{ range .Params.leader }}
+									{{ $name := . }}
+									{{ $words := split . " " }}
+									{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+									<!-- {{ $reversedName }} -->
+									{{ with $root.Site.GetPage "section" "people" }}
+										{{ with .GetPage  $reversedName }}
+											<!-- 文件存在的处理逻辑 -->
+											<!-- <p>文件存在：{{ .Params.cn_name }}</p> -->
+											<a href="{{ .Permalink }}" 
+												style="color:rgb(146, 157, 192);">
+												<b>{{ $name }}</b>
+											</a>,
+										{{ else }}
+											<!-- 文件不存在的处理逻辑 -->
+											<!-- <p>文件不存在</p> -->
+											<b>{{ $name }}</b>,
+										{{ end }}
+									{{ end }}
+								{{ end }}
+							</span>
+							<span class="paper-OtherAuthors">
+								{{ range .Params.members }}
+									{{ $name := . }}
+									{{ $words := split . " " }}
+									{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+									<!-- {{ $reversedName }} -->
+									{{ with $root.Site.GetPage "section" "people" }}
+										{{ with .GetPage  $reversedName }}
+											<!-- 文件存在的处理逻辑 -->
+											<!-- <p>文件存在：{{ .Params.cn_name }}</p> -->
+											<a href="{{ .Permalink }}" 
+												style="color:rgb(146, 157, 192);">
+												{{ $name }}
+											</a>,
+										{{ else }}
+											<!-- 文件不存在的处理逻辑 -->
+											<!-- <p>文件不存在</p> -->
+											{{ $name }},
+										{{ end }}
+									{{ end }}
+								{{ end }}
+							</span>
+
+		
+						</div>
+					</a>
+					
+				</div>
+			{{ end }}
+		{{ end }}
+	
+		{{ range .Pages.ByPublishDate.Reverse }}
+			
+		{{ end }}
+	</div>
+</div>
+{{ end }}
