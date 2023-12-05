@@ -1,0 +1,68 @@
+{{ define "main" }}
+<div class="topdown-main">
+		<div class="publications-column">
+			<h1 style="text-align:left; font-size: xx-large;">{{ .Params.title }}</h1>
+			<!-- <p>排版有待调整</p> -->
+	
+			{{ $root := . }}
+			
+			<span class="paper-FirstAuthor">
+				{{ range .Params.leader }}
+					{{ $name := . }}
+					{{ $words := split . " " }}
+					{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+					<!-- {{ $reversedName }} -->
+					{{ with $root.Site.GetPage "section" "people" }}
+						{{ with .GetPage  $reversedName }}
+							<!-- 文件存在的处理逻辑 -->
+							<!-- <p>文件存在：{{ .Params.cn_name }}</p> -->
+							<a href="{{ .Permalink }}" 
+								style="color:rgb(146, 157, 192);">
+								<b>{{ $name }}</b>
+							</a>,
+						{{ else }}
+							<!-- 文件不存在的处理逻辑 -->
+							<!-- <p>文件不存在</p> -->
+							<b>{{ $name }}</b>,
+						{{ end }}
+					{{ end }}
+				{{ end }}
+			</span>
+			<span class="paper-OtherAuthors">
+				{{ range .Params.members }}
+					{{ $name := . }}
+					{{ $words := split . " " }}
+					{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
+					<!-- {{ $reversedName }} -->
+					{{ with $root.Site.GetPage "section" "people" }}
+						{{ with .GetPage  $reversedName }}
+							<!-- 文件存在的处理逻辑 -->
+							<!-- <p>文件存在：{{ .Params.cn_name }}</p> -->
+							<a href="{{ .Permalink }}" 
+								style="color:rgb(146, 157, 192);">
+								{{ $name }}
+							</a>,
+						{{ else }}
+							<!-- 文件不存在的处理逻辑 -->
+							<!-- <p>文件不存在</p> -->
+							{{ $name }},
+						{{ end }}
+					{{ end }}
+				{{ end }}
+			</span>
+			<div class="paper-ConfJournal">
+				From {{ .Params.start_time }} to 
+				{{ with .Params.end_time }}
+					{{ . }}
+				{{ else }}
+					Now
+				{{ end }}
+			</div>
+
+			<hr aria-hidden="true">
+			{{ $root := . }}
+	
+			{{ .Content }}
+		</div>
+</div>
+{{ end }}
