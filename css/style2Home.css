@@ -20,13 +20,17 @@
 }
 
 .slogan{
-
-    padding: 150px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* padding: 150px; */
+    /* transform: translate(-50%, -50%)的作用是将元素自身的50%宽度和50%高度分别向左和向上移动，这样就可以使文本在垂直和水平方向上都与页面中心对齐。 */
+    transform: translate(-50%, -50%);
     color: #fff; /* 设置链接颜色 */
     font-family: Stanford,Source Serif Pro,Georgia,Times,Times New Roman,serif!important;
     font-weight: normal;
     font-size: 7.4505805969em;
-    text-align: right;
+    text-align: center;
     text-shadow: 0 0 30px rgba(0,0,0,.7);
 }
 
