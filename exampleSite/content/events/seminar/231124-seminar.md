@@ -1,5 +1,5 @@
 ---
-title: "研讨会231124"
+title: "研讨会"
 types: "seminar"
 date: 2023-11-24T19:30:15+08:00
 location: "致信楼 707"
