@@ -4,3 +4,110 @@
 /* 文字字体，字号，颜色 */
 /* 背景色，长宽，其他 */
 
+
+.first-grid{
+    position: relative;
+    /* border: 1px solid #ad214b; */
+    width: calc(50% + 665px);
+    /* height: 1000px; */
+    box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
+    margin-left: 35px;
+    margin-bottom: 35px;
+    overflow: hidden; /* 隐藏超出容器的部分 */
+    background-color: #fff;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.first-grid-pic{
+    box-shadow: 0 0 1px rgba(0,0,0,.15), 0 1px 1px rgba(0,0,0,.15);
+    height: 700px;
+}
+
+.first-grid .grid-content{
+    position: relative;
+    top: 0;
+    width: 90%;
+    height: auto;
+    padding: 1em 2em;
+    background: none;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.first-grid .grid-content .post-meta{
+    position: relative;
+    color: rgb(140, 21, 21);
+}
+
+.first-grid .grid-content h3 a{
+    position: relative;
+    top: 0;
+    color: black;
+    text-shadow: none;
+    font-family: 'Source Serif Pro', 'Times New Roman', Times, serif;
+    font-size: 2.2em;
+    letter-spacing: 0;
+}
+
+.post-abstract{
+    text-align: left;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+
+    font-size: 1.25em;
+    line-height: 1.35em;
+}
+
+.second-grid{
+    position: relative;
+    /* border: 1px solid #ad214b; */
+    width: calc(25% + 315px);
+    /* height: 1000px; */
+    box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
+    margin-left: 35px;
+    margin-bottom: 35px;
+    overflow: hidden; /* 隐藏超出容器的部分 */
+    background-color: #fff;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.second-grid-pic{
+    box-shadow: 0 0 1px rgba(0,0,0,.15), 0 1px 1px rgba(0,0,0,.15);
+    height: 350px;
+}
+
+.second-grid .grid-content{
+    position: relative;
+    top: 0;
+    width: 90%;
+    height: auto;
+    padding: 1em 2em;
+    background: none;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.second-grid .grid-content .post-meta{
+    position: relative;
+    color: rgb(140, 21, 21);
+}
+
+.second-grid .grid-content h3 a{
+    position: relative;
+    top: 0;
+    width: 100%;
+    color: black;
+    text-shadow: none;
+    font-family: 'Source Serif Pro', 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    letter-spacing: 0;
+}
+
+.second-grid .grid-content .post-abstract{
+    text-align: left;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+
+    font-size: 1em;
+    line-height: 1.2em;
+}
