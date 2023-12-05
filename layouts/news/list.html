@@ -1,184 +1,116 @@
 {{ define "main" }}
 <div class="topdown-main">
-	<div class="publications-column">
-		<h1 style="text-align:left; font-size: xx-large;">Lab News</h1>
-		<p>有限信息，设计成小方块(一大带多小)</p>
 
-		<hr aria-hidden="true">
+<!-- Lab News -->
+<section class="panel-fog"> 
+	<header>
+		<h2 class="section-title">Lab News</h2>
+		<p class="section-subtitle">Stories about people, research, and innovation across the Farm</p>
+	</header>
+	<section class="panel-fog"> 
+		<div class="six-grids">
 
-		{{ $currentYear := now.Year }}
-		{{ $startYear := 2010 }}
-		{{ $Pages := .Pages }}
-		{{ $root := . }}
-
-		<!-- print on-going projects first-->
-		<h2>On-going Projects</h2>
-
-		{{ range $Pages.ByPublishDate.Reverse }}
-			{{ with .Params.end_time }}
-			{{ else }}
-				<div class="paper-bar">
-					<a href="{{ .RelPermalink }}" style="
-						text-decoration: none;
-						">
-						<div class="paper-card">
-							<p class="paper-title">{{ .Params.title }}</p>
-							<span class="paper-FirstAuthor">
-								{{ range .Params.leader }}
-									{{ $name := . }}
-									{{ $words := split . " " }}
-									{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
-									<!-- {{ $reversedName }} -->
-									{{ with $root.Site.GetPage "section" "people" }}
-										{{ with .GetPage  $reversedName }}
-											<!-- 文件存在的处理逻辑 -->
-											<!-- <p>文件存在：{{ .Params.cn_name }}</p> -->
-											<a href="{{ .Permalink }}" 
-												style="color:rgb(146, 157, 192);">
-												<b>{{ $name }}</b>
-											</a>,
-										{{ else }}
-											<!-- 文件不存在的处理逻辑 -->
-											<!-- <p>文件不存在</p> -->
-											<b>{{ $name }}</b>,
-										{{ end }}
-									{{ end }}
-								{{ end }}
-							</span>
-							<span class="paper-OtherAuthors">
-								{{ range .Params.members }}
-									{{ $name := . }}
-									{{ $words := split . " " }}
-									{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
-									<!-- {{ $reversedName }} -->
-									{{ with $root.Site.GetPage "section" "people" }}
-										{{ with .GetPage  $reversedName }}
-											<!-- 文件存在的处理逻辑 -->
-											<!-- <p>文件存在：{{ .Params.cn_name }}</p> -->
-											<a href="{{ .Permalink }}" 
-												style="color:rgb(146, 157, 192);">
-												{{ $name }}
-											</a>,
-										{{ else }}
-											<!-- 文件不存在的处理逻辑 -->
-											<!-- <p>文件不存在</p> -->
-											{{ $name }},
-										{{ end }}
-									{{ end }}
-								{{ end }}
-							</span>
-							<div class="paper-ConfJournal">
-								From {{ .Params.start_time }} to 
-								{{ with .Params.end_time }}
-									{{ . }}
-								{{ else }}
-									Now
-								{{ end }}
-							</div>
-		
-						</div>
+		<!-- manual select first one -->
+		{{ range .Data.Pages }}
+			{{ if eq .Params.selectedInFirstPage 1 }}
+			<article class="first-grid">
+				<div class = "first-grid-pic">
+					<a href="{{ .RelPermalink }}">
+						<img class="landscape" src="{{ .Params.img_url }}">
 					</a>
-					<br>
-
-					
 				</div>
-									
+				<div class="grid-content">
+					<div class="post-meta">
+						<p>{{ .Params.types }}</p>
+					</div>
+					<h3>
+						<a href="{{ .RelPermalink }}">
+						{{ .Params.title }}
+						</a>
+					</h3>
+					<p class="post-abstract">{{ .Params.abstract }}</p>
+				</div>
+			</article>
 			{{ end }}
 		{{ end }}
-		<!-- 2010到今年 -->
-		<br>
-		{{ range $year := seq $currentYear -1 $startYear  }}
-			{{ $counter := 0 }}
 
-			<!-- 每年计数 -->
-			<!-- transform types all to numbers -->
-			{{ $numericYear := printf "%d" ($year) }}
-			{{ range $Pages.ByPublishDate.Reverse }}
-				{{ $end_year := index (split .Params.end_time "-") 0 }}
-				{{ if eq $end_year $numericYear }}
-					{{ $counter = add $counter 1 }}
-				{{ end }}
-			{{ end }}
-
-
-			{{ if gt $counter 0 }}
-				<h2>{{ $year }}</h2>
-				{{ range $Pages.ByPublishDate.Reverse }}
-					{{ $end_year := index (split .Params.end_time "-") 0 }}
-					{{ if eq $end_year $numericYear }}
-						<div class="paper-bar">
-							<a href="{{ .RelPermalink }}" style="
-								text-decoration: none;
-								">
-								<div class="paper-card">
-									<p class="paper-title">{{ .Params.title }}</p>
-									<span class="paper-FirstAuthor">
-										{{ range .Params.leader }}
-											{{ $name := . }}
-											{{ $words := split . " " }}
-											{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
-											<!-- {{ $reversedName }} -->
-											{{ with $root.Site.GetPage "section" "people" }}
-												{{ with .GetPage  $reversedName }}
-													<!-- 文件存在的处理逻辑 -->
-													<!-- <p>文件存在：{{ .Params.cn_name }}</p> -->
-													<a href="{{ .Permalink }}" 
-														style="color:rgb(146, 157, 192);">
-														<b>{{ $name }}</b>
-													</a>,
-												{{ else }}
-													<!-- 文件不存在的处理逻辑 -->
-													<!-- <p>文件不存在</p> -->
-													<b>{{ $name }}</b>,
-												{{ end }}
-											{{ end }}
-										{{ end }}
-									</span>
-									<span class="paper-OtherAuthors">
-										{{ range .Params.members }}
-											{{ $name := . }}
-											{{ $words := split . " " }}
-											{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
-											<!-- {{ $reversedName }} -->
-											{{ with $root.Site.GetPage "section" "people" }}
-												{{ with .GetPage  $reversedName }}
-													<!-- 文件存在的处理逻辑 -->
-													<!-- <p>文件存在：{{ .Params.cn_name }}</p> -->
-													<a href="{{ .Permalink }}" 
-														style="color:rgb(146, 157, 192);">
-														{{ $name }}
-													</a>,
-												{{ else }}
-													<!-- 文件不存在的处理逻辑 -->
-													<!-- <p>文件不存在</p> -->
-													{{ $name }},
-												{{ end }}
-											{{ end }}
-										{{ end }}
-									</span>
-									<div class="paper-ConfJournal">
-										From {{ .Params.start_time }} to 
-										{{ with .Params.end_time }}
-											{{ . }}
-										{{ else }}
-											Now
-										{{ end }}
-									</div>
-				
-								</div>
-							</a>
-							<br>
-
-							
-						</div>	
-					{{ end }}
-				{{ end }}
+		<!-- manual select second one -->
+		{{ range .Data.Pages }}
+			{{ if eq .Params.selectedInFirstPage 2 }}
+			<article class="second-grid">
+				<div class = "second-grid-pic">
+					<a href="{{ .RelPermalink }}">
+						<img class="landscape" src="{{ .Params.img_url }}">
+					</a>
+				</div>
+				<div class="grid-content">
+					<div class="post-meta">
+						<p>{{ .Params.types }}</p>
+					</div>
+					<h3>
+						<a href="{{ .RelPermalink }}">
+						{{ .Params.title }}
+						</a>
+					</h3>
+					<p class="post-abstract">{{ .Params.abstract }}</p>
+				</div>
+			</article>
 			{{ end }}
 		{{ end }}
-	
+
+		<!-- manual select 3rd one -->
 		{{ range .Pages.ByPublishDate.Reverse }}
-			
+			{{ if eq .Params.selectedInFirstPage 3 }}
+			<article class="second-grid">
+				<div class = "second-grid-pic">
+					<a href="{{ .RelPermalink }}">
+						<img class="landscape" src="{{ .Params.img_url }}">
+					</a>
+				</div>
+				<div class="grid-content">
+					<div class="post-meta">
+						<p>{{ .Params.types }}</p>
+					</div>
+					<h3>
+						<a href="{{ .RelPermalink }}">
+						{{ .Params.title }}
+						</a>
+					</h3>
+					<p class="post-abstract">{{ .Params.abstract }}</p>
+				</div>
+			</article>
+			{{ end }}
 		{{ end }}
+
+		<!-- other reverse sorted by time -->
+		{{ with .Site.GetPage "section" "news" }}
+			{{ range .Data.Pages }}
+				{{ if and (and (ne .Params.selectedInFirstPage 2) (ne .Params.selectedInFirstPage 1)) (ne .Params.selectedInFirstPage 3)}}
+				
+				<article class="small-grid">
+					<div class = "small-grid-pic">
+						<a href="{{ .RelPermalink }}">
+							<img class="landscape" src="{{ .Params.img_url }}">
+						</a>
+					</div>
+					<div class="small-grid-content">
+						<div class="post-meta">
+							<p>{{ .Params.types }}</p>
+						</div>
+						<h3>
+							<a href="{{ .RelPermalink }}">
+							{{ .Params.title }}
+							</a>
+						</h3>
+					</div>
+				</article>
+				{{ end }}
+			{{ end }}
+		{{ end }}
+		
 	</div>
+</section>
+
+</section>
 </div>
 {{ end }}
