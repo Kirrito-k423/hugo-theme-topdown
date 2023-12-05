@@ -314,109 +314,43 @@
             </header>
             <section class="panel-fog"> 
                 <div class="four-grids">
-                  <article class="quarter-grid">
-                    <div class = "quarter-grid-pic">
-                      <a href="">
-                        <img class="landscape" src="https://pic.shaojiemike.top/shaojiemike/2023/12/cf5134406dd7c7b2b65d688d43d61396.png">
-                      </a>
-                    </div>
+			          {{ $counter := 0 }}    
+                {{ with .Site.GetPage "section" "events" }}
+	                {{ range .Pages.ByPublishDate.Reverse }}
+        					  {{ $counter = add $counter 1 }}
+                    {{ if lt $counter 4 }}
+                      <article class="quarter-grid">
+                        <div class = "quarter-grid-pic">
+                          <a href="{{ .RelPermalink }}">
+                            <img class="landscape" src="{{ .Params.img_url }}">
+                          </a>
+                        </div>
 
-                    <time class="event-short-date" datetime="">
-                      <abbr class="month">Nov</abbr>
-                      <span class="day">24</span>
-                    </time>
-                    <div class="small-grid-content">
-                      <div class="post-meta">
-                        <p>Seminar</p>
-                      </div>
-                      <h3>
-                        <a href="">
-                          Ziqi Zhu and Shaojie Tan reported on the topic of AI and restricted address translation.
-                        </a>
-                      </h3>
-                      <p class="start-time">
-                        19:30 pm UTC+8
-                      </p>
-                    </div>
-                  </article>
-  
-                  <article class="quarter-grid">
-                    <div class = "quarter-grid-pic">
-                      <a href="">
-                        <img class="landscape" src="{{ site.BaseURL }}/images/pic-default.png">
-                      </a>
-                    </div>
+                        {{ $date := .Params.date | time }}
+			                  {{ $formattedDate := $date.Format "3:04 pm" }}
 
-                    <time class="event-short-date" datetime="">
-                      <abbr class="month">Nov</abbr>
-                      <span class="day">24</span>
-                    </time>
-                    <div class="small-grid-content">
-                      <div class="post-meta">
-                        <p>Report</p>
-                      </div>
-                      <h3>
-                        <a href="">
-                          balabala
-                        </a>
-                      </h3>
-                      <p class="start-time">
-                        19:30 pm UTC+8
-                      </p>
-                    </div>
-                  </article>
-
-                  <article class="quarter-grid">
-                    <div class = "quarter-grid-pic">
-                      <a href="">
-                        <img class="landscape" src="{{ site.BaseURL }}/images/pic-default.png">
-                      </a>
-                    </div>
-
-                    <time class="event-short-date" datetime="">
-                      <abbr class="month">Nov</abbr>
-                      <span class="day">24</span>
-                    </time>
-                    <div class="small-grid-content">
-                      <div class="post-meta">
-                        <p>Report</p>
-                      </div>
-                      <h3>
-                        <a href="">
-                          balabala
-                        </a>
-                      </h3>
-                      <p class="start-time">
-                        19:30 pm UTC+8
-                      </p>
-                    </div>
-                  </article>
-
-                  <article class="quarter-grid">
-                    <div class = "quarter-grid-pic">
-                      <a href="">
-                        <img class="landscape" src="{{ site.BaseURL }}/images/pic-default.png">
-                      </a>
-                    </div>
-
-                    <time class="event-short-date" datetime="">
-                      <abbr class="month">Nov</abbr>
-                      <span class="day">24</span>
-                    </time>
-                    <div class="small-grid-content">
-                      <div class="post-meta">
-                        <p>Report</p>
-                      </div>
-                      <h3>
-                        <a href="">
-                          balabala
-                        </a>
-                      </h3>
-                      <p class="start-time">
-                        19:30 pm UTC+8
-                      </p>
-                    </div>
-                  </article>
+                        <time class="event-short-date" datetime="">
+                          <abbr class="month">{{ $date.Format "Jan" }}</abbr>
+                          <span class="day">{{ $date.Format "02" }}</span>
+                        </time>
+                        <div class="small-grid-content">
+                          <div class="post-meta">
+                            <p>{{ .Params.types }}</p>
+                          </div>
+                          <h3>
+                            <a href="{{ .RelPermalink }}">
+                              {{ .Params.abstract }}
+                            </a>
+                          </h3>
+                          <p class="start-time">
+                            {{ $formattedDate }} UTC+8
+                          </p>
+                        </div>
+                      </article>
+    
+                    {{ end }}
+                  {{ end }}
+                {{ end }}
                 </div>
             </section>
             <section class="panel-fog"> 
