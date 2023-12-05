@@ -54,21 +54,28 @@
             <section class="panel-fog"> 
               <div class="six-grids">
 
-                <article class="big-grid">
-                  <a href="">
-                    <img class="landscape" src="https://pic.shaojiemike.top/img/96dd76aeca58da9e3a24ee1d269e7b1.jpg">
-                  </a>
-                  <div class="grid-content">
-                    <div class="post-meta">
-                      <p>Education</p>
-                    </div>
-                    <h3>
-                      <a href="">
-                        ASC23: USTC secured the Silver Prize and e Prize
-                      </a>
-                    </h3>
-                  </div>
-                </article>
+                {{ with .Site.GetPage "section" "news" }}
+                  {{ range .Data.Pages }}
+                    {{ if eq 1 .Params.selectedInFirstPage }}
+                      <article class="big-grid">
+                        <a href="{{ .RelPermalink }}">
+                          <img class="landscape" src="{{ .Params.img_url }}">
+                        </a>
+                        <div class="grid-content">
+                          <div class="post-meta">
+                            <p>{{ .Params.types }}</p>
+                          </div>
+                          <h3>
+                            <a href="{{ .RelPermalink }}">
+                              {{ .Params.title }}
+                            </a>
+                          </h3>
+                        </div>
+                      </article>
+                    {{ end }}
+                  {{ end }}
+                {{ end }}
+                
 
                 <article class="small-grid">
                   <div class = "small-grid-pic">
