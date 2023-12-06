@@ -9,7 +9,9 @@
     <link rel="stylesheet" type="text/css" href="https://kirrito-k423.github.io/hugo-theme-topdown/css/style4Publications.css">
     <link rel="stylesheet" type="text/css" href="https://kirrito-k423.github.io/hugo-theme-topdown/css/style5News.css">
     <link rel="stylesheet" type="text/css" href="https://kirrito-k423.github.io/hugo-theme-topdown/css/style6Events.css">
+    <link rel="stylesheet" type="text/css" href="https://kirrito-k423.github.io/hugo-theme-topdown/css/style7About.css">
     <link rel="stylesheet" type="text/css" href="https://kirrito-k423.github.io/hugo-theme-topdown/css/style.min.css">
+    
 	
     
 	
@@ -102,32 +104,223 @@
 	
 </div><div id="content">
 <div class="topdown-main">
-	<h1></h1>
+
+<section class="panel-white"> 
+	<header>
+	  <h2 class="section-title">About ACSA</h2>
+	  
+	</header>
+	<section class="panel-white"> 
+		<div class="about-joinus">
+			<h3>Join Us!</h3>
+
+			<div class="joinus-text">
+				Thanks for your interest!
+				<br>
+				We are always eager to have energetic and passionate researchers (postdocs, graduate students, undergraduates, and research associates) join us!
+				<br>
+				If you are interested in joining the lab, please send your CV and a short description of your research interests to us!
+				<br>
+			</div>
+			
+
+			<ul>
+				<li>If you're interested in Computer Science!</li>
+				<li>If you're interested in High Performance Computing!</li>
+				<li>If you'd like to get in touch with the most powerful machines in the world!</li>
+				<li>If you want to keep learning and keep growing!</li>
+			</ul>
+
+		</div>
+	</section>
+
+	<section class="panel-fog about-back"> 
+		<div class="about-joinus">
+			<h3>Visit</h3>
+			
+			<b>New Laboratory Location</b>: Room 705,706, Xinzhi Building
+
+			<br>
+
+			<b>Old Laboratory Location</b>: Room 1411, Science & Technology Laboratory Building
+
+			<br>
+			<br><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>普通Marker</title>
+  </head>
+  <script charset="utf-8" src="https://map.qq.com/api/gljs?v=1.exp&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"></script>
+  <style type="text/css">
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #container {
+      width: 95%;
+      height: 100%;
+    }
+    .red{
+      font-size: x-large;
+      font-weight: bold;
+      color: red;
+    }
+    .btnContainer {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      z-index: 10000;
+    }
+
+    .btnContainer button {
+      padding: 10px 14px;
+      box-sizing: border-box;
+      border: none;
+      background-color: #3876ff;
+      border-radius: 2px;
+      color: #fff;
+      font-size: 14px;
+      line-height: 14px;
+      margin-bottom: 10px;
+    }
+  </style>
+  <body>
+    <button onclick="screenshot()" disabled="disabled" id="export" class="disabled">
+      点击导出地图截图
+    </button>
+    <div id="container"></div>
+    <script src="https://mapapi.qq.com/web/jsapi/jsapi-gl/js/dom-to-image.min.js"></script>
+    
+    <script src="https://map.qq.com/api/gljs?v=1.exp&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"></script>
+    <script type="text/javascript">
+      const latitude = 31.81785;
+      const longitude = 117.132;
+
+      const old_latitude = 31.841008024576763;
+      const old_longitude = 117.25826613608992;
+
+      const half_latitude = (latitude + old_latitude) /2;
+      const half_longitude = (longitude + old_longitude) /2;
+
+      var old_center = new TMap.LatLng(old_latitude, old_longitude);
+      var old_center4text = new TMap.LatLng(old_latitude+0.0001, old_longitude);
+
+      var center = new TMap.LatLng(latitude, longitude);
+      var center4text = new TMap.LatLng(latitude+0.0001, longitude);
+
+      
+      var map = new TMap.Map('container', {
+        zoom: 13.5, 
+        center: new TMap.LatLng(half_latitude, half_longitude), 
+        pitch: 0, 
+        rotation: 0, 
+        
+        
+        renderOptions: {
+          
+          preserveDrawingBuffer: true, 
+        },
+      });
+
+      
+      var infoWindow = new TMap.InfoWindow({
+          map: map, 
+          position: center4text, 
+          content: '<span class="red">New Laboratory Location</span>' 
+      });
+
+      var infoWindow = new TMap.InfoWindow({
+          map: map, 
+          position: old_center4text, 
+          content: '<span class="red">Old Laboratory Location</span>' 
+      });
+      
+      var marker = new TMap.MultiMarker({
+        map: map,
+        styles: {
+          
+          marker: new TMap.MarkerStyle({
+            width: 20, 
+            height: 30, 
+            anchor: { x: 10, y: 30 }, 
+            
+          }),
+        },
+        geometries: [
+          
+          {
+            
+            position: center,
+            id: 'marker',
+            
+          },
+
+          {
+            
+            position: old_center,
+            id: 'marker',
+          },
+        ],
+      });
+
+      
+
+      
+
+      function screenshot() {
+        
+        var node = document.getElementById('container');
+        domtoimage
+          .toPng(node)
+          .then(function (dataUrl) {
+            
+            var link = document.createElement('a');
+            link.download = 'image.png';
+            link.href = dataUrl;
+            link.click();
+          })
+          .catch(function (error) {
+            console.error('domtoimage 出现问题! ', error);
+          });
+      }
+
+      map.on('tilesloaded', function () {
+        
+        var button = document.querySelector('#export');
+        button.disabled = false;
+        button.className = 'enable';
+      });
+
+    
+    </script>
+  </body>
+</html>
+</div>
+	</section>
+
+	<section class="panel-white"> 
+		<div class="about-joinus">
+			<h3>Contact</h3>
+			<ul>
+				<li>Hefei, Anhui 230027, China</li>
+				<li>Phone: 0551-3600839/0551-3603583</li>
+				<li>Email: han@ustc.edu.cn</li>
+			</ul>
+
+		</div>
+	</section>
 	
 
 
-<i data-feather="calendar"></i>
-<time datetime="0001-01-01">Jan 1, 0001</time>
 
-	<br><br>
-	<h1 id="about-acsa">About ACSA</h1>
-<p>intro-video 或者 <a href="https://english.pku.edu.cn/about.html">安老师的一封信</a></p>
-<p>mission <a href="https://www.caltech.edu/about/at-a-glance">caltech</a> and stanford</p>
-<p>history- <a href="https://www.berkeley.edu/about/traditions/">traditions</a></p>
-<p>Fact / data / <a href="https://www.berkeley.edu/about/by-the-numbers/">By the numbers</a></p>
-<ul>
-<li>人员（学生 教师 校友，资金</li>
-<li>student-faculty ratio</li>
-<li>Nobel Prizes</li>
-<li>42% female / 58% male (self-identified sex)</li>
-<li><a href="https://www.imperial.ac.uk/about/">排名</a></li>
-</ul>
-<p>Community/lab life/Experience Berkeley</p>
-<h2 id="visiting--where-is-acsa">Visiting &amp; Where is ACSA?</h2>
-<p><a href="https://visit.stanford.edu/basics/index.html">google map</a></p>
-<h2 id="吐槽">吐槽</h2>
-<p><a href="https://www.pku.edu.cn/">北大</a>这和斯坦福的也太像了吧</p>
 
+
+  </section>
 </div>
 
         </div><div class="topdown-footer">

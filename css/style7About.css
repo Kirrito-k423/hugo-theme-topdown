@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+
+/* 文字字体，字号，颜色 */
+/* 背景色，长宽，其他 */
+
+.about-joinus{
+    text-align: left;
+    position: relative;
+    width: 100%;
+    left: 2em;
+    top: -1em;
+}
+
+.about-joinus h3{
+    font-size: 2em;
+}
+
+.joinus-text{
+    position: relative;
+    left: 1.5em;
+}
+
+.about-back{
+    background-color: aliceblue;
+}
