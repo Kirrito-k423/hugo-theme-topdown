@@ -1,3 +1,4 @@
+
 # About ACSA
 
 intro-video 或者 [安老师的一封信](https://english.pku.edu.cn/about.html)
@@ -8,7 +9,7 @@ history- [traditions](https://www.berkeley.edu/about/traditions/)
 
 Fact / data / [By the numbers](https://www.berkeley.edu/about/by-the-numbers/) 
 - 人员（学生 教师 校友，资金
-- student-faculty ratio
+- student-faculty ratio 40:1
 - Nobel Prizes
 - 42% female / 58% male (self-identified sex)
 - [排名](https://www.imperial.ac.uk/about/)

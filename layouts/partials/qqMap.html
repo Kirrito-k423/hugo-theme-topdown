@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>普通Marker</title>
+  </head>
+  <script charset="utf-8" src="https://map.qq.com/api/gljs?v=1.exp&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"></script>
+  <style type="text/css">
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #container {
+      width: 95%;
+      height: 100%;
+    }
+    .red{
+      font-size: x-large;
+      font-weight: bold;
+      color: red;
+    }
+    .btnContainer {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      z-index: 10000;
+    }
+
+    .btnContainer button {
+      padding: 10px 14px;
+      box-sizing: border-box;
+      border: none;
+      background-color: #3876ff;
+      border-radius: 2px;
+      color: #fff;
+      font-size: 14px;
+      line-height: 14px;
+      margin-bottom: 10px;
+    }
+  </style>
+  <body>
+    <button onclick="screenshot()" disabled="disabled" id="export" class="disabled">
+      点击导出地图截图
+    </button>
+    <div id="container"></div>
+    <script src="https://mapapi.qq.com/web/jsapi/jsapi-gl/js/dom-to-image.min.js"></script>
+    <!-- dom-to-image 官方地址：https://github.com/tsayen/dom-to-image -->
+    <script src="https://map.qq.com/api/gljs?v=1.exp&key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"></script>
+    <script type="text/javascript">
+      const latitude = 31.81785;
+      const longitude = 117.132;
+
+      const old_latitude = 31.841008024576763;
+      const old_longitude = 117.25826613608992;
+
+      const half_latitude = (latitude + old_latitude) /2;
+      const half_longitude = (longitude + old_longitude) /2;
+
+      var old_center = new TMap.LatLng(old_latitude, old_longitude);
+      var old_center4text = new TMap.LatLng(old_latitude+0.0001, old_longitude);
+
+      var center = new TMap.LatLng(latitude, longitude);
+      var center4text = new TMap.LatLng(latitude+0.0001, longitude);
+
+      // 初始化地图
+      var map = new TMap.Map('container', {
+        zoom: 13.5, // 设置地图缩放
+        center: new TMap.LatLng(half_latitude, half_longitude), // 设置地图中心点坐标，
+        pitch: 0, // 俯仰度
+        rotation: 0, // 旋转角度
+        //pitch: 30, 
+        //rotation: 20, 
+        renderOptions: {
+          // renderOptions文档地址：https://lbs.qq.com/webApi/javascriptGL/glDoc/docIndexMap#10
+          preserveDrawingBuffer: true, // 保留地图的渲染缓冲 默认false
+        },
+      });
+
+      //初始化infoWindow
+      var infoWindow = new TMap.InfoWindow({
+          map: map, 
+          position: center4text, //设置信息框位置
+          content: '<span class="red">New Laboratory Location</span>' //设置信息框内容
+      });
+
+      var infoWindow = new TMap.InfoWindow({
+          map: map, 
+          position: old_center4text, //设置信息框位置
+          content: '<span class="red">Old Laboratory Location</span>' //设置信息框内容
+      });
+      // MultiMarker文档地址：https://lbs.qq.com/webApi/javascriptGL/glDoc/glDocMarker
+      var marker = new TMap.MultiMarker({
+        map: map,
+        styles: {
+          // 点标记样式
+          marker: new TMap.MarkerStyle({
+            width: 20, // 样式宽
+            height: 30, // 样式高
+            anchor: { x: 10, y: 30 }, // 描点位置
+            
+          }),
+        },
+        geometries: [
+          // 点标记数据数组
+          {
+            // 标记位置(纬度，经度，高度)
+            position: center,
+            id: 'marker',
+            
+          },
+
+          {
+            // 标记位置(纬度，经度，高度)
+            position: old_center,
+            id: 'marker',
+          },
+        ],
+      });
+
+      
+
+      
+
+      function screenshot() {
+        // 截图操作
+        var node = document.getElementById('container');
+        domtoimage
+          .toPng(node)
+          .then(function (dataUrl) {
+            // 导出图片
+            var link = document.createElement('a');
+            link.download = 'image.png';
+            link.href = dataUrl;
+            link.click();
+          })
+          .catch(function (error) {
+            console.error('domtoimage 出现问题! ', error);
+          });
+      }
+
+      map.on('tilesloaded', function () {
+        // 当地图容器中可见的瓦片加载完后会触发此事件。
+        var button = document.querySelector('#export');
+        button.disabled = false;
+        button.className = 'enable';
+      });
+
+    
+    </script>
+  </body>
+</html>
