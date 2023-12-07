@@ -659,4 +659,16 @@
 </style>
 {{ end }}
 	
+<script src="{{ site.BaseURL }}/js/APlayer.min.js"></script>
+<script>
+	const ap = new APlayer({
+		container: document.getElementById('aplayer'),
+		audio: [{
+			name: 'Key社 组曲',
+			artist: 'Animenz',
+			url: '{{ site.BaseURL }}/multimedia/AKey.mp3',
+			cover: '{{ site.BaseURL }}/images/key.png'
+		}]
+	});
+</script>
 {{ end }}
