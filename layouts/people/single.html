@@ -632,7 +632,8 @@
 					{{ end }}
 				{{ end }}
 			</div>
-
+			<div id="aplayer"></div>
+			<br>
 		</div>
 
 	</div>
@@ -641,8 +642,9 @@
 
 </div>
 
+
+
 {{ with .Params.custmize_css }}
-<style>
 	{{ . | safeCSS }}
 </style>
 {{ end }}
