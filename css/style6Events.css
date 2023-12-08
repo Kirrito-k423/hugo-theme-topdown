@@ -21,6 +21,14 @@
 .event-grid .small-grid-content .start-time{
     font-weight: 600;
     color: rgb(95, 87, 79);
+    text-decoration: none;
+}
+
+.event-grid .small-grid-content .start-time a{
+    
+    font-weight: 600;
+    color: rgb(95, 87, 79);
+    /* text-decoration: none; */
 }
 
 .event-grid .small-grid-content .post-abstract{
