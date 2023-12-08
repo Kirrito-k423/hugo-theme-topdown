@@ -14,7 +14,12 @@
 		  <article class="event-grid quarter-grid">
 			<div class = "quarter-grid-pic">
 			  <a href="{{ .RelPermalink }}">
-				<img class="landscape" src="{{ .Params.img_url }}">
+				{{ with .Params.img_url }}
+					<img class="landscape" src="{{ . }}" alt="src">
+				{{ else }}
+					<img class="landscape" src="{{ site.BaseURL }}/images/{{ .Params.types }}.png" alt="alt">
+				{{ end }}
+
 			  </a>
 			</div>
 
@@ -38,6 +43,12 @@
 				<img class="event-icon" src="{{ site.BaseURL }}/images/location.png" alt="" height="20" width="20">
 				{{ .Params.location }}
 			  </p>
+			  {{ with .Params.onlineLink }}
+				<p class="start-time">
+					<img class="event-icon" src="{{ site.BaseURL }}/images/zoom.png" alt="" height="20" width="20">
+					<a href="{{ . }}">online meeting</a>
+				</p>
+			  {{ end }}
 			  <p class="post-abstract">{{ .Params.abstract }}</p>
 
 			</div>

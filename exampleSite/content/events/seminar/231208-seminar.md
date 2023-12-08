@@ -5,7 +5,7 @@ date: 2023-12-08T19:30:00+08:00
 location: "致信楼 A707"
 img_url: 
 onlineLink: https://meeting.tencent.com/dm/d8AejrbqPiJF # 线上会议
-abstract: "乔良，张量分析模型初探：Roller；张森，NoC性能建模233"
+abstract: "乔良，张量分析模型初探：Roller；张森，NoC性能建模"
 KeyWords:
 ---
 
