@@ -27,7 +27,7 @@ jobs:
           pwd
           ls
           ls ..
-          hugo --themesDir ../.. -t hugo-theme-topdown -d ../public
+          hugo --buildFuture --themesDir ../.. -t hugo-theme-topdown -d ../public
 
       - name: check
         run: |
