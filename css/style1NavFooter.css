@@ -1,4 +1,4 @@
-@charset "UTF-8";
+/* @charset "UTF-8"; */
 
 
 /* 文字字体，字号，颜色 */
@@ -76,6 +76,83 @@
     font-family: Circular Std,Source Sans Pro,sans-serif;
     font-weight: 600;
     text-shadow: 0 1px 7px rgba(0,0,0,.4);
+}
+
+/* grey new bar  */
+
+.first-layer-navbar{
+    background: linear-gradient(0deg,rgba(0,0,0,.75),#000);
+    margin-left: -35px;
+    margin-right: -35px;
+    width: 100%;
+    padding-left: calc(50% - 715px);
+    padding-right: calc(50% - 715px);
+    font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
+    line-height: 1;
+    height: 2.6666666667em;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: right;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 1000; /* 设置导航栏的层级，确保它在其他元素之上 */
+    display: inline-flex;
+
+}
+
+/* .first-layer-navbar navbar-logo{
+    margin-right: auto;
+} */
+
+
+
+.first-layer-navbar .navbar-text{
+    position: relative;
+    top: 10px;
+    left: calc(715px - 35px);
+}
+
+.second-layer-navbar{
+    /* background: linear-gradient(0deg,transparent,rgba(0,0,0,.99)),linear-gradient(0deg,transparent 20%,rgba(0,0,0,.6)); */
+    padding-left: calc(0% + 30px);
+    padding-right: calc(0% + 30px);
+    
+    position: fixed;
+    top: 2.6666666667em;
+    bottom: auto;
+    width: 100%;
+    line-height: 1.8;
+    font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 0;
+    transition: box-shadow .3s ease;
+    z-index: 1000; /* 设置导航栏的层级，确保它在其他元素之上 */
+
+    display: inline-block;
+
+}
+
+.second-layer-navbar::before{
+    content: "";
+    /* color: red; */
+    background: linear-gradient(0deg,transparent,rgba(0,0,0,.99)),linear-gradient(0deg,transparent 20%,rgba(0,0,0,.6));
+    
+    position: absolute;
+    top: 0;
+    bottom: -2.6em;
+    left: 0;
+    right: 0;
+    opacity: .75;
+    z-index: 999; /* 设置导航栏的层级，确保它在其他元素之上 */
+
+}
+
+.second-layer-navbar a{
+    position: relative;
+    z-index: 1001; /* 设置导航栏的层级，确保它在其他元素之上 */
+
 }
 
 
