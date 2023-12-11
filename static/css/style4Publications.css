@@ -9,6 +9,11 @@
     padding: 1em calc(50% - 520px);
     color: rgb(146, 157, 192);
     background-color: rgb(244, 244, 244);
+   
+}
+
+.full4footer{
+    min-height: calc(100vh - 160px); /* 保证 body 至少占满视口高度 */
 }
 
 .publications-column h1{

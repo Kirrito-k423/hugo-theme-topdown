@@ -82,15 +82,14 @@
 
 .first-layer-navbar{
     background: linear-gradient(0deg,rgba(0,0,0,.75),#000);
-    margin-left: -35px;
-    margin-right: -35px;
-    width: 100%;
+    /* margin-left: -35px;
+    margin-right: -35px; */
+    width: calc(min(100%, 1430px));
     padding-left: calc(50% - 715px);
     padding-right: calc(50% - 715px);
     font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
     line-height: 1;
     height: 2.6666666667em;
-    width: 100%;
     position: fixed;
     top: 0;
     text-align: right;
@@ -110,7 +109,11 @@
 .first-layer-navbar .navbar-text{
     position: relative;
     top: 10px;
-    left: calc(715px - 35px);
+    /* left: calc(715px - 35px); */
+}
+
+.normal-font{
+    font-weight: 400;
 }
 
 .second-layer-navbar{
@@ -161,6 +164,7 @@
 
 .topdown-main{
     margin-top: 80px;
+    /* min-height: calc(100vh - 80px); 保证 body 至少占满视口高度 */
 }
 
 
