@@ -5,7 +5,7 @@
 
           <!-- slogan -->
           <div class="slogan">
-            <span class="red-bold">A</span>rchitect Big, <span class="red-bold">A</span>chieve High
+            {{ .Params.slogan | safeHTML }}
           </div> 
 
           <!-- jump-bar -->
@@ -13,7 +13,7 @@
             <div id="clicksource" class="home-explore-column">
             <a href="#main-content-jump" style="text-decoration: none;" >
               <p class="home-explore-text">
-                Explore ACSA<i class="home-explore-arrow" data-feather="chevron-down"></i>
+                {{ .Params.explore_text | safeHTML }}<i class="home-explore-arrow" data-feather="chevron-down"></i>
               </p>
             </a>
             </div>
@@ -29,27 +29,21 @@
             </header>
             <section class="panel-white"> 
               <p class="section-body">
-                培养精英人才，探索顶尖学术，跻身世界一流
-                <br>
-                并行与分布式系统研究所(IPADS lab)致力于开展高水平研究，解决制约产业发展的核心问题。
-                
-                三十载上下求索打造了系统软件领域国际一流，亚洲顶尖的研究团队；本硕博苦心经营培育了一批批活跃在国内外学术圈和工业界的精英人才。
-                
-                研究所与国内外顶尖研究机构广泛交流，高水平学术论文层出不穷；与一流企业深入合作，将学术成果转化为云计算、大数据等平台的核心技术。
-                <br>
-                质胜文则野，文胜质则史，文质彬彬，然后君子。（《论语·雍也》）
+                {{ .Params.ad.text | safeHTML }}
               </p>
             </section>
             <section class="panel-white"> 
-              <a href="{{ site.BaseURL }}/about" class="more-button">More about ACSA</a>
+              <a href="{{ .Params.ad.button_text | safeHTML }}" class="more-button">
+                {{ .Params.ad.button_text | safeHTML }}
+              </a>
             </section>
           </section>
 
           <!-- Lab News -->
           <section class="panel-fog"> 
             <header>
-              <h2 class="section-title">Lab News</h2>
-              <p class="section-subtitle">Stories about people, research, and innovation across the Farm</p>
+              <h2 class="section-title"> {{ .Params.news.title | safeHTML }}</h2>
+              <p class="section-subtitle">{{ .Params.news.subtitle | safeHTML }}</p>
             </header>
             <section class="panel-fog"> 
               <div class="six-grids">
@@ -132,82 +126,49 @@
             </section>
 
             <section class="panel-fog"> 
-              <a href="{{ site.BaseURL }}/about" class="more-button">More lab news</a>
+              <a href="{{ .Params.news.button_text | safeHTML }}" class="more-button">
+                {{ .Params.news.button_text | safeHTML }}
+              </a>
             </section>
           </section>
 
           <!-- Education -->
           <section class="panel-white"> 
             <header>
-              <h2 class="section-title">Education</h2>
-              <p class="section-subtitle">Preparing students to make meaningful contributions to society as engaged citizens and leaders in a complex world</p>
+              <h2 class="section-title">{{ .Params.firstThree.title | safeHTML }}</h2>
+              <p class="section-subtitle">{{ .Params.firstThree.subtitle | safeHTML }}</p>
             </header>
             <section class="panel-white"> 
               <div class="three-grids">
+                {{ range .Params.firstThree.threeGrids }}
                 <article class="one-grid">
                   <div class = "one-grid-pic">
                     <a href="">
-                      <img class="landscape" src="https://pic.shaojiemike.top/img/62b3824af78aa890ba03335e7c49cbd.jpg">
+                      <img class="landscape" src="{{ .img }}">
                     </a>
                   </div>
                   <div class="one-grid-content">
                     <h3>
-                      Undergraduate Education
+                      {{ .title }}
                     </h3>
-                    <p>Responsible for Undergraduate Computer Science Introduction Course and Campus Supercomputing Competition</p>
+                    <p>{{ .text }}</p>
                     <p class="highlight-link">
-                      <a class="jump-link" href="/">
-                        Undergraduate Education
+                      <a class="jump-link" href="{{ .link }}">
+                        {{ .title }}
                         <i class="jump-link-arrow" data-feather="chevron-right"></i>
                       </a>
                     </p>
                   </div>
                 </article>
+                {{ end }}
 
-                <article class="one-grid">
-                  <div class = "one-grid-pic">
-                    <a href="">
-                      <img class="landscape" src="https://pic.shaojiemike.top/img/mmexport1624874940144.jpg">
-                    </a>
-                  </div>
-                  <div class="one-grid-content">
-                    <h3>
-                      Graduate Education
-                    </h3>
-                    <p>Unsurpassed opportunities to participate in the advancement of entire fields of knowledge</p>
-                    <p class="highlight-link">
-                      <a class="jump-link" href="/">
-                        Graduate education
-                        <i class="jump-link-arrow" data-feather="chevron-right"></i>
-                      </a>
-                    </p>
-                  </div>
-                </article>
-
-                <article class="one-grid">
-                  <div class = "one-grid-pic">
-                    <a href="">
-                      <img class="landscape" src="https://pic.shaojiemike.top/shaojiemike/2023/12/1d1f800c758c8a2fc4846087ad24b315.jpg">
-                    </a>
-                  </div>
-                  <div class="one-grid-content">
-                    <h3>
-                      Ph.D. Scholar Abroad for Research Visit
-                    </h3>
-                    <p>Ph.D. Candidate Independently Pursuing Advanced Studies at Renowned International Laboratory</p>
-                    <p class="highlight-link">
-                      <a class="jump-link" href="/">
-                        Ph.D. Scholar Abroad for Research Visit
-                        <i class="jump-link-arrow" data-feather="chevron-right"></i>
-                      </a>
-                    </p>
-                  </div>
-                </article>
               </div>
               <!-- <p class="section-body">本科 研究生 博士交流</p> -->
             </section>
             <section class="panel-white"> 
-              <a href="{{ site.BaseURL }}/about" class="more-button">More about education</a>
+              <a href="{{ .Params.firstThree.button_text | safeHTML }}" class="more-button">
+                {{ .Params.firstThree.button_text | safeHTML }}
+              </a>
             </section>
           </section>
 
@@ -219,89 +180,51 @@
           <!-- research -->
           <section class="panel-white"> 
             <header>
-              <h2 class="section-title">Research</h2>
-              <p class="section-subtitle">Driving discoveries vital to our world, our health, and our intellectual life</p>
+              <h2 class="section-title">{{ .Params.secondThree.title | safeHTML }}</h2>
+              <p class="section-subtitle">{{ .Params.secondThree.subtitle | safeHTML }}</p>
             </header>
             <section class="panel-white"> 
               <!-- <p class="section-body">data-bar <br> HPC HPC&AI AI</p> -->
+              
               <hr aria-hidden="true">
-              <div class="grid-container">
-                <figure>
-                  <strong>5 Groups</strong> <br>cross disciplinary boundaries
-                </figure>
-                <figure>
-                  <strong>40 Members</strong><br> from Undergraduate to Ph.D.
-                </figure>
-                <figure>
-                  <strong>￥2 million</strong><br> sponsored research budget
-                </figure>
-              </div>
+                <div class="grid-container">
+                  {{ range .Params.secondThree.threeFactor }}
+                  <figure>
+                    {{ . | safeHTML }}
+                  </figure>
+                  {{ end }}
+                </div>
               <hr class="more-margin" aria-hidden="true">
 
               <div class="three-grids">
+                {{ range .Params.secondThree.threeGrids }}
                 <article class="one-grid">
                   <div class = "one-grid-pic">
                     <a href="">
-                      <img class="landscape" src="https://blog.greencloudvps.com/wp-content/uploads/2023/09/high-performance-computing-1-768x512.jpg">
+                      <img class="landscape" src="{{ .img }}">
                     </a>
                   </div>
                   <div class="one-grid-content">
                     <h3>
-                      High Performance Computing
+                      {{ .title }}
                     </h3>
-                    <p>High-performance computing (HPC) uses supercomputers and computer clusters to solve advanced computation problems.</p>
+                    <p>{{ .text }}</p>
                     <p class="highlight-link">
-                      <a class="jump-link" href="/">
-                        High Performance Computing
+                      <a class="jump-link" href="{{ .link }}">
+                        {{ .title }}
                         <i class="jump-link-arrow" data-feather="chevron-right"></i>
                       </a>
                     </p>
                   </div>
                 </article>
-
-                <article class="one-grid">
-                  <div class = "one-grid-pic">
-                    <a href="">
-                      <img class="landscape" src="https://pic.shaojiemike.top/shaojiemike/2023/12/c42751718bc7c650303f2aa752439c83.png">
-                    </a>
-                  </div>
-                  <div class="one-grid-content">
-                    <h3>
-                      AI 4 HPC
-                    </h3>
-                    <p>Integrate Artificial Intelligence (AI) models and workflows in High-Performance Computing.</p>
-                    <p class="highlight-link">
-                      <a class="jump-link" href="/">
-                        AI 4 HPC
-                        <i class="jump-link-arrow" data-feather="chevron-right"></i>
-                      </a>
-                    </p>
-                  </div>
-                </article>
-
-                <article class="one-grid">
-                  <div class = "one-grid-pic">
-                    <a href="">
-                      <img class="landscape" src="https://pic.shaojiemike.top/shaojiemike/2023/12/7b23105de8f903e7bcc74821936f6bdc.png">
-                    </a>
-                  </div>
-                  <div class="one-grid-content">
-                    <h3>
-                      AI in Medical Diagnosis
-                    </h3>
-                    <p>Leverage AI Technologies to Transform Health Care.</p>
-                    <p class="highlight-link">
-                      <a class="jump-link" href="/">
-                        Use AI in Medical Diagnosis
-                        <i class="jump-link-arrow" data-feather="chevron-right"></i>
-                      </a>
-                    </p>
-                  </div>
-                </article>
+                {{ end }}
               </div>
+             
             </section>
             <section class="panel-white"> 
-              <a href="{{ site.BaseURL }}/about" class="more-button">More about research</a>
+              <a href="{{ .Params.secondThree.button_text | safeHTML }}" class="more-button">
+                {{ .Params.secondThree.button_text | safeHTML }}
+              </a>
             </section>
           </section>
 
@@ -366,78 +289,40 @@
           {{ if .Param "life_section" }}
           <section class="panel-white"> 
             <header>
-              <h2 class="section-title">Lab Life</h2>
-              <p class="section-subtitle">Building a vibrant community of creative and accomplished people from around the world</p>
+              <h2 class="section-title">{{ .Params.thirdThree.title | safeHTML }}</h2>
+              <p class="section-subtitle">{{ .Params.thirdThree.subtitle | safeHTML }}</p>
             </header>
             <section class="panel-white"> 
-              <!-- <p class="section-body">春秋游 聚餐party 运动健康</p> -->
-
               <div class="three-grids">
+                {{ range .Params.thirdThree.threeGrids }}
                 <article class="one-grid">
                   <div class = "one-grid-pic">
                     <a href="">
-                      <img class="landscape" src="https://pic.shaojiemike.top/img/20230330113345.png">
+                      <img class="landscape" src="{{ .img }}">
                     </a>
                   </div>
                   <div class="one-grid-content">
                     <h3>
-                      {{ .Params.life1_h3 }}
+                      {{ .title }}
                     </h3>
-                      <p>{{ .Params.life1_text }}</p>
+                    <p>{{ .text }}</p>
                     <p class="highlight-link">
-                      <a class="jump-link" href="/">
-                        {{ .Params.life1_h3 }}
+                      <a class="jump-link" href="{{ .link }}">
+                        {{ .title }}
                         <i class="jump-link-arrow" data-feather="chevron-right"></i>
                       </a>
                     </p>
                   </div>
                 </article>
+                {{ end }}
 
-                <article class="one-grid">
-                  <div class = "one-grid-pic">
-                    <a href="">
-                      <img class="landscape" src="https://pic.shaojiemike.top/img/mmexport1624874891623.jpg">
-                    </a>
-                  </div>
-                  <div class="one-grid-content">
-                    <h3>
-                      Dinner Parties
-                    </h3>
-                    <p>Our lab culture emphasizes interpersonal connections and team cohesion. Regular dinner parties create a relaxed and enjoyable environment for team members to share experiences, 
-                      strengthening both personal and professional bonds.</p>
-                    <p class="highlight-link">
-                      <a class="jump-link" href="/">
-                        Dinner Parties
-                        <i class="jump-link-arrow" data-feather="chevron-right"></i>
-                      </a>
-                    </p>
-                  </div>
-                </article>
-
-                <article class="one-grid">
-                  <div class = "one-grid-pic">
-                    <a href="">
-                      <img class="landscape" src="https://pic.shaojiemike.top/shaojiemike/2023/12/f1ba1cc64704cdee1e7bfe4174d5dfc9.jpg">
-                    </a>
-                  </div>
-                  <div class="one-grid-content">
-                    <h3>
-                      Sports for Health
-                    </h3>
-                    <p>We value the physical well-being of our members and encourage participation in various sports activities. From regular fitness classes to team sports competitions, 
-                      we offer diverse options to promote overall health and cultivate a positive working atmosphere. </p>
-                    <p class="highlight-link">
-                      <a class="jump-link" href="/">
-                        Sports for Health
-                        <i class="jump-link-arrow" data-feather="chevron-right"></i>
-                      </a>
-                    </p>
-                  </div>
-                </article>
               </div>
+              <!-- <p class="section-body">本科 研究生 博士交流</p> -->
             </section>
             <section class="panel-white"> 
-              <a href="{{ site.BaseURL }}/about" class="more-button">More about lab life</a>
+              <a href="{{ .Params.thirdThree.button_text | safeHTML }}" class="more-button">
+                {{ .Params.thirdThree.button_text | safeHTML }}
+              </a>
             </section>
           </section>
           {{  end }}
