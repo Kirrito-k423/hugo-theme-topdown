@@ -16,7 +16,7 @@ news:
     title: Lab News
     subtitle: Stories about people, research, and innovation across the lab
     button_text: "More lab news"
-    button_link: "{{ site.BaseURL }}/about"
+    button_link: "{{ site.BaseURL }}/news"
 
 
 # education

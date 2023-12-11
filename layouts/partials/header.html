@@ -7,8 +7,14 @@
 	</a>
 
 	<a class="navbar-text"> Information for:</a>
-	{{ range site.Params.barinfo.main }}
-	<a class="navbar-text normal-font"  href="{{ .link }}"> {{ .name }} </a>
+	{{ with site.Params.barinfo.main }}
+		{{ range site.Params.barinfo.main }}
+		<a class="navbar-text normal-font"  href="{{ .link }}"> {{ .name }} </a>
+		{{ end }}
+	{{ else }}
+		<span style="color:red;">
+			You need to add external website links in config.toml
+		</span>
 	{{ end }}
 
 </div>
