@@ -1,50 +1,22 @@
-<div id="nav-border" class="container">
-
-	<!-- Toporg 的单色栏 -->
-	<div class="top-brand-bar">
-		<div class="top-brand-column">
-			<a class="top-brand-text" href="{{ .Site.Params.Toporg.url }}">
-				{{ .Site.Params.Toporg.name }}
-			</a>
-		</div>
-	</div>
-	
-
-	<div class="navbar">
-		<div class="navbar-column">
-			<a class="navbar-logo" href="{{ site.BaseURL | relLangURL }}">
-			<img height="30px" src="{{ site.Params.logo.longlogo | absURL}}"
-				alt="{{ site.Title }}">
-			</a>
-			
-			{{ range site.Menus.main }}
-			<div class="navbar-sublink">
-			<a class="navbar-text" href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
-			</div>
-			{{ end }}
-		</div>
-	</div>
-	<!-- <nav id="nav" class="nav justify-content-center"> -->
-		<!-- 使用 Go 语言模板引擎的语法开始一个循环，遍历网站（.Site）的 "main" 菜单。 -->
-        <!-- {{ range .Site.Menus.main }}
-			<a class="nav-link" href="{{ .URL }}"> -->
-			<!-- icon if we configure it as a pre property in config.toml, -->
-			<!-- {{ if .Pre }}
-				{{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
-				{{ $icon }}
-			{{ end }} -->
-			<!-- 在Go语言的模板引擎中，safeHTML 是一种安全函数（safe function）或过滤器，用于标记一段文本或HTML代码是安全的，不需要进行HTML转义。 -->
-			<!-- {{ $text := print .Name | safeHTML }}
-			{{ $text }}
-			</a>
-        {{ end }}
-    </nav> -->
 
 
-	<!-- 3 -->
-	<!-- <ul>
-		{{ range .Site.Menus.main }}
-		<li><a href="{{ .URL }}">{{ .Name }}</a></li>
-		{{ end }}
-	</ul> -->
+<div class="first-layer-navbar">
+	<a href="{{ site.BaseURL | relLangURL }}">
+	<img height="30px" src="{{ site.Params.logo.longlogo | absURL}}"
+		alt="{{ site.Title }}">
+	</a>
+
+	<a class="navbar-text"> Information for:</a>
+	<a class="navbar-text"  href=""> New Students </a>
+	<a class="navbar-text"  href=""> Faculty & Staff </a>
+	<a class="navbar-text"  href=""> Administrator </a>
+	<a class="navbar-text"  href=""> Alumni </a>
 </div>
+
+<div class="second-layer-navbar">
+	{{ range site.Menus.main }}
+        <a class="navbar-text" href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
+	{{ end }}
+</div>
+
+

@@ -1,0 +1,24 @@
+<!-- Toporg 的单色栏 -->
+<div class="top-brand-bar">
+    <div class="top-brand-column">
+        <a class="top-brand-text" href="{{ .Site.Params.Toporg.url }}">
+            {{ .Site.Params.Toporg.name }}
+        </a>
+    </div>
+</div>
+
+
+<div class="navbar">
+    <div class="navbar-column">
+        <a class="navbar-logo" href="{{ site.BaseURL | relLangURL }}">
+        <img height="30px" src="{{ site.Params.logo.longlogo | absURL}}"
+            alt="{{ site.Title }}">
+        </a>
+        
+        {{ range site.Menus.main }}
+        <div class="navbar-sublink">
+        <a class="navbar-text" href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
+        </div>
+        {{ end }}
+    </div>
+</div>
