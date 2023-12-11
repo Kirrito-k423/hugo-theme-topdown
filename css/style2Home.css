@@ -153,11 +153,13 @@ header {
 
 .big-pic{
     width: 100%;
-    position: absolute;
-    top: -60%;
-    bottom: 0%;
+    height: 100%;
+
+    /* position: absolute;
+    top: 20vh;
+    bottom: 0%; */
     object-fit: cover;  
-    opacity: .7; 
+    /* opacity: .7;  */
 
 }
 

@@ -100,9 +100,11 @@
 
 }
 
-/* .first-layer-navbar navbar-logo{
+.first-layer-navbar .navbar-logo{
+    position: relative;
+    top: 7px;
     margin-right: auto;
-} */
+}
 
 
 
