@@ -6,7 +6,7 @@
 		alt="{{ site.Title }}">
 	</a>
 
-	<a class="navbar-text"> Information for:</a>
+	<a class="navbar-text">{{ site.Params.barinfo.text }} </a>
 	{{ with site.Params.barinfo.main }}
 		{{ range site.Params.barinfo.main }}
 		<a class="navbar-text normal-font"  href="{{ .link }}"> {{ .name }} </a>
