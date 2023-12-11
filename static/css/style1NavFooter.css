@@ -167,9 +167,12 @@
 
 /* main */
 
+#content{
+    min-height: calc(100vh - 80px); 
+
+}
 .topdown-main{
     margin-top: 80px;
-    /* min-height: calc(100vh - 80px); 保证 body 至少占满视口高度 */
 }
 
 
