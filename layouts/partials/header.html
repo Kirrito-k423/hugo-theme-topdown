@@ -7,10 +7,10 @@
 	</a>
 
 	<a class="navbar-text"> Information for:</a>
-	<a class="navbar-text normal-font"  href=""> New Students </a>
-	<a class="navbar-text normal-font"  href=""> Faculty & Staff </a>
-	<a class="navbar-text normal-font"  href=""> Administrator </a>
-	<a class="navbar-text normal-font"  href=""> Alumni </a>
+	{{ range site.Params.barinfo.main }}
+	<a class="navbar-text normal-font"  href="{{ .link }}"> {{ .name }} </a>
+	{{ end }}
+
 </div>
 
 <div class="second-layer-navbar">
@@ -18,5 +18,4 @@
         <a class="navbar-text" href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
 	{{ end }}
 </div>
-
 

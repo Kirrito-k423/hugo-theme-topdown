@@ -13,6 +13,25 @@ longlogo = "images/acsa_light.png"
 backgroundPic = "images/first.png"
 quotePic = "images/winter.jpg"
 
+###  info in first layer bar
+[params.barinfo]
+
+[[params.barinfo.main]]
+name = "New Students"
+link = "publications"
+
+[[params.barinfo.main]]
+name = "Faculty & Staff"
+link = "publications"
+
+[[params.barinfo.main]]
+name = "Administrator"
+link = "https://docs.acsalab.com/"
+
+[[params.barinfo.main]]
+name = "Alumni"
+link = "publications"
+
 
 [menu] 
 
