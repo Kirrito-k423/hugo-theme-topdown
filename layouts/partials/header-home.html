@@ -1,0 +1,40 @@
+
+
+<div class="first-layer-navbar">
+	{{ with site.Params.logo.logo_text }}
+			<a class="navbar-logo" href="{{ site.BaseURL | relLangURL }}">
+				<div class="navbar-text">{{ . }} </div>
+			</a>
+	{{ else }}
+		{{ with site.Params.logo.longlogo_size }}
+			<a class="navbar-logo" href="{{ site.BaseURL | relLangURL }}">
+				<img height="{{ . }}" src="{{ site.Params.logo.longlogo | absURL}}"
+				alt="{{ site.Title }}">
+			</a>
+		{{ else }}
+			<a class="navbar-logo" href="{{ site.BaseURL | relLangURL }}">
+				<img height="30px" src="{{ site.Params.logo.longlogo | absURL}}"
+					alt="{{ site.Title }}">
+			</a>
+		{{ end }}
+	{{ end }}
+
+	<a class="navbar-text">{{ site.Params.barinfo.text }} </a>
+	{{ with site.Params.barinfo.main }}
+		{{ range site.Params.barinfo.main }}
+		<a class="navbar-text navbar-text-first normal-font"  href="{{ .link }}"> {{ .name }} </a>
+		{{ end }}
+	{{ else }}
+		<span style="color:red;">
+			You need to add external website links in config.toml
+		</span>
+	{{ end }}
+
+</div>
+
+<div class="second-layer-navbar">
+	{{ range site.Menus.main }}
+        <a class="navbar-text" href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
+	{{ end }}
+</div>
+
