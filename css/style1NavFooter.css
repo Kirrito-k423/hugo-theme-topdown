@@ -73,7 +73,8 @@
     text-decoration: none;
     color: #fff; /* 设置链接颜色 */
     margin: 0 15px; /* 为了添加一些间距，可以根据需要调整 */
-    font-family: Circular Std,Source Sans Pro,sans-serif;
+    font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
+    /* font-family: Circular Std,Source Sans Pro,sans-serif; */
     font-weight: 600;
     text-shadow: 0 1px 7px rgba(0,0,0,.4);
 
@@ -86,12 +87,12 @@
     background: linear-gradient(0deg,rgba(0,0,0,.75),#000);
     /* margin-left: -35px;
     margin-right: -35px; */
+    height: 2.6666666667em;
     width: calc(min(100%, 1430px));
     padding-left: calc(50% - 715px);
     padding-right: calc(50% - 715px);
     font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
     line-height: 1;
-    height: 2.6666666667em;
     position: fixed;
     top: 0;
     text-align: right;
@@ -118,7 +119,7 @@
 
 .first-layer-navbar .navbar-text{
     position: relative;
-    top: 10px;
+    top: 0.8333em;
     /* left: calc(715px - 35px); */
 }
 
@@ -126,7 +127,7 @@
 .first-layer-navbar .navbar-text-first::before {
     content: "";
     position: absolute;
-    top: -10px;
+    top: -0.8333em;
     left: 0;
     bottom: 0;
     height: 2px;
@@ -184,6 +185,7 @@
 
 .second-layer-navbar a{
     position: relative;
+    top: 0.3em;
     z-index: 1001; /* 设置导航栏的层级，确保它在其他元素之上 */
 
 }
@@ -212,6 +214,34 @@
     width: 50%;
 }
 
+
+/* other-white-navbar */
+
+.other-white-navbar .first-layer-navbar{
+    background: #172e5c;
+}
+
+.other-white-navbar .second-layer-navbar{
+    height: 3em;
+    color: #000;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
+}
+
+.other-white-navbar .second-layer-navbar::before{
+    background: #fff;
+    bottom: 0;
+}
+
+.other-white-navbar .second-layer-navbar .navbar-text{
+    color: #000;
+    text-shadow: none;
+    font-weight: 400;
+}
+
+.other-white-navbar .second-layer-navbar .navbar-text::before {
+    background-color: #000;
+}
 
 
 /* main */
