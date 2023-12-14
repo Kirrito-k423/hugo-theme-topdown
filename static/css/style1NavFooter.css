@@ -236,7 +236,11 @@
 .other-white-navbar .second-layer-navbar .navbar-text{
     color: #000;
     text-shadow: none;
-    font-weight: 400;
+    font-weight: lighter;
+}
+
+.other-white-navbar .second-layer-navbar .hightlightTitle{
+    font-weight: 600;
 }
 
 .other-white-navbar .second-layer-navbar .navbar-text::before {
