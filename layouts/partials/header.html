@@ -22,7 +22,7 @@
 	<a class="navbar-text">{{ site.Params.barinfo.text }} </a>
 	{{ with site.Params.barinfo.main }}
 		{{ range site.Params.barinfo.main }}
-		<a class="navbar-text normal-font"  href="{{ .link }}"> {{ .name }} </a>
+		<a class="navbar-text navbar-text-first normal-font"  href="{{ .link }}"> {{ .name }} </a>
 		{{ end }}
 	{{ else }}
 		<span style="color:red;">
