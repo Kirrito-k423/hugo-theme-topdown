@@ -1,10 +1,23 @@
 
 
 <div class="first-layer-navbar">
-	<a class="navbar-logo" href="{{ site.BaseURL | relLangURL }}">
-	<img height="30px" src="{{ site.Params.logo.longlogo | absURL}}"
-		alt="{{ site.Title }}">
-	</a>
+	{{ with site.Params.logo.logo_text }}
+			<a class="navbar-logo" href="{{ site.BaseURL | relLangURL }}">
+				<div class="navbar-text">{{ . }} </div>
+			</a>
+	{{ else }}
+		{{ with site.Params.logo.longlogo_size }}
+			<a class="navbar-logo" href="{{ site.BaseURL | relLangURL }}">
+				<img height="{{ . }}" src="{{ site.Params.logo.longlogo | absURL}}"
+				alt="{{ site.Title }}">
+			</a>
+		{{ else }}
+			<a class="navbar-logo" href="{{ site.BaseURL | relLangURL }}">
+				<img height="30px" src="{{ site.Params.logo.longlogo | absURL}}"
+					alt="{{ site.Title }}">
+			</a>
+		{{ end }}
+	{{ end }}
 
 	<a class="navbar-text">{{ site.Params.barinfo.text }} </a>
 	{{ with site.Params.barinfo.main }}

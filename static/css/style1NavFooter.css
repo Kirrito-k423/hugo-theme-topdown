@@ -102,6 +102,12 @@
 
 .first-layer-navbar .navbar-logo{
     position: relative;
+    /* top: 7px; */
+    margin-right: auto;
+}
+
+.first-layer-navbar .navbar-logo img{
+    position: relative;
     top: 7px;
     margin-right: auto;
 }
