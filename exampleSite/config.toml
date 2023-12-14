@@ -9,6 +9,7 @@ name = "USTC"
 url = "https://en.ustc.edu.cn/"
 [params.logo]
 longlogo = "images/acsa_light.png"
+favicon = "acsa-favicon.png"
 [params.pic]
 backgroundPic = "images/first.png"
 quotePic = "images/winter.jpg"
