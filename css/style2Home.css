@@ -83,7 +83,7 @@
 }
 
 .panel-fog{
-    background-color: #f4f4f4;
+    background-color: rgb(247, 247, 247);
     padding: 1em calc(50% - 720px);
     text-align: center;
 }
@@ -167,7 +167,7 @@ header {
     margin-top: 100vh;
     z-index: 0;
 
-    background-color: #f4f4f4;
+    background-color: rgb(247, 247, 247);
 }
 
 /* grid */
