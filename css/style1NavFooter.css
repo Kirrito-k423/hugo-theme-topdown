@@ -76,6 +76,8 @@
     font-family: Circular Std,Source Sans Pro,sans-serif;
     font-weight: 600;
     text-shadow: 0 1px 7px rgba(0,0,0,.4);
+
+    transition: color 0.3s;
 }
 
 /* grey new bar  */
@@ -118,6 +120,26 @@
     position: relative;
     top: 10px;
     /* left: calc(715px - 35px); */
+}
+
+/* 伪元素 ::before 用于创建横线 */
+.first-layer-navbar .navbar-text-first::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #fff;
+    transform-origin: 0 50%;
+    transition: transform 0.3s, width 0.3s;
+  }
+
+/* 鼠标悬浮时的样式变化 */
+.first-layer-navbar .navbar-text-first:hover::before {
+    transform: scaleX(2);
+    width: 50%;
 }
 
 .normal-font{
@@ -170,6 +192,25 @@
     font-size: 1.3em;
 }
 
+/* 伪元素 ::before 用于创建横线 */
+.second-layer-navbar .navbar-text::before {
+    content: "";
+    position: absolute;
+    top:calc(1em + 7px);
+    left: 50%;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #fff;
+    transform-origin: 100% 50%;
+    transition: transform 0.3s, width 0.3s;
+  }
+
+/* 鼠标悬浮时的样式变化 */
+.second-layer-navbar .navbar-text:hover::before {
+    transform: scaleX(2);
+    width: 50%;
+}
 
 
 
