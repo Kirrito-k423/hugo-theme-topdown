@@ -307,7 +307,7 @@ header {
 .grid-content{
     position: absolute;
     top: 200px;
-    width: 90%;
+    width: calc(100% - 56px);
     height: 150px;
     padding: 28px;
     background: linear-gradient(180deg,transparent,rgba(0,0,0,.85) 80%);
