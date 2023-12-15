@@ -20,7 +20,7 @@ text = "Information for:"
 
 [[params.barinfo.main]]
 name = "New Students"
-link = "publications"
+link = "http://icarus1.acsalab.com/"
 
 [[params.barinfo.main]]
 name = "Faculty & Staff"
