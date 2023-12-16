@@ -56,6 +56,11 @@
 			{{ $root := . }}
 	
 			{{ .Content }}
+
+
+			<div class="accordion" id="markdownToc">
+				{{ .TableOfContents }}
+			</div>
 		</div>
 </div>
 {{ end }}

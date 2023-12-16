@@ -34,6 +34,12 @@
 			<hr aria-hidden="true">
 			{{ $root := . }}
 	
+			<div class="accordion" id="markdownToc">
+				{{ .TableOfContents }}
+			</div>
+			
+			<hr aria-hidden="true">
+
 			{{ .Content }}
 		</div>
 </div>
