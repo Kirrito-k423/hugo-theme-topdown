@@ -62,7 +62,8 @@
 .home-explore-text {
     margin-top: 10px;
     color: #fff; /* 设置链接颜色 */
-    margin-left: 30px; /* 为了添加一些间距，可以根据需要调整 */
+    /* 为了添加一些间距，可以根据需要调整 */
+    /* margin-left: 30px;  */
     font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-weight: 600;
     text-align:center;
@@ -129,7 +130,7 @@ header {
 }
 
 .more-button{
-    width: 387px;
+    /* width: 387px; */
     display: inline-block;
     text-align: center;
     padding: 0.4444444444em 1em 0.5555555556em;
@@ -409,4 +410,73 @@ header {
 
 .more-margin{
     margin-bottom: 50px;
+}
+
+
+/* mobile */
+
+/* 在小屏幕上调整字体大小 */
+
+@media only screen and (max-width: 1400px) {
+    .one-grid {
+        width: 70%;
+        margin: 0 auto; /* 设置左右边距为auto，实现水平居中 */
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .big-grid {
+        width: 70%;
+        margin: 10px auto; /* 设置左右边距为auto，实现水平居中 */
+    }
+    .small-grid {
+        width: 70%;
+        margin: 10px auto; /* 设置左右边距为auto，实现水平居中 */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .slogan {
+    font-size: 5em;
+    }
+    .section-title {
+        font-size: 2em;
+    }
+    .section-subtitle {
+        font-size: 1em;
+    }
+    .section-body {
+        font-size: 1.2em;
+    }
+    .small-grid-content h3 a {
+        font-size: 0.7em;
+    }
+    .grid-content h3 a{
+        font-size: 1em;
+    }
+    .one-grid {
+        width: 90%;
+        margin: 0 auto; /* 设置左右边距为auto，实现水平居中 */
+    }
+    .big-grid {
+        width: 90%;
+    }
+    .small-grid {
+        width: 90%;
+    }
+
+}
+  
+/* 在更小的屏幕上进一步调整字体大小 */
+@media only screen and (max-width: 400px) {
+    .slogan {
+        font-size: 3em;
+    }
+}
+
+/* 在大屏幕上调整字体大小 */
+@media only screen and (min-width: 600px) {
+    .more-button {
+        width: 387px;
+    }
 }
