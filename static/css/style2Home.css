@@ -465,6 +465,9 @@ header {
         width: 90%;
     }
 
+    .quarter-grid {
+        width: 90%;
+    }
 }
   
 /* 在更小的屏幕上进一步调整字体大小 */
