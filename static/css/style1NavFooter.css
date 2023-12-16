@@ -185,7 +185,7 @@
 
 .second-layer-navbar a{
     position: relative;
-    top: 0.3em;
+    top: -0.4em;
     z-index: 1001; /* 设置导航栏的层级，确保它在其他元素之上 */
 
 }
@@ -294,6 +294,53 @@
     text-decoration: none; /* 去除下划线， 去除装饰*/
 }
 
+/* stacked nav bar  */
+
+/* 初始样式，用于大屏幕 */
+/* .menu-list {
+    display: flex;
+    list-style: none;
+} */
+
+.menu-button{
+    color: #172e5c;
+    background-color: #fff;
+    padding: 0px 5px; 
+    height: 20px;
+    width: 30px;
+    border-bottom: 1px dashed #212121;
+    border-radius: 5px; /* 圆角边框 */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* 添加过渡效果 */
+
+    position: relative;
+    z-index: 2000;
+    display: none;
+    margin-top: 15px;
+    margin-left: 90%; /* 设置左右边距为auto，实现水平居中 */
+}
+
+/* 当屏幕宽度小于某个阈值时，隐藏菜单项 */
+@media screen and (max-width: 850px) {
+
+    .other-white-navbar .second-layer-navbar .navbar-text {
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,.15), 0 3px 3px rgba(0,0,0,.15);
+    }
+
+    .menu-list {
+        display: none;
+    }
+
+    .menu-list.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-button{
+        display: block;
+    }
+}
 
 
 

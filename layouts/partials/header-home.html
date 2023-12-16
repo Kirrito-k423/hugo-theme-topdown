@@ -33,8 +33,13 @@
 </div>
 
 <div class="second-layer-navbar">
-	{{ range site.Menus.main }}
-        <a class="navbar-text" href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
-	{{ end }}
+	
+	
+	<button class="menu-button" aria-label="Toggle Menu">&#9776;</button>
+    <ul class="menu-list">
+		{{ range site.Menus.main }}
+			<a class="navbar-text" href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
+		{{ end }}
+    </ul>
 </div>
 

@@ -9,6 +9,16 @@
 <!-- jump anime -->
 <script type="text/javascript" src="{{ site.BaseURL }}/js/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="{{ site.BaseURL }}/js/jump.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var menuButton = document.querySelector('.menu-button');
+    var menuList = document.querySelector('.menu-list');
+
+    menuButton.addEventListener('click', function () {
+        menuList.classList.toggle('active');
+    });
+});
+</script>
 <!-- <script>
   // Add Bootstrap Collapse behavior
   $(document).ready(function(){

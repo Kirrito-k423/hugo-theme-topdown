@@ -34,14 +34,18 @@
 
 	{{ $title := .Title}}
 	<div class="second-layer-navbar">
-		{{ range site.Menus.main }}
-			<!-- {{ .Name }} -->
-			<!-- {{ $title }} TODO: bug about is in root directory -->
-			{{ if eq $title .Name }}
-				<a class="navbar-text hightlightTitle" href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
-			{{ else }}
-				<a class="navbar-text" href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
+		<button class="menu-button" aria-label="Toggle Menu">&#9776;</button>
+		<ul class="menu-list">
+			{{ range site.Menus.main }}
+				<!-- {{ .Name }} -->
+				<!-- {{ $title }} TODO: bug about is in root directory -->
+				{{ if eq $title .Name }}
+					<a class="navbar-text hightlightTitle" href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
+				{{ else }}
+					<a class="navbar-text" href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
+				{{ end }}
 			{{ end }}
-		{{ end }}
+		</ul>
+		
 	</div>
 </div>
