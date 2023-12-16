@@ -483,3 +483,32 @@ header {
         width: 387px;
     }
 }
+
+/* max slogan */
+
+@media only screen and (min-resolution: 2dppx)  {
+    .slogan {
+        font-size: 4em;
+    }
+    .first-layer-navbar .navbar-text{
+        font-size: 0.7em;
+    }
+    .second-layer-navbar .navbar-text{
+        font-size: 0.7em;
+    }
+    .home-explore-text{
+        font-size: 0.5em;
+    }
+}
+
+@media only screen and (min-resolution: 3dppx)  {
+    .slogan {
+        font-size: 2em;
+    }
+    .second-layer-navbar .navbar-text{
+        font-size: 0.2em;
+    }
+    .home-explore-text{
+        font-size: 0.2em;
+    }
+}
