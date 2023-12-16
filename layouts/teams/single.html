@@ -58,9 +58,14 @@
 			{{ .Content }}
 
 
-			<div class="accordion" id="markdownToc">
-				{{ .TableOfContents }}
-			</div>
+			{{ if  gt (len .TableOfContents) 0  }}
+				<!-- <p>No table of contents available.</p> -->
+			{{ else }}
+				<div class="accordion" id="markdownToc">
+					{{ .TableOfContents }}
+				</div>
+				<hr aria-hidden="true">
+			{{ end }}
 		</div>
 </div>
 {{ end }}
