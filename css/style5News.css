@@ -111,3 +111,31 @@
     font-size: 1em;
     line-height: 1.2em;
 }
+
+@media only screen and (max-width: 1450px) {
+    .first-grid {
+        width: 95%;
+        margin: 10px auto; /* 设置左右边距为auto，实现水平居中 */
+    }
+
+    .second-grid {
+        width: 44%;
+        margin: 10px auto; /* 设置左右边距为auto，实现水平居中 */
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    /* news */
+
+    .first-grid {
+        width: 90%;
+        margin: 10px auto; /* 设置左右边距为auto，实现水平居中 */
+    }
+
+    .second-grid {
+        width: 90%;
+        margin: 10px auto; /* 设置左右边距为auto，实现水平居中 */
+    }
+
+}
