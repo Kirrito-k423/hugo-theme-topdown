@@ -53,14 +53,14 @@
 }
 
 .home-explore-column{
-    position: absolute;
-    top: 0px;
-    left: 40%;
-    right: 40%;
+    /* position: absolute;
+    top: 0px; */
+    width: 100%;
+    margin: 0 auto;
 }
 
 .home-explore-text {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     color: #fff; /* 设置链接颜色 */
     /* 为了添加一些间距，可以根据需要调整 */
     /* margin-left: 30px;  */
@@ -467,6 +467,7 @@ header {
 
     .quarter-grid {
         width: 90%;
+        margin: 10px auto; /* 设置左右边距为auto，实现水平居中 */
     }
 }
   
