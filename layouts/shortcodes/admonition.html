@@ -1,0 +1,7 @@
+{{ $admonitionType := .Get 0 }}
+{{ $title := .Get 1 }}
+{{ $content := .Inner | safeHTML }}
+<div class="admonition {{ $admonitionType }}">
+    <div class="clickable"><span>{{ $admonitionType }} : {{ $title }}</span></div>
+    <div class="hidden">{{ $content | markdownify | safeHTML }}</div>
+</div>

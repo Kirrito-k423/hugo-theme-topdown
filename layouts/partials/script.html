@@ -19,6 +19,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
+
+<script>
+  $(document).ready(function () {
+      // Add click event handler to the h1 element
+      $(".clickable").click(function () {
+          // Toggle the visibility of the .hidden div
+          $(this).next(".hidden").slideToggle();
+      });
+  });
+</script>
 <!-- <script>
   // Add Bootstrap Collapse behavior
   $(document).ready(function(){
