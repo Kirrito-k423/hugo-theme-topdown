@@ -27,13 +27,15 @@
 			<hr aria-hidden="true">
 			{{ $root := . }}
 	
-			{{ if  gt (len .TableOfContents) 0  }}
-				<!-- <p>No table of contents available.</p> -->
-			{{ else }}
+			<!-- {{  (len .TableOfContents) }} -->
+
+			{{ if  gt (len .TableOfContents) 32  }}
 				<div class="accordion" id="markdownToc">
 					{{ .TableOfContents }}
 				</div>
 				<hr aria-hidden="true">
+			{{ else }}
+				<!-- <p>No table of contents available.</p> -->
 			{{ end }}
 
 			{{ .Content }}
