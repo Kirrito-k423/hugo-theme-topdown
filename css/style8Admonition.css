@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+
+/* 文字字体，字号，颜色 */
+/* 背景色，长宽，其他 */
+
+.admonition{
+    background-color: white;
+    border: 1px solid rgb(0, 184, 212); /* 黑色边框 */
+    border-radius: 10px; /* 圆角半径 */
+    /* padding: 10px; 内边距 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 阴影效果，可根据需要调整 */
+}
+
+.clickable{
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    border-radius: 10px; /* 圆角半径 */
+    border: 1px solid rgb(0, 184, 212); /* 黑色边框 */
+    padding: 10px; 
+    height: 2em;
+    margin: auto;
+    background-color: rgb(229, 248, 251);
+}
+
+.clickable span{
+    font-weight: 600;
+    color: black;
+}
+
+.hidden{
+    display: none;
+    border-radius: 10px; /* 圆角半径 */
+    padding: 10px; 
+    background-color: white;
+}

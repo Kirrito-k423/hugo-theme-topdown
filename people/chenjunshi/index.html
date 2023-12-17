@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="https://kirrito-k423.github.io/hugo-theme-topdown/css/style5News.css">
     <link rel="stylesheet" type="text/css" href="https://kirrito-k423.github.io/hugo-theme-topdown/css/style6Events.css">
     <link rel="stylesheet" type="text/css" href="https://kirrito-k423.github.io/hugo-theme-topdown/css/style7About.css">
+    <link rel="stylesheet" type="text/css" href="https://kirrito-k423.github.io/hugo-theme-topdown/css/style8Admonition.css">
     <link rel="stylesheet" type="text/css" href="https://kirrito-k423.github.io/hugo-theme-topdown/css/style.min.css">
     <link rel="stylesheet" type="text/css" href="https://kirrito-k423.github.io/hugo-theme-topdown/css/APlayer.min.css">
     
@@ -1251,6 +1252,16 @@ document.addEventListener('DOMContentLoaded', function () {
         menuList.classList.toggle('active');
     });
 });
+</script>
+
+<script>
+  $(document).ready(function () {
+      
+      $(".clickable").click(function () {
+          
+          $(this).next(".hidden").slideToggle();
+      });
+  });
 </script>
 
 </body>
