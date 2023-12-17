@@ -40,3 +40,10 @@
     position: relative;
     top:3px;
 }
+
+.sidebar{
+    padding-top: 0.1em;
+    position: sticky;
+    top: 5.6em;
+    background-color: bisque;
+}
