@@ -34,15 +34,18 @@
 			<hr aria-hidden="true">
 			{{ $root := . }}
 			<!-- {{  (len .TableOfContents) }} -->
+
+			<div class="sidebar">
+				{{ if  gt (len .TableOfContents) 32  }}
+					<div class="accordion" id="markdownToc">
+						{{ .TableOfContents }}
+					</div>
+					<hr aria-hidden="true">
+				{{ else }}
+					<!-- <p>No table of contents available.</p> -->
+				{{ end }}
+			</div>
 			
-			{{ if  gt (len .TableOfContents) 32  }}
-				<div class="accordion" id="markdownToc">
-					{{ .TableOfContents }}
-				</div>
-				<hr aria-hidden="true">
-			{{ else }}
-				<!-- <p>No table of contents available.</p> -->
-			{{ end }}
 
 			{{ .Content }}
 		</div>
