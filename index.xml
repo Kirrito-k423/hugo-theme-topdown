@@ -6,13 +6,20 @@
     <description>Recent content on ACSA Lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 08 Dec 2023 19:30:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 22 Dec 2023 19:30:00 +0800</lastBuildDate>
     <atom:link href="https://kirrito-k423.github.io/hugo-theme-topdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>讨论班</title>
-      <link>https://kirrito-k423.github.io/hugo-theme-topdown/events/seminar/231208-seminar/</link>
-      <pubDate>Fri, 08 Dec 2023 19:30:00 +0800</pubDate>
-      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/events/seminar/231208-seminar/</guid>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/events/seminar/231222-seminar/</link>
+      <pubDate>Fri, 22 Dec 2023 19:30:00 +0800</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/events/seminar/231222-seminar/</guid>
+      <description>大家好，本周周五19:30讨论班在A707进行，报告内容如下:&#xA;汪涵楠 —— 交互式分割：Local Refinement 付佳伟 —— SDFG: Bridging Control-Centric and Data-Centric Optimization 赵敏帆 —— visual in-context learning </description>
+    </item>
+    <item>
+      <title>讨论班</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/events/seminar/231215-seminar/</link>
+      <pubDate>Fri, 15 Dec 2023 19:30:00 +0800</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/events/seminar/231215-seminar/</guid>
       <description>why 乔良 —— 张量分析模型初探：Roller&amp;amp;近期实验 张森 —— Simulation-based Performance Evaluation of NoC-based Multicore Systems </description>
     </item>
     <item>
