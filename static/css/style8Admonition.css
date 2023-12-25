@@ -16,7 +16,7 @@
     display: flex;
     align-items: center; /* 垂直居中 */
     border-radius: 10px; /* 圆角半径 */
-    border: 1px solid rgb(0, 184, 212); /* 黑色边框 */
+    /* border: 1px solid rgb(0, 184, 212);  */
     padding: 10px; 
     height: 2em;
     margin: auto;
