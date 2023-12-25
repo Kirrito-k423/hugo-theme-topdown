@@ -5,7 +5,7 @@ explore_text: Explore ACSA
 
 # admission
 ad:
-  text: "质胜文则野，文胜质则史，文质彬彬，然后君子。（《论语·雍也》）" 
+  text: "Cultivate Professional Researchers & Engineers for the next generation Computing." 
   button_text: "More about ACSA"
   button_link: "{{ site.BaseURL }}/about"
 

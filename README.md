@@ -47,10 +47,10 @@ hugo server --themesDir ../.. -t topdown --bind=222.195.72.221 --baseURL=http://
 
 1. [x] Learn how SSG works.
    1. [ ] make icarus support mkdocs grammar
-2. [ ] Modify some existing templates.
+2. [x] Modify some existing templates.
 3. [ ] Implement more detailed functions.
-   1. [ ] click and Mouse hover feature
-   2. [ ] All people name in any page linked to his subpage.
+   1. [x] click and Mouse hover feature
+   2. [x] All people name in any page linked to his subpage.
 
 If someone wants to join me or complete these tasks for me, I would be grateful for the assistance.
 
@@ -72,3 +72,5 @@ If someone wants to join me or complete these tasks for me, I would be grateful 
 > 2. 各种文本（实验室的admission，组织架构设计的初衷
 > 3. 当前成员的信息（头像，中文姓名以及拼音，研究方向以及成果
 > 4. 校友信息（中文姓名以及拼音，去向以及研究内容。欢迎提供其他信息
+
+质胜文则野，文胜质则史，文质彬彬，然后君子。（《论语·雍也》）
