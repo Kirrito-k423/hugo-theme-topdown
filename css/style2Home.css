@@ -124,7 +124,7 @@ header {
 .section-body{
     text-align: center;
     line-height: 1.59375;
-    /* font-weight: 400; */
+    font-weight: 300;
     font-size: 1.9em;
 
     margin-top: 0;
