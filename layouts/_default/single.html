@@ -1,9 +1,46 @@
 {{ define "main" }}
 <div class="topdown-main">
-	<h1>{{ .Title }}</h1>
-	{{ partial "metadata.html" . }}
-	<br><br>
-	{{ .Content }}
-	default single
+		<div class="publications-column full4footer">
+			<h1 style="text-align:left; font-size: xx-large;color:black;">{{ .Params.title }}</h1>
+			<!-- <p>排版有待调整</p> -->
+	
+			{{ $root := . }}
+			{{ $date := .Params.date }}
+			{{ $formattedDate := $date.Format "Jan 02, 2006 3:04 pm" }}
+
+		
+			<p class="start-time">
+				<img class="event-icon" src="{{ site.BaseURL }}/images/calendar.png" alt="" height="20" width="20">
+				{{ $formattedDate }} UTC+8
+			</p>
+			<p class="start-time">
+				<img class="event-icon" src="{{ site.BaseURL }}/images/location.png" alt="" height="20" width="20">
+				{{ .Params.location }}
+			</p>
+			{{ with .Params.onlineLink }}
+			<p class="start-time">
+				<img class="event-icon" src="{{ site.BaseURL }}/images/zoom.png" alt="" height="20" width="20">
+				<a href="{{ . }}">online meeting</a>
+			</p>
+			{{ end }}
+
+			<hr aria-hidden="true">
+			{{ $root := . }}
+	
+			<!-- {{  (len .TableOfContents) }} -->
+
+			<div class="sidebar">
+				{{ if  gt (len .TableOfContents) 32  }}
+					<div class="accordion" id="markdownToc">
+						{{ .TableOfContents }}
+					</div>
+					<hr aria-hidden="true">
+				{{ else }}
+					<!-- <p>No table of contents available.</p> -->
+				{{ end }}
+			</div>
+
+			{{ .Content }}
+		</div>
 </div>
 {{ end }}
