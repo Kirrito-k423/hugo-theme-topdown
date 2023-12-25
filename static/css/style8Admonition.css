@@ -9,7 +9,7 @@
     border: 1px solid rgb(0, 184, 212); /* 黑色边框 */
     border-radius: 10px; /* 圆角半径 */
     /* padding: 10px; 内边距 */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 阴影效果，可根据需要调整 */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* 阴影效果，可根据需要调整 */
 }
 
 .clickable{
@@ -23,6 +23,11 @@
     background-color: rgb(229, 248, 251);
 }
 
+.clickable img {
+    margin-right: 0.5em;
+}
+
+
 .clickable span{
     font-weight: 600;
     color: black;
@@ -33,4 +38,8 @@
     border-radius: 10px; /* 圆角半径 */
     padding: 10px; 
     background-color: white;
+}
+
+.note{
+    margin-bottom: 1em;
 }
