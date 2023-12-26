@@ -6,8 +6,15 @@
     <description>Recent content on ACSA Lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 22 Dec 2023 19:30:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 26 Dec 2023 19:00:00 +0800</lastBuildDate>
     <atom:link href="https://kirrito-k423.github.io/hugo-theme-topdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>论文研讨会(蔚来)</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/events/seminar/231226-seminarwithweilai/</link>
+      <pubDate>Tue, 26 Dec 2023 19:00:00 +0800</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/events/seminar/231226-seminarwithweilai/</guid>
+      <description>七点线上召开我们实验室和蔚来的讨论班，内容为顶会论文分享，请有兴趣的同学参加。&#xA;郝晓宇： Sparse Tensor Core </description>
+    </item>
     <item>
       <title>讨论班</title>
       <link>https://kirrito-k423.github.io/hugo-theme-topdown/events/seminar/231222-seminar/</link>
