@@ -1,4 +1,10 @@
-{{ define "main" }}
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header-home.html" . -}}
+        <div id="content">
+
 {{ with .GetPage "home" }} 
   <div class="topdown-main">
       <div class="home-fisrt-full-page">
@@ -351,4 +357,14 @@ body {
 <br>
 <h1>You need create home.md in Content directory for the presentation of homepage. <br>And config it as the same as the file in exampleSite/content/home.md</h1>
 {{ end }}
-{{ end }}
+
+</div>
+{{- partial "footer.html" . -}}
+{{- partial "script.html" . -}}
+</body>
+<style>
+body {
+  margin: 0; /* 重置 body 的默认外边距 */
+}
+</style>
+</html>

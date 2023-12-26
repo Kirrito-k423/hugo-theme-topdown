@@ -1,6 +1,7 @@
 {{ define "main" }}
 <div class="topdown-main">
 		<div class="publications-column full4footer">
+			<img class="img_url" src="{{ .Params.img_url }}">
 			<h1 style="text-align:left; font-size: xx-large;color:black;">{{ .Params.title }}</h1>
 			<!-- <p>排版有待调整</p> -->
 	
@@ -24,7 +25,7 @@
 			</p>
 			{{ end }}
 
-			<hr aria-hidden="true">
+			<!-- <hr aria-hidden="true"> -->
 			{{ $root := . }}
 	
 			<!-- {{  (len .TableOfContents) }} -->

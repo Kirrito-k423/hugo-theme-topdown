@@ -12,6 +12,10 @@
    
 }
 
+.publications-column .img_url{
+    width: 100%;
+}
+
 .full4footer{
     min-height: calc(100vh - 160px); /* 保证 body 至少占满视口高度 */
     position: relative;

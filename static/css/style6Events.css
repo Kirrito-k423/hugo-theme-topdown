@@ -45,5 +45,9 @@
     padding-top: 0.1em;
     position: sticky;
     top: 5.6em;
-    background-color: bisque;
+    background-color: #9dbeff;
+}
+
+.sidebar .accordion a{
+    text-decoration: none;
 }
