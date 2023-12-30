@@ -11,4 +11,4 @@ KeyWords:
 - HPC
 ---
 
-祝贺！！！
+[祝贺！！！](https://mp.weixin.qq.com/s/93sQPFfHLX12i3ixmh4Qow)

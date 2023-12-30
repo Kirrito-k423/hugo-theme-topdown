@@ -332,6 +332,46 @@
             </section>
           </section>
           {{  end }}
+
+          <!-- fourthThree -->
+          <section class="panel-fog"> 
+            <header>
+              <h2 class="section-title">{{ .Params.fourthThree.title | safeHTML }}</h2>
+              <p class="section-subtitle">{{ .Params.fourthThree.subtitle | safeHTML }}</p>
+            </header>
+            <section class="panel-fog"> 
+              <div class="three-grids">
+                {{ range .Params.fourthThree.threeGrids }}
+                <article class="one-grid">
+                  <div class = "one-grid-pic">
+                    <a href="">
+                      <img class="landscape" src="{{ .img }}">
+                    </a>
+                  </div>
+                  <div class="one-grid-content">
+                    <h3>
+                      {{ .title }}
+                    </h3>
+                    <p>{{ .text }}</p>
+                    <p class="highlight-link">
+                      <a class="jump-link" href="{{ .link }}">
+                        {{ .title }}
+                        <i class="jump-link-arrow" data-feather="chevron-right"></i>
+                      </a>
+                    </p>
+                  </div>
+                </article>
+                {{ end }}
+
+              </div>
+              <!-- <p class="section-body">本科 研究生 博士交流</p> -->
+            </section>
+            <section class="panel-fog"> 
+              <a href="{{ .Params.fourthThree.button_link | safeHTML }}" class="more-button">
+                {{ .Params.fourthThree.button_text | safeHTML }}
+              </a>
+            </section>
+          </section>
       </div>
   </div>
 
