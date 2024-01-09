@@ -6,8 +6,22 @@
     <description>Recent content on ACSA Lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 27 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jan 2024 19:00:00 +0800</lastBuildDate>
     <atom:link href="https://kirrito-k423.github.io/hugo-theme-topdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>放假通知</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/events/notice/240109-chinesenewyear/</link>
+      <pubDate>Tue, 09 Jan 2024 19:00:00 +0800</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/events/notice/240109-chinesenewyear/</guid>
+      <description>实验室放假通知：&#xA;今年年会和年终总结预计在1月30号或31号进行（年会活动形式暂定，大家可以积极献言献策）。 正式放假(一般春节前一周)从2.1号开始，返校时间参考校历开学时间（准备SC和GB的同学会另行安排），请大家自行留意时间提前购票。 </description>
+    </item>
+    <item>
+      <title>顶会论文分享会2(蔚来)</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/events/seminar/240109-seminarwithweilai/</link>
+      <pubDate>Tue, 09 Jan 2024 19:00:00 +0800</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/events/seminar/240109-seminarwithweilai/</guid>
+      <description>大家好，今晚七点线上召开我们实验室和蔚来的讨论班，内容为顶会论文分享，请有兴趣的同学参加。会议在飞书上开，请提前安装会议软件。 会议 ID：417 225 752 会议链接：https://vc.feishu.cn/j/417225752&#xA;谭邵杰： 受限的地址翻译 </description>
+    </item>
     <item>
       <title>Professor An Hong was elected as a high-contributing scholar in Chinese computer field in 2023.</title>
       <link>https://kirrito-k423.github.io/hugo-theme-topdown/news/award/231227-highcontribution/</link>
