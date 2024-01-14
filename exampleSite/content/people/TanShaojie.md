@@ -2,8 +2,8 @@
 # 后续与个人不符合的选项，请空缺
 cn_name: 谭邵杰
 cn_level:           # 教授，研究员（博士生,硕士生不用填
-img: https://pic.shaojiemike.top/shaojiemike/2023/12/d4d223fade41ba62f09917f864b27c7e.png # 头像链接
-# img: ./images/people/TanShaojie.png # 头像链接
+# img: https://pic.shaojiemike.top/shaojiemike/2023/12/d4d223fade41ba62f09917f864b27c7e.png # 头像链接
+img: ./images/people/TanShaojie.png # 头像链接
 
 year_enrollment_undergraduate:  2017      # 本科入学年份，来计算本科生几年级
 year_enrollment: 2021       # 硕士入学年份，来计算硕士生几年级

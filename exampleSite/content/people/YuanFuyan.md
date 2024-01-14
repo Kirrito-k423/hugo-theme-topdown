@@ -2,7 +2,7 @@
 # 后续与个人不符合的选项，请空缺
 cn_name: 袁福焱
 cn_level:           # 教授，研究员（博士生,硕士生不用填
-img: ./images/people/YuanFuyan.png # 头像链接
+img: /images/people/YuanFuyan.png # 头像链接
 
 year_enrollment: 2021       # 硕士入学年份，来计算硕士生几年级
 year_enrollment_PhD:   # 博士入学年份，来计算博士生几年级
