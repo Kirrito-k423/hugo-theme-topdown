@@ -20,7 +20,7 @@
       <link>https://kirrito-k423.github.io/hugo-theme-topdown/events/seminar/240109-seminarwithweilai/</link>
       <pubDate>Tue, 09 Jan 2024 19:00:00 +0800</pubDate>
       <guid>https://kirrito-k423.github.io/hugo-theme-topdown/events/seminar/240109-seminarwithweilai/</guid>
-      <description>大家好，今晚七点线上召开我们实验室和蔚来的讨论班，内容为顶会论文分享，请有兴趣的同学参加。会议在飞书上开，请提前安装会议软件。 会议 ID：417 225 752 会议链接：https://vc.feishu.cn/j/417225752&#xA;谭邵杰： 受限的地址翻译 </description>
+      <description>大家好，今晚七点线上召开我们实验室和蔚来的讨论班，内容为顶会论文分享，请有兴趣的同学参加。会议在飞书上开，请提前安装会议软件。 会议 ID：417 225 752 会议链接：https://vc.feishu.cn/j/417225752&#xA;谭邵杰： 受限的地址翻译 赵阳：Beyond Static Parallel Loops: Supporting Dynamic Task Parallelism on Manycore Architectures with Software-Managed Scratchpad Memories </description>
     </item>
     <item>
       <title>Professor An Hong was elected as a high-contributing scholar in Chinese computer field in 2023.</title>
@@ -143,6 +143,13 @@
     </item>
     <item>
       <title></title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/people/shijun/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/people/shijun/</guid>
+      <description>个人简介 石军， 2020级博士生，ACSA实验室HPDA方向，主要研究方向为医学影像分析、多模态大模型以及大模型训练与推理框架&#xA;学生工作 2021年中国科大时珍书院院长助理 2022年计算机学院机器智能党支部书记 助教课程 2021 中国科学技术大学 计算机学院 计算之美 研究项目 科大新医学项目—多源影像融合系统 KBR横向课题—基于超声的3D心脏重建 崂山实验室项目—面向新一代国产超算的大模型训练优化框架 华为横向课题—NPU系统仿真与建模：AI Benchmark设计 蔚来横向课题—面向车载设备的AI算子自动融合方法研究 获奖情况 2022.12. 安徽省研究生党员标兵 2023.03. 中国科大研究生党员标兵 2022.12. 中国科大-英特尔奖学金 2023.10. 中国科大-英特尔奖学金 2021.10. 第四届世界声博会十大人工智能新锐团队 2021.10. Inte全球AI影响力嘉年华创造者赛道最高奖 2020-2022. 科大讯飞1024 AI开发者大赛冠军（10项） 2021.10. 科大讯飞1024 AI开发者大赛十佳算法团队 2018-2019年全国并行应用挑战赛铜奖 2020.06. ISC世界大学生超算竞赛冠军（教练） 2023.05. ASC世界大学生超算竞赛亚军（教练） 已发表论文 发表论文20篇，其中一作（英文）：</description>
+    </item>
+    <item>
+      <title></title>
       <link>https://kirrito-k423.github.io/hugo-theme-topdown/people/tanshaojie/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://kirrito-k423.github.io/hugo-theme-topdown/people/tanshaojie/</guid>
@@ -163,6 +170,13 @@
       <description>欢迎来到存内计算 的详细介绍页面&#xA;所属论文</description>
     </item>
     <item>
+      <title>A Novel U-Like Network for the Segmentation of Thoracic Organs</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2020/isbi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2020/isbi/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>A3PIM: An Automated, Analytic and Accurate Processing-in-Memory Offloader</title>
       <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/date23-a3pim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -177,11 +191,18 @@
       <description></description>
     </item>
     <item>
-      <title>AI小组</title>
-      <link>https://kirrito-k423.github.io/hugo-theme-topdown/teams/ai/</link>
+      <title>Automatic Segmentation of Target Structures for Total Marrow and Lymphoid Irradiation in Bone Marrow Transplantation</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2022/embc-autoseg/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/teams/ai/</guid>
-      <description>欢迎来到AI小组的主页&#xA;所属子小组</description>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2022/embc-autoseg/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DARNet: Dual-Attention Residual Network for Automatic Diagnosis of COVID-19 via CT Images</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2021/bibm-darnet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2021/bibm-darnet/</guid>
+      <description></description>
     </item>
     <item>
       <title>DW DFT小组</title>
@@ -189,6 +210,20 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://kirrito-k423.github.io/hugo-theme-topdown/teams/hpc/dwdft/</guid>
       <description>欢迎来到DFT小组的主页&#xA;所属项目</description>
+    </item>
+    <item>
+      <title>H-DenseFormer: An Efficient Hybrid Densely Connected Transformer for Multimodal Tumor Segmentation</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/miccai-hdenseformer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/miccai-hdenseformer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HDPA方向</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/teams/ai/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/teams/ai/</guid>
+      <description>欢迎来到AI小组的主页&#xA;所属子小组</description>
     </item>
     <item>
       <title>IPCC2021</title>
@@ -210,6 +245,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2022/hpcc22-sca/</guid>
       <description>The performance of high-performance computing (HPC) and other real-world applications is becoming unpre-dictable as the micro-architecture of the modern central processing unit (CPU) turns to be more and more complex. As a consequence, predicting the execution time of a code snippet is notoriously difficult. Basic block throughput predictor, also known as static code analyzer, provides a ubiquitous way to predict the execution time of a basic block, which includes assembly code segments without jump-related instructions.</description>
+    </item>
+    <item>
+      <title>Rethinking Automatic Segmentation of Gross Target Volume from a Decoupling Perspective</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/cmig-autoseg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/cmig-autoseg/</guid>
+      <description></description>
     </item>
     <item>
       <title>Uncovering the performance bottleneck of modern HPC processor with static code analyzer: a case study on Kunpeng 920</title>

@@ -8,6 +8,13 @@
     <language>en</language>
     <atom:link href="https://kirrito-k423.github.io/hugo-theme-topdown/publications/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>A Novel U-Like Network for the Segmentation of Thoracic Organs</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2020/isbi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2020/isbi/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>A3PIM: An Automated, Analytic and Accurate Processing-in-Memory Offloader</title>
       <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/date23-a3pim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -22,11 +29,39 @@
       <description></description>
     </item>
     <item>
+      <title>Automatic Segmentation of Target Structures for Total Marrow and Lymphoid Irradiation in Bone Marrow Transplantation</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2022/embc-autoseg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2022/embc-autoseg/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DARNet: Dual-Attention Residual Network for Automatic Diagnosis of COVID-19 via CT Images</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2021/bibm-darnet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2021/bibm-darnet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>H-DenseFormer: An Efficient Hybrid Densely Connected Transformer for Multimodal Tumor Segmentation</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/miccai-hdenseformer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/miccai-hdenseformer/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Quantifying Throughput of Basic Blocks on ARM Microarchitectures by Static Code Analyzers: A Case Study on Kunpeng 920</title>
       <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2022/hpcc22-sca/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2022/hpcc22-sca/</guid>
       <description>The performance of high-performance computing (HPC) and other real-world applications is becoming unpre-dictable as the micro-architecture of the modern central processing unit (CPU) turns to be more and more complex. As a consequence, predicting the execution time of a code snippet is notoriously difficult. Basic block throughput predictor, also known as static code analyzer, provides a ubiquitous way to predict the execution time of a basic block, which includes assembly code segments without jump-related instructions.</description>
+    </item>
+    <item>
+      <title>Rethinking Automatic Segmentation of Gross Target Volume from a Decoupling Perspective</title>
+      <link>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/cmig-autoseg/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://kirrito-k423.github.io/hugo-theme-topdown/publications/2023/cmig-autoseg/</guid>
+      <description></description>
     </item>
     <item>
       <title>Uncovering the performance bottleneck of modern HPC processor with static code analyzer: a case study on Kunpeng 920</title>

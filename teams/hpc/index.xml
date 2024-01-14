@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>HPC小组 on ACSA Lab</title>
+    <title>HPC方向 on ACSA Lab</title>
     <link>https://kirrito-k423.github.io/hugo-theme-topdown/teams/hpc/</link>
-    <description>Recent content in HPC小组 on ACSA Lab</description>
+    <description>Recent content in HPC方向 on ACSA Lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <atom:link href="https://kirrito-k423.github.io/hugo-theme-topdown/teams/hpc/index.xml" rel="self" type="application/rss+xml" />
