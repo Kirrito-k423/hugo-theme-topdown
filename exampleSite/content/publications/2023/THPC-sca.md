@@ -12,6 +12,7 @@ ConfJournal: "CCF Transactions on High Performance Computing"
 ConfJournalAbbr: THPC
 IsAConference: "no" # 会议填yes，期刊写 no
 CCFLevel: "C" 
+JournalLabel: "CCF C Journal"
 Year: 2023
 Abstract: "The performance of high-performance computing (HPC) and other real-world applications is becoming unpredictable as the micro-architecture of the modern central processing unit (CPU) turns to be more and more complex. As a consequence, predicting the execution time of a code snippet is notoriously difficult. Basic block throughput predictor is a crucial feature of the static code analyzer. It offers a ubiquitous method for predicting the execution time of a basic block. In this article, we build a workflow to faithfully run, collect and analyze basic blocks from real-world applications. Several static code analyzers are introduced, compared, and optimized to show which one performs better on accuracy and other metrics on a Kunpeng 920 processor. Through extensive experiments, we achieve state-of-the-art 86.7% accuracy in predicting the throughput of all basic blocks. Moreover, we showcase the potential …"
 KeyWords:

@@ -1,5 +1,5 @@
 ---
-title: "AI小组"
+title: "HDPA方向"
 # father-team: # 根小组填空，填对应父亲小组的文件名
 leader:
 - Jun Shi

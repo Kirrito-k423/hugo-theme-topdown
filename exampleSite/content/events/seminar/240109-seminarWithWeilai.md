@@ -5,7 +5,7 @@ date: 2024-01-09T19:00:00+08:00
 location: "Online"
 img_url: 
 onlineLink: https://vc.feishu.cn/j/417225752 # 线上会议
-abstract: "谭邵杰： 受限的地址翻译"
+abstract: "谭邵杰： 受限的地址翻译 赵阳：Beyond Static Parallel Loops"
 KeyWords:
 ---
 
@@ -14,3 +14,5 @@ KeyWords:
 会议链接：https://vc.feishu.cn/j/417225752
 
 ## 谭邵杰： 受限的地址翻译
+
+## 赵阳：Beyond Static Parallel Loops: Supporting Dynamic Task Parallelism on Manycore Architectures with Software-Managed Scratchpad Memories
