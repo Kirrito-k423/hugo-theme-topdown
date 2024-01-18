@@ -139,6 +139,7 @@
           </section>
 
           <!-- Education -->
+          {{ if .Param "first3_section" }}
           <section class="panel-white"> 
             <header>
               <h2 class="section-title">{{ .Params.firstThree.title | safeHTML }}</h2>
@@ -177,6 +178,7 @@
               </a>
             </section>
           </section>
+          {{  end }}
 
           <!-- img + TODO:quote -->
           <div class="image-container">
@@ -184,6 +186,7 @@
           </div>
 
           <!-- research -->
+          {{ if .Param "second3_section" }}
           <section class="panel-white"> 
             <header>
               <h2 class="section-title">{{ .Params.secondThree.title | safeHTML }}</h2>
@@ -233,6 +236,7 @@
               </a>
             </section>
           </section>
+          {{  end }}
 
 
           <!-- Event -->

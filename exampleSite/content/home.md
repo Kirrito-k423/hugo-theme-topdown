@@ -20,6 +20,7 @@ news:
 
 
 # education
+first3_section: true # false to hide
 firstThree:
     title: Education
     subtitle: Preparing students to make meaningful contributions to society as engaged citizens and leaders in a complex world
@@ -40,6 +41,7 @@ firstThree:
             link: "/"
 
 # research
+second3_section: true # false to hide
 secondThree:
     title: Research
     subtitle: Driving discoveries vital to our world, our health, and our intellectual life
@@ -63,6 +65,7 @@ secondThree:
             text: Leverage AI Technologies to Transform Health Care.
             link: "/"
 
+life_section: true # false to hide
 thirdThree:
     title: Lab Life
     subtitle: Building a vibrant community of creative and accomplished people from around the world
@@ -85,11 +88,4 @@ thirdThree:
             text: We value the physical well-being of our members and encourage participation in various sports activities. From regular fitness classes to team sports competitions, 
                       we offer diverse options to promote overall health and cultivate a positive working atmosphere.
             link: "/"
-
-# lab life
-life_section: true # false to hide
-life1_h3: ""
-life1_text: 
-
-
 ---
