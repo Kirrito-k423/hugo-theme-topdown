@@ -247,7 +247,7 @@
                 {{ with .Site.GetPage "section" "events" }}
 	                {{ range .Pages.ByPublishDate.Reverse }}
         					  {{ $counter = add $counter 1 }}
-                    {{ if lt $counter 4 }}
+                    {{ if lt $counter 5 }}
                       <article class="quarter-grid">
                         <div class = "quarter-grid-pic">
                           <a href="{{ .RelPermalink }}">
