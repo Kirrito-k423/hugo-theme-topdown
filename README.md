@@ -2,11 +2,11 @@
 
 A Hugo theme meticulously crafted for personal/team/lab/start-up **presentations**, featuring an intuitive **top-down organizational** structure.
 
-> [!CAUTION]  
-> The project development is still in the conceptual stage.
 
-> [!WARNING] 
-> At the current stage, the website design has heavily drawn inspiration from Stanford University's official website, which may lead to legal issues. Considering this, there are plans to gradually replace the design.
+## Demo
+
+- [Personal Demo](https://td.shaojiemike.top/)
+- [Team Demo](https://kirrito-k423.github.io/hugo-theme-topdown/)
 
 ## Test
 
@@ -18,3 +18,6 @@ hugo server --themesDir ../.. -t topdown --bind=222.195.72.221 --baseURL=http://
 
 > [!IMPORTANT]  
 > 质胜文则野，文胜质则史，文质彬彬，然后君子。（《论语·雍也》）
+
+> [!WARNING] 
+> At the current stage, the website design has heavily drawn inspiration from Stanford University's official website, which may lead to legal issues. Considering this, there are plans to gradually replace the design.
