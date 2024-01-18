@@ -334,6 +334,7 @@
           {{  end }}
 
           <!-- fourthThree -->
+          {{ if .Param "last_section" }}
           <section class="panel-fog"> 
             <header>
               <h2 class="section-title">{{ .Params.fourthThree.title | safeHTML }}</h2>
@@ -372,6 +373,7 @@
               </a>
             </section>
           </section>
+          {{  end }}
       </div>
   </div>
 
