@@ -140,7 +140,9 @@
 				<!-- {{- partial "paper2.html" . -}} -->
 
 			</div>
-			<div id="aplayer"></div>
+			{{ if .Param "aplayer" }}
+				<div id="aplayer"></div>
+			{{ end }}
 			<br>
 		</div>
 

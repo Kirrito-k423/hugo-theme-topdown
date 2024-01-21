@@ -16,6 +16,8 @@ dblp_url: https://dblp.org/pid/73/5552.html
 homepage_url:  https://cs.ustc.edu.cn/2020/0426/c23235a460072/page.htm         # 个人博客
 github_url:             # github主页
 email:  han@ustc.edu.cn                # 常用邮件
+
+aplayer: yes # no to hide mp3 player
 ---
 
 
