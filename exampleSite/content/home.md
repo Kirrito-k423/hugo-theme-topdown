@@ -7,7 +7,7 @@ explore_text: Explore ACSA
 ad:
   text: "Cultivate Professional Researchers & Engineers for the next generation Computing." 
   button_text: "More about ACSA"
-  button_link: "{{ site.BaseURL }}/about"
+  button_link: "/about"
 
 # 培养精英人才，探索顶尖学术，跻身世界一流<br>并行与分布式系统研究所(IPADS lab)致力于开展高水平研究，解决制约产业发展的核心问题。三十载上下求索打造了系统软件领域国际一流，亚洲顶尖的研究团队；本硕博苦心经营培育了一批批活跃在国内外学术圈和工业界的精英人才。研究所与国内外顶尖研究机构广泛交流，高水平学术论文层出不穷；与一流企业深入合作，将学术成果转化为云计算、大数据等平台的核心技术。
 
@@ -16,7 +16,7 @@ news:
     title: Lab News
     subtitle: Stories about people, research, and innovation across the lab
     button_text: "More lab news"
-    button_link: "{{ site.BaseURL }}/news"
+    button_link: "/news"
 
 
 # education
@@ -25,7 +25,7 @@ firstThree:
     title: Education
     subtitle: Preparing students to make meaningful contributions to society as engaged citizens and leaders in a complex world
     button_text: "More about education"
-    button_link: "{{ site.BaseURL }}/about"
+    button_link: "/about"
     threeGrids:
         -   title: Undergraduate Education
             img: https://pic.shaojiemike.top/img/62b3824af78aa890ba03335e7c49cbd.jpg
@@ -46,7 +46,7 @@ secondThree:
     title: Research
     subtitle: Driving discoveries vital to our world, our health, and our intellectual life
     button_text: "More about research"
-    button_link: "{{ site.BaseURL }}/publications"
+    button_link: "/publications"
     threeFactor:
         - <strong>5 Groups</strong> <br>cross disciplinary boundaries
         - <strong>40 Members</strong><br> from Undergraduate to Ph.D.
@@ -70,7 +70,7 @@ thirdThree:
     title: Lab Life
     subtitle: Building a vibrant community of creative and accomplished people from around the world
     button_text: "More about lab life"
-    button_link: "{{ site.BaseURL }}/"
+    button_link: "/"
     threeGrids:
         -   title: Spring and Autumn Outings
             img: https://pic.shaojiemike.top/img/20230330113345.png

@@ -2,8 +2,7 @@
 {{ $filename := .File.BaseFileName }}
 
 
-{{ if or (eq .Params.cn_level "教授") 
-        (eq .Params.cn_level "特任副研究员") }}
+{{ if or (eq .Params.cn_level "教授") (eq .Params.cn_level "特任副研究员") }}
     <!-- <h1>论文</h1> -->
 {{ else }}
     <h1>参与项目</h1>
