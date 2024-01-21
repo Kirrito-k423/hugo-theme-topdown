@@ -39,7 +39,7 @@
               </p>
             </section>
             <section class="panel-white"> 
-              <a href="{{ .Params.ad.button_link | safeHTML }}" class="more-button">
+              <a href="{{ site.BaseURL }}{{ .Params.ad.button_link | safeHTML }}" class="more-button">
                 {{ .Params.ad.button_text | safeHTML }}
               </a>
             </section>
@@ -132,7 +132,7 @@
             </section>
 
             <section class="panel-fog"> 
-              <a href="{{ .Params.news.button_link | safeHTML }}" class="more-button">
+              <a href="{{ site.BaseURL }}{{ .Params.news.button_link | safeHTML }}" class="more-button">
                 {{ .Params.news.button_text | safeHTML }}
               </a>
             </section>
@@ -173,7 +173,7 @@
               <!-- <p class="section-body">本科 研究生 博士交流</p> -->
             </section>
             <section class="panel-white"> 
-              <a href="{{ .Params.firstThree.button_link | safeHTML }}" class="more-button">
+              <a href="{{ site.BaseURL }}{{ .Params.firstThree.button_link | safeHTML }}" class="more-button">
                 {{ .Params.firstThree.button_text | safeHTML }}
               </a>
             </section>
@@ -231,7 +231,7 @@
              
             </section>
             <section class="panel-white"> 
-              <a href="{{ .Params.secondThree.button_link | safeHTML }}" class="more-button">
+              <a href="{{ site.BaseURL }}{{ .Params.secondThree.button_link | safeHTML }}" class="more-button">
                 {{ .Params.secondThree.button_text | safeHTML }}
               </a>
             </section>
@@ -291,7 +291,7 @@
                 </div>
             </section>
             <section class="panel-fog"> 
-              <a href="{{ site.BaseURL }}/about" class="more-button">More events</a>
+              <a href="{{ site.BaseURL }}/events" class="more-button">More events</a>
             </section>
           </section>
 
@@ -330,7 +330,7 @@
               <!-- <p class="section-body">本科 研究生 博士交流</p> -->
             </section>
             <section class="panel-white"> 
-              <a href="{{ .Params.thirdThree.button_link | safeHTML }}" class="more-button">
+              <a href="{{ site.BaseURL }}{{ .Params.thirdThree.button_link | safeHTML }}" class="more-button">
                 {{ .Params.thirdThree.button_text | safeHTML }}
               </a>
             </section>
