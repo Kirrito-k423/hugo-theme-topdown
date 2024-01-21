@@ -16,7 +16,17 @@
 			<article class="first-grid">
 				<div class = "first-grid-pic">
 					<a href="{{ .RelPermalink }}">
-						<img class="landscape" src="{{ .Params.img_url }}">
+						{{ $img := .Params.img_url }}
+						{{ if strings.HasPrefix $img "http://" -}}
+							<!-- 外链图片 -->
+							<img class="landscape" src="{{ $img }}">
+						{{ else if strings.HasPrefix $img "https://" -}}
+							<!-- 外链图片 -->
+							<img class="landscape" src="{{ $img }}">
+						{{ else -}}
+							<!-- 内链图片 -->
+							<img class="landscape" src="{{ $.Site.BaseURL }}/{{ $img }}">
+						{{ end }}
 					</a>
 				</div>
 				<div class="grid-content">
@@ -40,7 +50,17 @@
 			<article class="second-grid">
 				<div class = "second-grid-pic">
 					<a href="{{ .RelPermalink }}">
-						<img class="landscape" src="{{ .Params.img_url }}">
+						{{ $img := .Params.img_url }}
+						{{ if strings.HasPrefix $img "http://" -}}
+							<!-- 外链图片 -->
+							<img class="landscape" src="{{ $img }}">
+						{{ else if strings.HasPrefix $img "https://" -}}
+							<!-- 外链图片 -->
+							<img class="landscape" src="{{ $img }}">
+						{{ else -}}
+							<!-- 内链图片 -->
+							<img class="landscape" src="{{ $.Site.BaseURL }}/{{ $img }}">
+						{{ end }}
 					</a>
 				</div>
 				<div class="grid-content">
@@ -64,7 +84,17 @@
 			<article class="second-grid">
 				<div class = "second-grid-pic">
 					<a href="{{ .RelPermalink }}">
-						<img class="landscape" src="{{ .Params.img_url }}">
+						{{ $img := .Params.img_url }}
+						{{ if strings.HasPrefix $img "http://" -}}
+							<!-- 外链图片 -->
+							<img class="landscape" src="{{ $img }}">
+						{{ else if strings.HasPrefix $img "https://" -}}
+							<!-- 外链图片 -->
+							<img class="landscape" src="{{ $img }}">
+						{{ else -}}
+							<!-- 内链图片 -->
+							<img class="landscape" src="{{ $.Site.BaseURL }}/{{ $img }}">
+						{{ end }}
 					</a>
 				</div>
 				<div class="grid-content">
@@ -90,7 +120,17 @@
 				<article class="small-grid">
 					<div class = "small-grid-pic">
 						<a href="{{ .RelPermalink }}">
-							<img class="landscape" src="{{ .Params.img_url }}">
+							{{ $img := .Params.img_url }}
+							{{ if strings.HasPrefix $img "http://" -}}
+								<!-- 外链图片 -->
+								<img class="landscape" src="{{ $img }}">
+							{{ else if strings.HasPrefix $img "https://" -}}
+								<!-- 外链图片 -->
+								<img class="landscape" src="{{ $img }}">
+							{{ else -}}
+								<!-- 内链图片 -->
+								<img class="landscape" src="{{ $.Site.BaseURL }}/{{ $img }}">
+							{{ end }}
 						</a>
 					</div>
 					<div class="small-grid-content">
