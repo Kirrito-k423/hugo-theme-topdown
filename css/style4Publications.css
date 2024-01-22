@@ -30,6 +30,7 @@
 
 .people-group{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .paper-bar{
