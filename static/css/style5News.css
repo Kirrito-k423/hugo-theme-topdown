@@ -112,6 +112,16 @@
     line-height: 1.2em;
 }
 
+.auto-height{
+    height: auto;
+}
+
+.small-news-content{
+    position: relative;
+    top: 0;
+    padding: 28px 28px 10px 28px;
+}
+
 @media only screen and (max-width: 1450px) {
     .first-grid {
         width: 95%;

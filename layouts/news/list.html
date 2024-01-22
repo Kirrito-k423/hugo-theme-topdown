@@ -117,7 +117,7 @@
 			{{ range .Data.Pages }}
 				{{ if and (and (ne .Params.selectedInFirstPage 2) (ne .Params.selectedInFirstPage 1)) (ne .Params.selectedInFirstPage 3)}}
 				
-				<article class="small-grid">
+				<article class="small-grid auto-height">
 					<div class = "small-grid-pic">
 						<a href="{{ .RelPermalink }}">
 							{{ $img := .Params.img_url }}
@@ -133,7 +133,7 @@
 							{{ end }}
 						</a>
 					</div>
-					<div class="small-grid-content">
+					<div class="small-grid-content small-news-content">
 						<div class="post-meta">
 							<p>{{ .Params.types }}</p>
 						</div>
