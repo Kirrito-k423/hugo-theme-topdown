@@ -34,9 +34,19 @@
     margin: 5px;
 }
 
+.person .square-container-list {
+    margin: 0 auto;
+}
+
 .square-container {
     width: 100%; /* 设置宽度等于父元素的宽度 */
     padding-top: 100%; /* 设置 padding-top 百分比，使高度等于宽度 */
+    position: absolute; /* 设置绝对定位，使子元素脱离文档流 */
+}
+
+.square-container-list {
+    width: 130px; /* 设置宽度等于父元素的宽度 */
+    padding-top: 130px; /* 设置 padding-top 百分比，使高度等于宽度 */
     position: absolute; /* 设置绝对定位，使子元素脱离文档流 */
 }
 
@@ -50,6 +60,10 @@
     overflow: hidden; /* 隐藏溢出的部分 */
     display: inline-block; /* 或者使用 display: block; */
     margin: 0 auto; /* 使用 auto 将 .img-container 在水平方向上居中 */
+}
+
+.person-img-container-adjust{
+    height: 130px;
 }
 
 .person-img-container img {
@@ -71,11 +85,12 @@ img:hover {
 .person-name{
     text-decoration: none;
     color: rgb(23, 113, 192);
-    font-size: 1.1em;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .person-title{
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
     /* body {
