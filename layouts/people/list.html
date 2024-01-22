@@ -21,8 +21,8 @@
 
 			{{ with .Params.cn_level }}
 			<div class="person">
-				<div class="square-container">
-					<a class="person-img-container" href="{{ $RelPermalink }}">
+				<div class="square-container square-container-list">
+					<a class="person-img-container person-img-container-adjust" href="{{ $RelPermalink }}">
 						{{ with $img }}
 							{{ if strings.HasPrefix $img "http://" -}}
 								<!-- 外链图片 -->
@@ -65,8 +65,8 @@
 			{{ else }}
 				{{ with .Params.year_enrollment_PhD }}
 					<div class="person">
-						<div class="square-container">
-							<a class="person-img-container" href="{{ $RelPermalink }}">
+						<div class="square-container square-container-list">
+							<a class="person-img-container person-img-container-adjust" href="{{ $RelPermalink }}">
 								{{ with $img }}
 									{{ if strings.HasPrefix $img "http://" -}}
 										<!-- 外链图片 -->
@@ -112,8 +112,8 @@
 				{{ else }}
 					{{ with .Params.year_enrollment }}
 						<div class="person">
-							<div class="square-container">
-								<a class="person-img-container" href="{{ $RelPermalink }}">
+							<div class="square-container square-container-list">
+								<a class="person-img-container person-img-container-adjust" href="{{ $RelPermalink }}">
 									{{ with $img }}
 										{{ if strings.HasPrefix $img "http://" -}}
 											<!-- 外链图片 -->
@@ -162,8 +162,8 @@
 					{{ else }}
 						{{ with .Params.year_enrollment_undergraduate }}
 							<div class="person">
-								<div class="square-container">
-									<a class="person-img-container" href="{{ $RelPermalink }}">
+								<div class="square-container square-container-list">
+									<a class="person-img-container person-img-container-adjust" href="{{ $RelPermalink }}">
 										{{ with $img }}
 											{{ if strings.HasPrefix $img "http://" -}}
 												<!-- 外链图片 -->
@@ -209,8 +209,8 @@
 
 			{{ with .Params.year_graduation }}
 				<div class="person">
-					<div class="square-container">
-						<a class="person-img-container" href="{{ $RelPermalink }}">
+					<div class="square-container square-container-list">
+						<a class="person-img-container person-img-container-adjust" href="{{ $RelPermalink }}">
 							{{ with $img }}
 								{{ if strings.HasPrefix $img "http://" -}}
 									<!-- 外链图片 -->
