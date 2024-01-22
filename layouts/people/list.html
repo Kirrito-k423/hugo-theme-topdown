@@ -23,15 +23,19 @@
 			<div class="person">
 				<div class="square-container">
 					<a class="person-img-container" href="{{ $RelPermalink }}">
-						{{ if strings.HasPrefix $img "http://" -}}
-							<!-- 外链图片 -->
-							<img src="{{ $img }}">
-						{{ else if strings.HasPrefix $img "https://" -}}
-							<!-- 外链图片 -->
-							<img src="{{ $img }}">
-						{{ else -}}
-							<!-- 内链图片 -->
-							<img src="{{ $.Site.BaseURL }}/{{ $img }}">
+						{{ with $img }}
+							{{ if strings.HasPrefix $img "http://" -}}
+								<!-- 外链图片 -->
+								<img src="{{ $img }}">
+							{{ else if strings.HasPrefix $img "https://" -}}
+								<!-- 外链图片 -->
+								<img src="{{ $img }}">
+							{{ else -}}
+								<!-- 内链图片 -->
+								<img src="{{ $.Site.BaseURL }}/{{ $img }}">
+							{{ end }}
+						{{ else }}
+							<img src="{{ $.Site.BaseURL }}/images/people-default.png">	
 						{{ end }}
 					</a>
 				</div>
@@ -63,15 +67,19 @@
 					<div class="person">
 						<div class="square-container">
 							<a class="person-img-container" href="{{ $RelPermalink }}">
-								{{ if strings.HasPrefix $img "http://" -}}
-									<!-- 外链图片 -->
-									<img src="{{ $img }}">
-								{{ else if strings.HasPrefix $img "https://" -}}
-									<!-- 外链图片 -->
-									<img src="{{ $img }}">
-								{{ else -}}
-									<!-- 内链图片 -->
-									<img src="{{ $.Site.BaseURL }}/{{ $img }}">
+								{{ with $img }}
+									{{ if strings.HasPrefix $img "http://" -}}
+										<!-- 外链图片 -->
+										<img src="{{ $img }}">
+									{{ else if strings.HasPrefix $img "https://" -}}
+										<!-- 外链图片 -->
+										<img src="{{ $img }}">
+									{{ else -}}
+										<!-- 内链图片 -->
+										<img src="{{ $.Site.BaseURL }}/{{ $img }}">
+									{{ end }}
+								{{ else }}
+									<img src="{{ $.Site.BaseURL }}/images/people-default.png">	
 								{{ end }}
 							</a>
 						</div>
@@ -106,15 +114,19 @@
 						<div class="person">
 							<div class="square-container">
 								<a class="person-img-container" href="{{ $RelPermalink }}">
-									{{ if strings.HasPrefix $img "http://" -}}
-										<!-- 外链图片 -->
-										<img src="{{ $img }}">
-									{{ else if strings.HasPrefix $img "https://" -}}
-										<!-- 外链图片 -->
-										<img src="{{ $img }}">
-									{{ else -}}
-										<!-- 内链图片 -->
-										<img src="{{ $.Site.BaseURL }}/{{ $img }}">
+									{{ with $img }}
+										{{ if strings.HasPrefix $img "http://" -}}
+											<!-- 外链图片 -->
+											<img src="{{ $img }}">
+										{{ else if strings.HasPrefix $img "https://" -}}
+											<!-- 外链图片 -->
+											<img src="{{ $img }}">
+										{{ else -}}
+											<!-- 内链图片 -->
+											<img src="{{ $.Site.BaseURL }}/{{ $img }}">
+										{{ end }}
+									{{ else }}
+										<img src="{{ $.Site.BaseURL }}/images/people-default.png">	
 									{{ end }}
 								</a>
 							</div>
@@ -152,15 +164,19 @@
 							<div class="person">
 								<div class="square-container">
 									<a class="person-img-container" href="{{ $RelPermalink }}">
-										{{ if strings.HasPrefix $img "http://" -}}
-											<!-- 外链图片 -->
-											<img src="{{ $img }}">
-										{{ else if strings.HasPrefix $img "https://" -}}
-											<!-- 外链图片 -->
-											<img src="{{ $img }}">
-										{{ else -}}
-											<!-- 内链图片 -->
-											<img src="{{ $.Site.BaseURL }}/{{ $img }}">
+										{{ with $img }}
+											{{ if strings.HasPrefix $img "http://" -}}
+												<!-- 外链图片 -->
+												<img src="{{ $img }}">
+											{{ else if strings.HasPrefix $img "https://" -}}
+												<!-- 外链图片 -->
+												<img src="{{ $img }}">
+											{{ else -}}
+												<!-- 内链图片 -->
+												<img src="{{ $.Site.BaseURL }}/{{ $img }}">
+											{{ end }}
+										{{ else }}
+											<img src="{{ $.Site.BaseURL }}/images/people-default.png">	
 										{{ end }}
 									</a>
 								</div>
@@ -195,15 +211,19 @@
 				<div class="person">
 					<div class="square-container">
 						<a class="person-img-container" href="{{ $RelPermalink }}">
-							{{ if strings.HasPrefix $img "http://" -}}
-								<!-- 外链图片 -->
-								<img src="{{ $img }}">
-							{{ else if strings.HasPrefix $img "https://" -}}
-								<!-- 外链图片 -->
-								<img src="{{ $img }}">
-							{{ else -}}
-								<!-- 内链图片 -->
-								<img src="{{ $.Site.BaseURL }}/{{ $img }}">
+							{{ with $img }}
+								{{ if strings.HasPrefix $img "http://" -}}
+									<!-- 外链图片 -->
+									<img src="{{ $img }}">
+								{{ else if strings.HasPrefix $img "https://" -}}
+									<!-- 外链图片 -->
+									<img src="{{ $img }}">
+								{{ else -}}
+									<!-- 内链图片 -->
+									<img src="{{ $.Site.BaseURL }}/{{ $img }}">
+								{{ end }}
+							{{ else }}
+								<img src="{{ $.Site.BaseURL }}/images/people-default.png">	
 							{{ end }}
 						</a>
 					</div>
