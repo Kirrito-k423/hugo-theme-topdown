@@ -209,24 +209,21 @@
 
 			{{ with .Params.year_graduation }}
 				<div class="person">
-					<div class="square-container square-container-list">
+					<!-- <div class="square-container square-container-list">
 						<a class="person-img-container person-img-container-adjust" href="{{ $RelPermalink }}">
 							{{ with $img }}
 								{{ if strings.HasPrefix $img "http://" -}}
-									<!-- 外链图片 -->
 									<img src="{{ $img }}">
 								{{ else if strings.HasPrefix $img "https://" -}}
-									<!-- 外链图片 -->
 									<img src="{{ $img }}">
 								{{ else -}}
-									<!-- 内链图片 -->
 									<img src="{{ $.Site.BaseURL }}/{{ $img }}">
 								{{ end }}
 							{{ else }}
 								<img src="{{ $.Site.BaseURL }}/images/people-default.png">	
 							{{ end }}
 						</a>
-					</div>
+					</div> -->
 					<div>
 						<a class="person-name" href="{{ $RelPermalink }}">
 							<!-- Hugo automatically takes the first 70 words of your content as its summary and stores it into the .Summary variable -->
