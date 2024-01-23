@@ -148,8 +148,9 @@
 					{{- partial "paper1.html" . -}}
 				{{ end }}
 				<!-- 其余参与论文 -->
-				{{ with .Params.otherPubs}}
-				{{- partial "paper2.html" . -}}
+				{{ with .Params.hideOtherPubs}}
+				{{ else}}
+					{{- partial "paper2.html" . -}}
 				{{ end }}
 
 			</div>
