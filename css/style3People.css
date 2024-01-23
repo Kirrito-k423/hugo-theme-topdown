@@ -114,7 +114,7 @@ img:hover {
 
 .stick-motto-bar{
     position: relative;
-    top:40px;
+    /* top:40px; */
     /* height: 100vh; */
     background-color: rgb(247, 247, 247);
     /* display: flex; */
