@@ -7,13 +7,16 @@
 
 
 	<div class="stick-motto-bar">
+		{{ $motto := .Params.motto }}
+		{{ with $motto}}
 		<h1 class="stick-motto-column motto">
-			{{ with .Params.motto }}
+			{{ with $motto }}
 			{{ . }}
 			{{ else }}
 			“红专并进，理实交融”
 			{{ end }}
 		</h1>
+		{{ end }}
 		<div class="stick-motto-column">
 
 			<div class="person">
@@ -140,9 +143,14 @@
 				<!-- 论文 -->
 
 				<!-- 一作论文 -->
-				{{- partial "paper1.html" . -}}
+				{{ with .Params.hidePubs }}
+				{{ else}}
+					{{- partial "paper1.html" . -}}
+				{{ end }}
 				<!-- 其余参与论文 -->
-				<!-- {{- partial "paper2.html" . -}} -->
+				{{ with .Params.otherPubs}}
+				{{- partial "paper2.html" . -}}
+				{{ end }}
 
 			</div>
 			{{ if .Param "aplayer" }}
