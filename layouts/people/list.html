@@ -204,7 +204,7 @@
 		{{ range .Pages.ByPublishDate.Reverse }}
 			{{ $RelPermalink := .RelPermalink }}
 			{{ $cn_name := .Params.cn_name }}
-			{{ $employment := .Params.employment }}
+			{{ $employment := .Params.employment_short }}
 			{{ $img := .Params.img }}
 
 			{{ with .Params.year_graduation }}
