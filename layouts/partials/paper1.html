@@ -86,11 +86,19 @@
 									{{ if eq . "yes" }}
 										{{ if eq $CCFlevel "A" }}
 											<b class="rainbow-text">CCF {{ $CCFlevel }}</b> 
-										{{ else }}
+										{{ else if eq $CCFlevel "B" }}
 											<b>CCF {{ $CCFlevel }}</b> 
+										{{ else }}
+											<!-- ignore CCF C -->
 										{{ end }}
 									{{ else }}
-										<b>{{ $JournalLabel }}</b>
+										{{ if eq $CCFlevel "A" }}
+											<b class="rainbow-text">{{ $JournalLabel }}</b>
+										{{ else if eq $CCFlevel "B" }}
+											<b>{{ $JournalLabel }}</b>
+										{{ else }}
+											<!-- ignore CCF C -->
+										{{ end }}										
 									{{ end }}
 								{{ end }}
 							{{ end }}
