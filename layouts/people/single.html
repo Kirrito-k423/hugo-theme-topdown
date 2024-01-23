@@ -169,8 +169,7 @@
 
 
 {{ with .Params.custmize_css }}
-	{{ . | safeCSS }}
-</style>
+<style>{{ . | safeCSS }}</style>
 {{ end }}
 
 {{ with .Params.motto_pic }}
