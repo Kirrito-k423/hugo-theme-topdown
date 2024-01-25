@@ -51,7 +51,9 @@
 							{{ end }}
 						</span>
 						<span class="paper-OtherAuthors">
-							{{ range $page.Params.OtherAuthors }}
+							{{ $totalAuthors := len $page.Params.OtherAuthors }}
+							{{ range $index, $name := $page.Params.OtherAuthors }}
+								{{ $isLast := eq (add $index 1) $totalAuthors }}
 								{{ $name := . }}
 								{{ $words := split . " " }}
 								{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
@@ -62,12 +64,12 @@
 										<!-- <p>文件存在：{{ $page.Params.cn_name }}</p> -->
 										<a href="{{ .Permalink }}" 
 											style="color:rgb(146, 157, 192);text-decoration: none;">
-											<span style="text-decoration: underline;">{{ $name }}</span>,
+											<span style="text-decoration: underline;">{{ $name }}</span>{{ if not $isLast }},{{ end }}
 										</a>
 									{{ else }}
 										<!-- 文件不存在的处理逻辑 -->
 										<!-- <p>文件不存在</p> -->
-										{{ $name }},
+										{{ $name }}{{ if not $isLast }},{{ end }}
 									{{ end }}
 								{{ end }}
 							{{ end }}

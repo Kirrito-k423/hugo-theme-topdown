@@ -51,9 +51,9 @@
 																<!-- 文件存在的处理逻辑 -->
 																<!-- <p>文件存在：{{ .Params.cn_name }}</p> -->
 																<a href="{{ .Permalink }}" 
-																	style="color:rgb(146, 157, 192);">
-																	{{ $name }}
-																</a>,
+																	style="color:rgb(146, 157, 192);text-decoration: none;">
+																	<span style="text-decoration: underline;">{{ $name }}</span><span style="font-weight:normal;">,</span>
+																</a>
 															{{ else }}
 																<!-- 文件不存在的处理逻辑 -->
 																<!-- <p>文件不存在</p> -->
@@ -63,7 +63,10 @@
 													{{ end }}
 												</span>
 												<span class="paper-OtherAuthors">
-													{{ range .Params.OtherAuthors }}
+													{{ $totalAuthors := .Params.OtherAuthors }}
+													{{ $totalAuthorsLen := len $totalAuthors }}
+													{{ range $index, $name := $totalAuthors  }}
+														{{ $isLast := eq (add $index 1) $totalAuthorsLen }}
 														{{ $name := . }}
 														{{ $words := split . " " }}
 														{{ $reversedName := (index $words 0) | printf "%s%s" (index $words 1) }}
@@ -73,13 +76,13 @@
 																<!-- 文件存在的处理逻辑 -->
 																<!-- <p>文件存在：{{ .Params.cn_name }}</p> -->
 																<a href="{{ .Permalink }}" 
-																	style="color:rgb(146, 157, 192);">
-																	{{ $name }}
-																</a>,
+																	style="color:rgb(146, 157, 192);text-decoration: none;">
+																	<span style="text-decoration: underline;">{{ $name }}</span>{{ if not $isLast }},{{ end }}
+																</a>
 															{{ else }}
 																<!-- 文件不存在的处理逻辑 -->
 																<!-- <p>文件不存在</p> -->
-																{{ $name }},
+																{{ $name }}{{ if not $isLast }},{{ end }}
 															{{ end }}
 														{{ end }}
 													{{ end }}
