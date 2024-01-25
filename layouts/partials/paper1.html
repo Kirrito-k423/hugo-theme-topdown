@@ -33,14 +33,14 @@
 										<!-- <p>文件存在：{{ $page.Params.cn_name }}</p> -->
 										{{ if eq $reversedName $filename}}
 											<a href="{{ .Permalink }}" 
-												style="color:black">
-												{{ $name }}
-											</a>,
+												style="color:black;text-decoration: none;">
+												<span style="text-decoration: underline;">{{ $name }}</span><span style="font-weight:normal;color:rgb(146, 157, 192);">,</span>
+											</a>
 										{{ else }}
 											<a href="{{ .Permalink }}" 
-												style="color:rgb(146, 157, 192);">
-												{{ $name }}
-											</a>,
+												style="color:rgb(146, 157, 192);text-decoration: none;">
+												<span style="text-decoration: underline;">{{ $name }}</span>,
+											</a>
 										{{ end }}
 									{{ else }}
 										<!-- 文件不存在的处理逻辑 -->
@@ -61,9 +61,9 @@
 										<!-- 文件存在的处理逻辑 -->
 										<!-- <p>文件存在：{{ $page.Params.cn_name }}</p> -->
 										<a href="{{ .Permalink }}" 
-											style="color:rgb(146, 157, 192);">
-											{{ $name }}
-										</a>,
+											style="color:rgb(146, 157, 192);text-decoration: none;">
+											<span style="text-decoration: underline;">{{ $name }}</span>,
+										</a>
 									{{ else }}
 										<!-- 文件不存在的处理逻辑 -->
 										<!-- <p>文件不存在</p> -->
