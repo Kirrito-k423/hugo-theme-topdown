@@ -20,7 +20,7 @@ email:  shaojiemike@mail.ustc.edu.cn                # 常用邮件
 
 motto: 淡而不厌，简而文，温而理，知远之近，知风之自，知微之显，可与人德矣。
 motto_pic: https://pic.shaojiemike.top/shaojiemike/2023/12/8fd5c1c5abfb5149af6d082f7b3978c1.png
-custmize_css: "
+customize_css: "
 .motto{
     font-size: 3em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 设置阴影，可以根据需要调整阴影的偏移和颜色 */
