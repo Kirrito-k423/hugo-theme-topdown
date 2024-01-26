@@ -51,3 +51,43 @@
 .sidebar .accordion a{
     text-decoration: none;
 }
+
+/* 
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid rgb(162, 175, 185);
+}
+
+table th, table td {
+    padding: 8px; 
+  } */
+  
+  table {
+    border-collapse: separate;
+    border-spacing: 0 0; /* 横向间隔设置为0，纵向间隔设置为10px */
+    border-left: 0.05rem solid #0000001f; /* 最外层边框 */
+    border-right: 0.05rem solid #0000001f; /* 最外层边框 */
+    margin: 10px;
+}
+  
+  table th, table td {
+    border-left: none;
+    border-right: none;
+    padding: 20px 20px; /* 根据需要调整单元格内的空间 */
+  }
+  
+  /* 只为表格的顶部和底部添加边框 */
+  table tr th, table tr td {
+    border-bottom: .05rem solid #0000001f
+  }
+
+  table th {
+    border-top: .05rem solid #0000001f
+  }
+
+  
+  
+  
