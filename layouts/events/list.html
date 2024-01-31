@@ -49,7 +49,7 @@
 					<a href="{{ . }}">online meeting</a>
 				</p>
 			  {{ end }}
-			  <p class="post-abstract">{{ .Params.abstract }}</p>
+			  <p class="post-abstract">{{ .Params.abstract | replaceRE "\n" "<br>" | safeHTML }}</p>
 
 			</div>
 		  </article>

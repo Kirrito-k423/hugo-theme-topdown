@@ -14,6 +14,7 @@
 - **Intuitive Top-Down Logic:** Sections are arranged logically to emphasize importance, priority, and the hierarchical relationship among them.
 - **Automatic Publication Linking:** Effortlessly auto-link publications on individual profile pages.
 - **Database-Like Organization:** Emulates a database structure for content management. For example, `event` is treated as a database, where `event/xxx.md` represents a database entry. The YAML metadata in `event/xxx.md` articulates the specifics of each entry.
+- **Icons**： Using [Feather icons](https://feathericons.com/) and [Bootstrap Icons](https://icons.getbootstrap.com/)
 
 ## Live Demos
 
