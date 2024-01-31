@@ -15,7 +15,17 @@
 			<div class = "quarter-grid-pic">
 			  <a href="{{ .RelPermalink }}">
 				{{ with .Params.img_url }}
-					<img class="landscape" src="{{ . }}" alt="src">
+					{{ $img := . }}
+					{{ if strings.HasPrefix $img "http://" -}}
+						<!-- 外链图片 -->
+						<img class="landscape" src="{{ $img }}">
+					{{ else if strings.HasPrefix $img "https://" -}}
+						<!-- 外链图片 -->
+						<img class="landscape" src="{{ $img }}">
+					{{ else -}}
+						<!-- 内链图片 -->
+						<img class="landscape" src="{{ $.Site.BaseURL }}/{{ $img }}">
+					{{ end }}
 				{{ else }}
 					<img class="landscape" src="{{ site.BaseURL }}/images/{{ .Params.types }}.png" alt="alt">
 				{{ end }}
