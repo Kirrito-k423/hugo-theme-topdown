@@ -324,7 +324,7 @@ header {
     font-size: 1em;
     line-height: 1.2;
     color: rgb(252, 230, 225);
-    text-shadow: rgba(0,0,0,.6) 0 0 2px;
+    /* text-shadow: rgba(0,0,0,.6) 0 0 2px; */
     text-align: left;
 }
 
