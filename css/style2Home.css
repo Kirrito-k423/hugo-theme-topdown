@@ -223,7 +223,7 @@ header {
     margin: 19px;
 
     overflow: hidden; /* 隐藏超出容器的部分 */
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 .quarter-grid{
