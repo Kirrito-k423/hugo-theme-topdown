@@ -12,6 +12,19 @@
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* 阴影效果，可根据需要调整 */
 }
 
+/* 为 Markdown 内的所有图片设置最大宽度 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 特别针对 admonition 块内的图片进行样式设置 */
+.admonition img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 .clickable{
     display: flex;
     align-items: center; /* 垂直居中 */
