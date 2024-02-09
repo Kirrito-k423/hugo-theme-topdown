@@ -3,8 +3,9 @@
 <!-- Event -->
 <section class="panel-fog"> 
 	<header>
-	  <h2 class="section-title">Events</h2>
+	  <h2 class="section-title">{{ .Params.title | safeHTML }}</h2>
 	  <!-- <p class="section-subtitle">Driving discoveries vital to our world, our health, and our intellectual life</p> -->
+	  <p class="section-subtitle">{{ .Params.subtitle | safeHTML }}</p>
 	</header>
 	<section class="panel-fog full4footer"> 
 		<div class="four-grids">
