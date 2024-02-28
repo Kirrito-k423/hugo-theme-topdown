@@ -50,10 +50,12 @@
 				<img class="event-icon" src="{{ site.BaseURL }}/images/calendar.png" alt="" height="20" width="20">
 				{{ $formattedDate }} UTC+8
 			  </p>
+			  {{ with .Params.location }}
 			  <p class="start-time">
 				<img class="event-icon" src="{{ site.BaseURL }}/images/location.png" alt="" height="20" width="20">
-				{{ .Params.location }}
+				{{ . }}
 			  </p>
+			  {{ end }}
 			  {{ with .Params.onlineLink }}
 				<p class="start-time">
 					<img class="event-icon" src="{{ site.BaseURL }}/images/zoom.png" alt="" height="20" width="20">

@@ -79,7 +79,7 @@
 		{{ end }}
 
 		<!-- manual select 3rd one -->
-		{{ range .Pages.ByPublishDate.Reverse }}
+		{{ range .Data.Pages }}
 			{{ if eq .Params.selectedInFirstPage 3 }}
 			<article class="second-grid">
 				<div class = "second-grid-pic">
@@ -116,7 +116,6 @@
 		{{ with .Site.GetPage "section" "news" }}
 			{{ range .Data.Pages }}
 				{{ if and (and (ne .Params.selectedInFirstPage 2) (ne .Params.selectedInFirstPage 1)) (ne .Params.selectedInFirstPage 3)}}
-				
 				<article class="small-grid auto-height">
 					<div class = "small-grid-pic">
 						<a href="{{ .RelPermalink }}">
