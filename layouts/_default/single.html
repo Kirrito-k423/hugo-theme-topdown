@@ -1,7 +1,19 @@
 {{ define "main" }}
 <div class="topdown-main">
-		<div class="publications-column full4footer">
-			<img class="img_url" src="{{ .Params.img_url }}">
+		<div class="publications-column full4footer">			
+			{{ with .Params.img_url }}
+				{{ $img := . }}
+				{{ if strings.HasPrefix $img "http://" -}}
+					<!-- 外链图片 -->
+					<img class="landscape" src="{{ $img }}">
+				{{ else if strings.HasPrefix $img "https://" -}}
+					<!-- 外链图片 -->
+					<img class="landscape" src="{{ $img }}">
+				{{ else -}}
+					<!-- 内链图片 -->
+					<img class="landscape" src="{{ $.Site.BaseURL }}/{{ $img }}">
+				{{ end }}
+			{{ end }}
 			<h1 style="text-align:left; font-size: xx-large;color:black;">{{ .Params.title }}</h1>
 			<!-- <p>排版有待调整</p> -->
 	
