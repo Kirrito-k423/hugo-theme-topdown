@@ -42,11 +42,23 @@
     top:3px;
 }
 
-.sidebar{
+ /* 嵌入在正文的简单模式 */
+/* .sidebar{
     padding-top: 0.1em;
     position: sticky;
     top: 5.6em;
     background-color: #9dbeff;
+} */
+
+
+.sidebar{
+    position: fixed;
+    right: 10px;
+    top: 30%;
+    background-color: #cfdeff;
+    border-radius: 10px; /* 设置圆角的大小 */
+    word-wrap: break-word; /* 或 overflow-wrap: break-word; 允许长单词或URL地址在任何字符之间断行 */
+    word-break: break-word; /* 为了兼容性，同时使用这两个属性 */
 }
 
 .sidebar .accordion a{
