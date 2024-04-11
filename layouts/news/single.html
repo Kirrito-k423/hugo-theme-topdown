@@ -37,9 +37,16 @@
 
 			{{ if  gt (len .TableOfContents) 32  }}
 			<div class="sidebar">
-				<div class="accordion" id="markdownToc">
-					{{ .TableOfContents }}
+				<div class="clickable" style="background-color: #afc8ff;">
+					<!-- <img src="/icons/pen-fill.svg" alt="Bootstrap Icons" class="icon"> -->
+					<span style="margin: 0 10px;">目录</span>
 				</div>
+				<div class="hidden" style="background-color: #cfdeff">
+					<div class="accordion" id="markdownToc">
+						{{ .TableOfContents }}
+					</div>
+				</div>
+				
 			</div>
 			{{ else }}
 				<!-- <p>No table of contents available.</p> -->

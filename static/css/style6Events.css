@@ -61,6 +61,12 @@
     word-break: break-word; /* 为了兼容性，同时使用这两个属性 */
 }
 
+.accordion {
+    margin: 0 25px 0 0px; 
+    /* 上下保持0，左右各10px空间 */
+    /* 如果需要，可以添加其他样式，比如宽度或背景色 */
+}
+
 .sidebar .accordion a{
     text-decoration: none;
 }
