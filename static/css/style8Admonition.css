@@ -6,10 +6,75 @@
 
 .admonition{
     background-color: white;
-    border: 1px solid rgb(0, 184, 212); /* 黑色边框 */
-    border-radius: 10px; /* 圆角半径 */
+    border-radius: 5px; /* 圆角半径 */
     /* padding: 10px; 内边距 */
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* 阴影效果，可根据需要调整 */
+    margin: 0.5em;
+
+}
+
+.admonition-note{
+    border: 1.5px solid rgb(68, 138, 255); /* 黑色边框 */
+}
+
+.clickable-note{
+    background-color: rgb(236, 243, 255);
+}
+
+.admonition-abstract{
+    border: 1.5px solid rgb(0, 176, 255); /* 黑色边框 */
+}
+
+.clickable-abstract{
+    background-color: rgb(229, 247, 255);
+}
+
+.admonition-info{
+    border: 1.5px solid rgb(0, 184, 212); /* 黑色边框 */
+}
+
+.clickable-info{
+    background-color: rgb(229, 248, 251);
+}
+
+.admonition-tip{
+    border: 1.5px solid rgb(0, 191, 165); /* 黑色边框 */
+}
+
+.clickable-tip{
+    background-color: rgb(229, 248, 246);
+}
+
+.admonition-success{
+    border: 1.5px solid rgb(0, 200, 83); /* 黑色边框 */
+}
+
+.clickable-success{
+    background-color: rgb(229, 249, 237);
+}
+
+.admonition-question{
+    border: 1.5px solid rgb(100, 221, 23); /* 黑色边框 */
+}
+
+.clickable-question{
+    background-color: rgb(239, 252, 231);
+}
+
+.admonition-warning{
+    border: 1.5px solid rgb(255, 145, 0); /* 黑色边框 */
+}
+
+.clickable-warning{
+    background-color: rgb(255, 244, 229);
+}
+
+.admonition-failure{
+    border: 1.5px solid rgb(255, 82, 82); /* 黑色边框 */
+}
+
+.clickable-failure{
+    background-color: rgb(255, 237, 237);
 }
 
 /* 为 Markdown 内的所有图片设置最大宽度 */
@@ -28,16 +93,18 @@ img {
 .clickable{
     display: flex;
     align-items: center; /* 垂直居中 */
-    border-radius: 10px; /* 圆角半径 */
+    border-radius: 5px; /* 圆角半径 */
     /* border: 1px solid rgb(0, 184, 212);  */
     padding: 10px; 
     height: 2em;
     margin: auto;
-    background-color: rgb(229, 248, 251);
+    /* background-color: rgb(229, 248, 251); */
 }
 
+
+
 .clickable img {
-    margin-right: 0.5em;
+    margin: 0 0.8em 0 0.3em;
 }
 
 
@@ -48,11 +115,8 @@ img {
 
 .hidden{
     display: none;
-    border-radius: 10px; /* 圆角半径 */
-    padding: 0px 10px 10px 10px; 
+    border-radius: 5px; /* 圆角半径 */
+    padding: 10px 10px 10px 10px; 
     background-color: white;
 }
 
-.note{
-    margin-bottom: 1em;
-}

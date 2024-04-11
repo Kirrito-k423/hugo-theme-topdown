@@ -2,10 +2,10 @@
 {{ $title := .Get 1 }}
 {{ $content := .Inner | safeHTML }}
 <!-- https://icons.getbootstrap.com/?q=bug -->
-<div class="admonition {{ $admonitionType }}">
-    <div class="clickable">
-        <img src="/icons/pen-fill.svg" alt="Bootstrap Icons" class="icon">
-        <span>  {{ $title }}</span>
+<div class="admonition {{ printf "admonition-%s" $admonitionType }}">
+    <div class="clickable {{ printf "clickable-%s" $admonitionType }}">
+        <img src="/icons/mkdocs-{{$admonitionType}}.svg" alt="Bootstrap Icons" class="icon">
+        <span>{{ $title }}</span>
     </div>
     <div class="hidden">{{ $content | markdownify | safeHTML }}</div>
 </div>
