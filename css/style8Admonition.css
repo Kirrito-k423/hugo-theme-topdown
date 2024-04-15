@@ -69,6 +69,34 @@
     background-color: rgb(255, 244, 229);
 }
 
+.highlight{
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    border-radius: 5px; /* 圆角半径 */
+    /* border: 1px solid rgb(0, 184, 212);  */
+    padding: 10px; 
+    height: 2em;
+    margin: 0.5em;
+}
+
+.highlight-red{
+    border: 1.5px solid rgb(238, 211, 215);
+    background-color: rgb(242, 222, 222);
+    color: rgb(199, 74, 72);
+}
+
+.highlight-green{
+    border: 1.5px solid rgb(214, 233, 198);
+    background-color: rgb(223, 240, 216);
+    color: rgb(70, 136, 107);
+}
+
+.highlight-blue{
+    border: 1.5px solid rgb(188, 232, 241);
+    background-color: rgb(217, 237, 247);
+    color: rgb(58, 135, 173);
+}
+
 .admonition-failure{
     border: 1.5px solid rgb(255, 82, 82); /* 黑色边框 */
 }
