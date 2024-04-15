@@ -1,0 +1,4 @@
+<!-- highlight -->
+{{ $hlType := .Get 0}}
+{{ $content := .Inner | safeHTML }}
+<div class="highlight {{ printf "highlight-%s" $hlType }}">{{ $content | markdownify | safeHTML }}</div>
