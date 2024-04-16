@@ -74,8 +74,8 @@
     align-items: center; /* 垂直居中 */
     border-radius: 5px; /* 圆角半径 */
     /* border: 1px solid rgb(0, 184, 212);  */
-    padding: 10px; 
-    height: 2em;
+    padding: 0.5em; 
+    /* height: 2em; */
     margin: 0.5em;
 }
 
