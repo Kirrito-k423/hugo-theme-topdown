@@ -10,64 +10,81 @@
 	<section class="panel-fog full4footer"> 
 		<div class="four-grids">
 
-		{{ range .Data.Pages }}
+			{{ $paginator := .Paginate .Data.Pages 8 }}
+			{{ range $paginator.Pages }}
 
-		  <article class="event-grid quarter-grid">
-			<div class = "quarter-grid-pic">
-			  <a href="{{ .RelPermalink }}">
-				{{ with .Params.img_url }}
-					{{ $img := . }}
-					{{ if strings.HasPrefix $img "http://" -}}
-						<!-- 外链图片 -->
-						<img class="landscape" src="{{ $img }}">
-					{{ else if strings.HasPrefix $img "https://" -}}
-						<!-- 外链图片 -->
-						<img class="landscape" src="{{ $img }}">
-					{{ else -}}
-						<!-- 内链图片 -->
-						<img class="landscape" src="{{ $.Site.BaseURL }}/{{ $img }}">
-					{{ end }}
-				{{ else }}
-					<img class="landscape" src="{{ site.BaseURL }}/images/{{ .Params.types }}.png" alt="alt">
-				{{ end }}
-
-			  </a>
-			</div>
-
-			{{ $date := .Params.date | time }}
-			{{ $formattedDate := $date.Format "Jan 02, 2006 3:04 pm" }}
-
-			<div class="small-grid-content">
-			  <div class="post-meta">
-				<p>{{ .Params.types }}</p>
-			  </div>
-			  <h3>
+			<article class="event-grid quarter-grid">
+				<div class = "quarter-grid-pic">
 				<a href="{{ .RelPermalink }}">
-					{{ .Params.title }}
+					{{ with .Params.img_url }}
+						{{ $img := . }}
+						{{ if strings.HasPrefix $img "http://" -}}
+							<!-- 外链图片 -->
+							<img class="landscape" src="{{ $img }}">
+						{{ else if strings.HasPrefix $img "https://" -}}
+							<!-- 外链图片 -->
+							<img class="landscape" src="{{ $img }}">
+						{{ else -}}
+							<!-- 内链图片 -->
+							<img class="landscape" src="{{ $.Site.BaseURL }}/{{ $img }}">
+						{{ end }}
+					{{ else }}
+						<img class="landscape" src="{{ site.BaseURL }}/images/{{ .Params.types }}.png" alt="alt">
+					{{ end }}
+
 				</a>
-			  </h3>
-			  <p class="start-time">
-				<img class="event-icon" src="{{ site.BaseURL }}/images/calendar.png" alt="" height="20" width="20">
-				{{ $formattedDate }} UTC+8
-			  </p>
-			  {{ with .Params.location }}
-			  <p class="start-time">
-				<img class="event-icon" src="{{ site.BaseURL }}/images/location.png" alt="" height="20" width="20">
-				{{ . }}
-			  </p>
-			  {{ end }}
-			  {{ with .Params.onlineLink }}
+				</div>
+
+				{{ $date := .Params.date | time }}
+				{{ $formattedDate := $date.Format "Jan 02, 2006 3:04 pm" }}
+
+				<div class="small-grid-content">
+				<div class="post-meta">
+					<p>{{ .Params.types }}</p>
+				</div>
+				<h3>
+					<a href="{{ .RelPermalink }}">
+						{{ .Params.title }}
+					</a>
+				</h3>
 				<p class="start-time">
-					<img class="event-icon" src="{{ site.BaseURL }}/images/zoom.png" alt="" height="20" width="20">
-					<a href="{{ . }}">online meeting</a>
+					<img class="event-icon" src="{{ site.BaseURL }}/images/calendar.png" alt="" height="20" width="20">
+					{{ $formattedDate }} UTC+8
 				</p>
-			  {{ end }}
-			  <p class="post-abstract">{{ .Params.abstract | replaceRE "\n" "<br>" | safeHTML }}</p>
+				{{ with .Params.location }}
+				<p class="start-time">
+					<img class="event-icon" src="{{ site.BaseURL }}/images/location.png" alt="" height="20" width="20">
+					{{ . }}
+				</p>
+				{{ end }}
+				{{ with .Params.onlineLink }}
+					<p class="start-time">
+						<img class="event-icon" src="{{ site.BaseURL }}/images/zoom.png" alt="" height="20" width="20">
+						<a href="{{ . }}">online meeting</a>
+					</p>
+				{{ end }}
+				<p class="post-abstract">{{ .Params.abstract | replaceRE "\n" "<br>" | safeHTML }}</p>
 
-			</div>
-		  </article>
+				</div>
+			</article>
 
-		{{ end }}
+			{{ end }}
+		</div>
+
+		<div class="pagination">
+			{{ if gt $paginator.TotalPages 1 }}
+			<ul>
+				{{ if $paginator.HasPrev }}
+				<li><a href="{{ $paginator.Prev.URL }}">&laquo; Previous</a></li>
+				{{ end }}
+				{{ range $paginator.Pagers }}
+				<li><a href="{{ .URL }}" class="{{ if eq . $paginator }}active{{ end }}">{{ .PageNumber }}</a></li>
+				{{ end }}
+				{{ if $paginator.HasNext }}
+				<li><a href="{{ $paginator.Next.URL }}">Next &raquo;</a></li>
+				{{ end }}
+			</ul>
+			{{ end }}
 		</div>
 	</section>
 
