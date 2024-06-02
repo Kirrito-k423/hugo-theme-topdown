@@ -9,8 +9,8 @@
 	</header>
 	<section class="panel-fog full4footer"> 
 		<div class="four-grids">
-
-			{{ $paginator := .Paginate .Data.Pages 8 }}
+			{{ $paginate := .Params.Paginate | default 12 }}
+			{{ $paginator := .Paginate .Data.Pages $paginate }}
 			{{ range $paginator.Pages }}
 
 			<article class="event-grid quarter-grid">
