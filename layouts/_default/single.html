@@ -6,13 +6,13 @@
 				{{ $img := . }}
 				{{ if strings.HasPrefix $img "http://" -}}
 					<!-- 外链图片 -->
-					<img class="landscape" src="{{ $img }}">
+					<img class="landscape highlightPic" src="{{ $img }}">
 				{{ else if strings.HasPrefix $img "https://" -}}
 					<!-- 外链图片 -->
-					<img class="landscape" src="{{ $img }}">
+					<img class="landscape highlightPic" src="{{ $img }}">
 				{{ else -}}
 					<!-- 内链图片 -->
-					<img class="landscape" src="{{ $.Site.BaseURL }}/{{ $img }}">
+					<img class="landscape highlightPic" src="{{ $.Site.BaseURL }}/{{ $img }}">
 				{{ end }}
 			{{ end }}
 			<h1 style="text-align:left; font-size: xx-large;color:black;">{{ .Params.title }}</h1>
