@@ -307,6 +307,12 @@ header {
     height: 100%;
 }
 
+.highlightPic {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), /* basic shadow */
+    0 6px 20px rgba(0, 0, 0, 0.1); /* additional shadow for depth */
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+
 .grid-content{
     position: absolute;
     top: 200px;
