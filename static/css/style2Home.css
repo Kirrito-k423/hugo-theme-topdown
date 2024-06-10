@@ -3,7 +3,10 @@
 
 /* 文字字体，字号，颜色 */
 /* 背景色，长宽，其他 */
-
+a{
+    text-decoration: none;
+}
+  
 
 .home-fisrt-full-page{
     position: fixed;
