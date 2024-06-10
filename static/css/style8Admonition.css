@@ -105,6 +105,38 @@
     background-color: rgb(255, 237, 237);
 }
 
+.admonition-danger{
+    border: 1.5px solid rgb(235, 57, 75); /* 黑色边框 */
+}
+
+.clickable-danger{
+    background-color: rgb(252, 235, 237);
+}
+
+.admonition-bug{
+    border: 1.5px solid rgb(235, 57, 75); /* 黑色边框 */
+}
+
+.clickable-bug{
+    background-color: rgb(252, 235, 237);
+}
+
+.admonition-example{
+    border: 1.5px solid rgb(117, 79, 246); /* 黑色边框 */
+}
+
+.clickable-example{
+    background-color: rgb(240, 237, 254);
+}
+
+.admonition-quote{
+    border: 1.5px solid rgb(158, 158, 159); /* 黑色边框 */
+}
+
+.clickable-quote{
+    background-color: rgb(244, 245, 245);
+}
+
 /* 为 Markdown 内的所有图片设置最大宽度 */
 img {
     max-width: 100%;
