@@ -1,0 +1,23 @@
+{{ $level := .Get "level" }}
+{{ $title := .Inner | markdownify | plainify }}
+{{ $toc := .Page.Scratch.Get "toc" | default (dict) }}
+{{ $levelStr := printf "%d" $level }} <!-- 将level转换为字符串 -->
+<!-- Special case for level 1: reset levels 2 and 3 -->
+{{ if eq $levelStr "1" }}
+  {{ $toc = merge $toc (dict "2" 0 "3" 0) }}
+{{ end }}
+{{ if eq $levelStr "2" }}
+  {{ $toc = merge $toc (dict "3" 0) }}
+{{ end }}
+
+{{ $num := index $toc $levelStr | default 0 }}
+{{ $newNum := add $num 1 }}
+{{ $toc = merge $toc (dict $levelStr $newNum) }}
+{{ .Page.Scratch.Set "toc" $toc }}
+
+{{ $prefix := "" }}
+{{ range seq 1 $level }}
+  {{ $prefix = printf "%s%d." $prefix (index $toc (printf "%d" .)) }}
+{{ end }}
+
+<h{{ $level }} id="{{ $prefix }} {{ .Inner }}">{{ $prefix }} {{ .Inner }}</h{{ $level }}>

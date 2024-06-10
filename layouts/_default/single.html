@@ -61,7 +61,7 @@
     </div>
 	<div class="hidden" style="background-color: #cfdeff">
 		<div class="accordion" id="markdownToc">
-			{{ .TableOfContents }}
+			{{ .TableOfContents | safeHTML }}
 		</div>
 	</div>
 	
