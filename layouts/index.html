@@ -240,6 +240,7 @@
 
 
           <!-- Event -->
+          {{ if .Param "event_section" }}
           <section class="panel-fog"> 
             <header>
               <h2 class="section-title">Events</h2>
@@ -294,6 +295,7 @@
               <a href="{{ site.BaseURL }}/events" class="more-button">More events</a>
             </section>
           </section>
+          {{  end }}
 
           <!-- Lab Life -->
           {{ if .Param "life_section" }}
